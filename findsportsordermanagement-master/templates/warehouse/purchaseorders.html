@@ -1,0 +1,198 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+        {% if request.user.is_staff %}
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12">
+                </div>
+
+                {% if unique_dates %}
+
+                    <div class="col-lg-5 col-md-12">
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> SUPPLIERS
+                                </a> </b></h4>
+                                <p class="card-category">Select a supplier to view all purchase orders for that
+                                    supplier</p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th><b>Supplier Name</b></th>
+
+                                    </thead>
+                                    <tbody>
+
+                                    {% for supplier in list_of_supplier_names %}
+
+
+                                        <tr>
+                                            <td><b><a href="?supplier_name={{ supplier }}">{{ supplier }}</a></b></td>
+
+                                        </tr>
+
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    {#                    Showing list of all created on dates#}
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> <img class="img"
+                                                                                                   src="{% static  '/img/error-flat.png' %}"
+                                                                                                   height="20px"/>
+                                    PURCHASE ORDERS NOT RECEIVED</a> </b></h4>
+                                <p class="card-category">Note: Do not confirm the stock unless an invoice is received
+                                    from the supplier.</p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th><b>Purchase ID</b></th>
+                                    <th><b>Submitted</b></th>
+                                    <th><b>Days</b></th>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for item in dict_purchase_order_submitted_date %}
+                                        {% if item.3 >= 2 %}
+                                            <tr bgcolor="#FA8072">
+                                                {% else %}
+                                            <tr>
+                                        {% endif %}
+
+                                    <td><b><a
+                                            href="/purchaseorder/purchaseorderstockconfirm?warehouse=True&pid={{ item.2 }}">{{ item.0 }}</a></b>
+                                    </td>
+                                    <td><b>{{ item.1 }}</b></td>
+                                    <td><b>{{ item.3 }}</b></td>
+
+                                    </tr>
+
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                {% else %}
+                    {#                   showing list of purchase orders created on a specific date #}
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card card-stats">
+                                <div class="card-header">
+
+                                    <div align="center" class="card-icon">
+                                        <i class="material-icons">
+                                        </i>
+
+
+                                    </div>
+                                    <div align="center">
+                                        <h3 class="card-title">  {{ number_of_purchase_orders }} </h3>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Purchase Orders</a> </b>
+                                </h4>
+                                <p class="card-category">Showing all purchase orders created
+                                    on {{ created_on_date }}</p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th><b>PID</b></th>
+                                    <th><b>Supplier</b></th>
+                                    <th><b>Submitted On</b></th>
+
+
+                                    </thead>
+                                    <tbody>
+
+                                    {% for purchase_id_alias in List_of_dated_dict %}
+                                        {% if purchase_id_alias.6 %}
+                                            <tr>
+                                                {% else %}
+                                            <tr bgcolor="#FA8072">
+                                        {% endif %}
+
+                                    <td><b><a
+                                            href="/purchaseorder/purchaseorderstockconfirm?warehouse=True&pid={{ purchase_id_alias.1 }}">{{ purchase_id_alias.0 }}</a></b>
+                                    </td>
+                                    <td><b>{{ purchase_id_alias.2 }}</b></td>
+                                    <td><b>{{ purchase_id_alias.3 }}</b></td>
+
+                                    </tr>
+
+
+
+                                    {% endfor %}
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        {% else %}
+            <div>
+                <h1>You are not authorized to view this page. Please contact Admin!</h1>
+            </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% include "mastertemplates/jsfiles.html" %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#tutorialbutton").click(function () {
+
+            $("#tutorialdiv").toggle();
+        });
+    });
+</script>

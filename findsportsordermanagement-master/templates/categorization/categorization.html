@@ -1,0 +1,213 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        {% if error %}
+            <h1>Invalid File Uploaded. Please check the file and try again ! </h1>
+            <h3>Error Message: {{ errormsg }}</h3>
+        {% else %}
+            <h3>Please note : In order to avoid performance issues , limit the file to only 500 products at a time. Only
+                CSV files are allowed to upload!</h3>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+
+
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b>FIND SPORTS CATEGORIZATION HELPER</b>
+                            </h4>
+                        </div>
+                        <div class="card-body table-responsive">
+
+
+                            <form action="categorization_file_upload" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+
+                                <div class="col-lg-12 col-md-12">
+
+
+                                    <div class="card">
+
+                                        <div class="card-body table-responsive">
+
+
+                                            <h2>Upload Categorization File</h2>
+                                            <p>Please note that the column names are sensitive , hence don't change
+                                                them.</p>
+
+
+                                            <input type="file" class="btn btn-secondary pull-left" name="myfile">
+                                            <button type="submit" class="btn btn-primary pull-left">Upload</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </form>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <form action="downloadfilewithcomments" style="" method="post">
+                        {% csrf_token %}
+                        {% for key,value in dict_product_details.items %}
+                            <div class="col-lg-12 col-md-12">
+
+
+                                <b>NETO: </b> <a
+                                    href="https://www.findsports.com.au/_cpanel/products/view?sku={{ value.sku }}"
+                                    target="_blank">NETO LINK</a>
+
+
+                                <br><br>
+
+
+                                <b>SKU: </b> <a href="http://www.findsports.com.au/{{ value.product_url }}"
+                                                target="_blank">{{ value.sku }}</a>
+                                <br><br>
+                                <b>NAME: </b> {{ value.name }}<input type="text" name="{{ value.sku }}:ProductName"
+                                                                     hidden value="{{ value.name }}">
+                                <br><br>
+                                <b>CATCH SIZE: </b> {{ value.size }}
+                                <br><br>
+                                <b>CATCH COLOR: </b> {{ value.color }}
+                                <br>
+                                <input name="{{ value.sku }}:Updated Colour" class="form-control"
+                                       placeholder="Updated Catch Color"
+                                       value="">
+                                <br><br>
+                                <b>CATCH TITLE:(Should be without size and color) </b>{{ value.catch_title }}
+                                <br>
+                                <input name="{{ value.sku }}:catchtitle" class="form-control"
+                                       value="" placeholder="Updated Catch Title">
+                                <br><br>
+                                <b>SHIPPING WIDTH: </b> {{ value.shipping_width }}
+                                <br><br>
+                                <b>SHIPPING LENGTH: </b> {{ value.shipping_length }}
+                                <br><br>
+                                <b>SHIPPING HEIGHT: </b> {{ value.shipping_height }}
+                                <br><br>
+                                <b>SHIPPING WEIGHT: </b> {{ value.shipping_weight }}
+                                <br><br>
+                                <b>SHIPPING CATEGORY: </b> {{ value.shipping_category }}
+                                <br><br>
+                                <b>CATCH DESCRIPTION: ({{ value.description_count }})</b><br><br>
+                                {{ value.description | safe }}
+                                <input type="text" name="{{ value.sku }}:catchdescription" hidden
+                                       value="{{ value.description | safe }}">
+                                <br>
+                                <textarea rows="4" name="{{ value.sku }}:Updated Description" rows="100" cols="100"
+                                          class="form-control" placeholder="Updated Description"
+                                ></textarea>
+
+                            </div>
+                            {% if value.is_image1 %}
+                                <div class="col-lg-2 col-md-12">
+                                    <div class="card">
+                                        <a href="{{ value.image1 }}" target="_blank"> <img src="{{ value.image1 }}"
+                                                                                           height="300"
+                                                                                           width="300"/></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if value.is_image2 %}
+                                <div class="col-lg-2 col-md-12">
+                                    <div class="card">
+                                        <a href="{{ value.image2 }}" target="_blank"> <img src="{{ value.image2 }}"
+                                                                                           height="300"
+                                                                                           width="300"/></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if value.is_image3 %}
+                                <div class="col-lg-2 col-md-12">
+                                    <div class="card">
+                                        <a href="{{ value.image3 }}" target="_blank"> <img src="{{ value.image3 }}"
+                                                                                           height="300"
+                                                                                           width="300"/></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if value.is_image4 %}
+                                <div class="col-lg-2 col-md-12">
+                                    <div class="card">
+                                        <a href="{{ value.image4 }}" target="_blank"> <img src="{{ value.image4 }}"
+                                                                                           height="300"
+                                                                                           width="300"/></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if value.is_image5 %}
+                                <div class="col-lg-2 col-md-12">
+                                    <div class="card">
+                                        <a href="{{ value.image5 }}" target="_blank"> <img src="{{ value.image5 }}"
+                                                                                           height="300"
+                                                                                           width="300"/></a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div class="col-lg-12 col-md-12">
+                                <br>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+
+                                <div class="card">
+                                    {% if value.is_size_chart %}
+                                        <a href="{{ value.sizechart }}" target="_blank"> <img
+                                                src="{{ value.sizechart }}"
+                                        /></a>
+                                    {% else %}
+                                        <h3>No Size Chart found!</h3>
+                                    {% endif %}
+
+
+                                </div>
+                            <br><br>
+                            <input name="{{ value.sku }}:Updated Size Chart" class="form-control" value=""
+                                       placeholder="New Size Chart link">
+                                <br>
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <b>COMMENTS: </b> <textarea rows="4" name="{{ value.sku }}:Comment" rows="5" cols="10"
+                                                            value=""
+                                                            placeholder="Insert Comments"
+                                                            class="form-control"></textarea>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12">
+                                <br><br>
+                                <hr>
+                            </div>
+
+
+
+
+
+
+                        {% endfor %}
+                        <div align="center">
+
+                            <input class="btn btn-round btn-fill btn-info" type="submit"
+                                   name="download_file_with_comments"
+                                   value="DOWNLOAD FILE WITH COMMENTS">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+
+{% include "mastertemplates/jsfiles.html" %}

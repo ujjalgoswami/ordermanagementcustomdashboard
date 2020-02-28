@@ -1,0 +1,58 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">FINDSPORTS ORDER DETAILS for ORDER ID : {{orderid}}  </h4>
+                  <p class="card-category">All the details here are being fetched via NETO API</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive table-upgrade">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th class="text-center"></th>
+                          <th class="text-center">PRO</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+{% for key, value in jsontemp.items %}
+
+             <tr>
+                          <td>{{ key }}</td>
+                           <td class="text-center"></td>
+                 {% if value|length > 0 %}
+<td class="text-center">{{ value }}</td>
+                     {% else %}
+                     <td class="text-center"></td>
+{% endif %}
+
+                        </tr>
+
+
+
+{% endfor %}
+
+                        <tr>
+                          <td class="text-center"></td>
+                          <td class="text-center">
+                            <a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>
+                          </td>
+                          <td class="text-center">
+                            <a target="_blank" href="http://www.creative-tim.com/product/material-dashboard-pro/?ref=md-free-upgrade-live" class="btn btn-round btn-fill btn-info">Upgrade to PRO</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,187 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<style>
+    .controls {
+        display: flex;
+    }
+
+    .radio {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    .controls2 {
+        display: flex;
+    }
+
+    .radio2 {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+</style>
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            {% if Permission %}
+
+                <form action="timebomb_file_upload" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="col-lg-12 col-md-12">
+
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Time Bomb Settings</a>
+                                </b></h4>
+                                <p class="card-category">Uploading a file will instantly add all the skus in the
+                                    timebomb database. Please make sure to click on Force Generate Timebomb after you
+                                    upload the file to see the changes.</p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+
+
+                                <h2>Upload Time Bomb File</h2>
+                                <p>MANDATORY COLUMNS: SKU</p>
+
+
+                                <div class="controls">
+
+
+                                    <label class="radio">
+                                        <input type="radio"
+
+                                               required name="day" value="Monday">
+                                        Monday
+                                    </label>
+
+
+                                    <label class="radio">
+                                        <input type="radio"
+
+                                               required name="day" value="Thursday">
+                                        Thursday
+                                    </label>
+
+
+                                </div>
+
+
+                                <input type="file" class="btn btn-secondary pull-left" name="myfile">
+                                <button type="submit" class="btn btn-primary pull-left">Upload</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </form>
+
+
+
+
+
+
+
+                <form action="/timebomb/" method="post">
+                    {% csrf_token %}
+
+                    <div class="col-lg-12 col-md-12">
+
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Time Bomb Settings</a>
+                                </b></h4>
+                                <p class="card-category">Clicking generate time bomb will generate a file in the server
+                                    with all the skus given in the list.</p>
+
+                            </div>
+                            <div align="center">
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th></th>
+                                    <th></th>
+
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+
+                                        <td>TO (EMAIL)</td>
+                                        <td><input type="text" name="receiver_email" value="ujjal@findsports.com.au"
+                                                   required></td>
+
+
+                                    </tr>
+                                    <tr>
+
+                                        <td><a class="btn btn-round btn-fill btn-info" href="/timebomb/test-import.csv"
+                                               target="_blank">Download
+                                            Existing File</a></td>
+                                        <td>
+                                            <input type="submit" class="btn btn-round btn-fill btn-danger"
+                                               name="force_generate" value="FORCE GENERATE TIMEBOMB"></td>
+                                    </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    {#                    <div align="center">#}
+                    {##}
+                    {#                        <input class="btn btn-round btn-fill btn-success" type="submit"#}
+                    {#                               value="Refresh Time Bomb File">#}
+                    {##}
+                    {##}
+                    {#                    </div>#}
+
+
+                </form>
+                <div align="center">
+                    {% for message in messages %}
+                        <h3>
+                            {{ message }}
+                        </h3>
+                    {% endfor %}
+                </div>
+
+
+            {% else %}
+                <h1>Permission not granted! Please contact Admin!</h1>
+            {% endif %}
+
+        </div>
+
+
+    </div>
+</div>
+<script>
+    {#M.toast({html:"{{ supplier_message|safe }}",classes:'blue'})#}
+    alert("Warning This is a highly sensitive page .Please get admin approval before making any changes.")
+</script>
+
+{% include "mastertemplates/jsfiles.html" %}

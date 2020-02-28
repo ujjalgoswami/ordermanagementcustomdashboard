@@ -1,0 +1,291 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+        {% for key,value in dict_subpoid_details.items %}
+     <div class="row">
+
+            <div class="col-lg-8 col-md-12">
+
+
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title"><b> Purchase Order Details </b> <a
+                                href="#"><img class="img"
+                                                                                                        src="{% static  '/img/download.png' %}"
+                                                                                                        height="30px"/></a>
+                        </h4>
+                        <p class="card-category">
+
+                        <div class="col-lg-12 col-md-12">
+                            {% if tracking %}
+                                <a target="_blank" href="{{ courier_link }}"
+                                   class="btn btn-round btn-fill btn-success">Track
+                                    Purchase Order</a>
+                            {% else %}
+                                <a href="#" class="btn btn-round btn-fill btn-danger">Track Purchase Order</a>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            {% if purchase_order_submitted %}
+                                <h3><img class="img" src="{% static  '/img/check.png' %}" height="45px"/> Submitted
+                                    on {{ purchase_order_submitted_date }}</h3>
+                            {% else %}
+
+                                <h3><img class="img" src="{% static  '/img/error-flat.png' %}" height="30px"/>
+                                    Purchase Order not submitted!</h3>
+
+                            {% endif %}
+                        </div>
+
+
+                        </p>
+
+                    </div>
+                    <div class="card-body table-responsive">
+                        <form action="changepurchaseorderstatus" method="post">
+                            {% csrf_token %}
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+            <tr>
+                                    <td><b>SUB-PO-ID</b></td>
+                                    <td><b>{{ key }}</b></td>
+                                    <input type="text" class="btn btn-round btn-fill btn-success" name="pid"
+                                           value="{{ key }}" hidden/>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Purchase Order ID</b></td>
+                                    <td><b>{{ value.purchaseorderid }}</b></td>
+                                    <input type="text" class="btn btn-round btn-fill btn-success" name="pid"
+                                           value="{{ value.purchaseorderid }}" hidden/>
+
+                                </tr>
+
+                                <tr>
+                                    <td><b>Tracking ID</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="trackingid"
+                                               value="{{ value.trackingid }}"/>
+
+                                    </b></td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Courier Name</b></td>
+                                    <td><b>
+
+                                        <input type="text" class="form-control" name="courier"
+                                               value="{{ value.courier }}"/>
+                                    </b>
+                                        <label class="bmd-label-floating">startrack , geelong express , fastway ,
+                                            tasmania freight , tnt , Aus post</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>Alias</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="alias"
+                                                   value="{{ value.alias }}"/>
+                                    </b></td>
+                                </tr>
+
+
+
+
+
+                                </tbody>
+                            </table>
+
+                            <div align="center">
+                                <input type="submit" name="save" disabled class="btn btn-round btn-fill btn-info"
+                                       value="Update Purchase Order"/>
+                            </div>
+                            <div align="center">
+
+                                {% if purchase_order_submitted %}
+                                    <input type="submit" name="unsubmit" disabled class="btn btn-round btn-fill btn-danger"
+                                           value="UnSubmit Purchase Order"/>
+                                {% else %}
+                                    <input type="submit" name="submit" disabled class="btn btn-round btn-fill btn-success"
+                                           value="Submit Purchase Order"/>
+                                    {% if eligible %}
+                                        <p><b>{{ msg }}</b></p>
+                                    {% else %}
+                                        <p><b>{{ msg }}</b></p>
+                                    {% endif %}
+
+                                {% endif %}
+
+
+
+                                <div align="center">
+                                    {% for message in messages %}
+                                        <h3>
+                                            {{ message }}
+                                        </h3>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title"><b><a href="?download=purchaseorders"> Products Details</a> </b></h4>
+
+
+                    </div>
+                    <div class="card-body table-responsive">
+
+                        <table id="notrefunded" class="table table-hover">
+                            <thead class="text-warning">
+                            <th><b>Orderlineid</b></th>
+                            <th><b>SKU</b></th>
+                            <th><b>QTY</b></th>
+                            <th><b>Part No</b></th>
+                            <th><b>Stock</b></th>
+
+
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><b>{{ value.orderlineid }}</b></td>
+                                    <td><b>{{ value.sku }}</b></td>
+                                    <td><b>{{ value.qty }}</b></td>
+                                    <td><b>{{ value.partnumber }}</b></td>
+                                    <td><b>{{ value.stock }}</b></td>
+                                    <td>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+
+                                                {% if purchase_order_submitted %}
+                                                    <input class="form-check-input" type="checkbox"
+                                                           name="{{ value.orderlineid }}:dropship" disabled
+                                                           value="False">
+
+                                                {% else %}
+                                                    <input class="form-check-input" type="checkbox"
+                                                           name="{{ value.orderlineid }}:dropship" value="False">
+
+                                                {% endif %}
+
+
+                                            </label>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
+            </form>
+
+
+    <div class="col-lg-4 col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Customer Details</a> </b></h4>
+                                <p class="card-category"></p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+
+
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th><b></b></th>
+                                    <th><b></b></th>
+                                    </thead>
+                                    <tbody>
+
+
+                                        <tr>
+                                        <td><b>ShipFirstName</b></td>
+                                        <td>{{ value.ShipFirstName }}</td>
+                                        </tr>
+                                          <tr>
+                                        <td><b>ShipLastName</b></td>
+                                        <td>{{ value.ShipLastName }}</td>
+                                        </tr>
+                                              <tr>
+                                        <td><b>ShippingOption</b></td>
+                                        <td>{{ value.ShippingOption }}</td>
+                                        </tr>
+                                             <tr>
+                                        <td><b>ShipStreetLine1</b></td>
+                                        <td>{{ value.ShipStreetLine1 }}</td>
+                                        </tr>
+                                           <tr>
+                                        <td><b>ShipCity</b></td>
+                                        <td>{{ value.ShipCity }}</td>
+                                        </tr>
+                                        <tr>
+                                        <td><b>ShipState</b></td>
+                                        <td>{{ value.ShipState }}</td>
+                                        </tr>
+                                      <tr>
+                                        <td><b>ShipCountry</b></td>
+                                        <td>{{ value.ShipCountry }}</td>
+                                        </tr>
+
+                                      <tr>
+                                        <td><b>ShippingSignature</b></td>
+                                        <td>{{ value.ShippingSignature }}</td>
+                                        </tr>
+                                      <tr>
+                                        <td><b>ShipPhone</b></td>
+                                        <td>{{ value.ShipPhone }}</td>
+                                        </tr>
+
+                                         <tr>
+                                        <td><b>DeliveryInstruction</b></td>
+                                        <td>{{ value.DeliveryInstruction }}</td>
+                                        </tr>
+
+                                      <tr>
+                                        <td><b>ShipPostCode</b></td>
+                                        <td>{{ value.ShipPostCode }}</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+<hr>
+        {% endfor %}
+
+
+
+
+
+
+
+
+
+        {% include "mastertemplates/jsfiles.html" %}
+
+

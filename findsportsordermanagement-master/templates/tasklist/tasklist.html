@@ -1,0 +1,744 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<!-- End Navbar -->
+<style>
+    .controls {
+        display: flex;
+    }
+
+    .radio {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    .controls2 {
+        display: flex;
+    }
+
+    .radio2 {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    a.test {
+        color: white;
+    }
+
+
+</style>
+
+<div class="content">
+    <div class="container-fluid">
+        {% if request.user.is_staff %}
+            <div class="row">
+
+
+                <div class="col-md-12">
+                    <input id="newticketbutton" class="btn btn-round btn-fill btn-danger" type="submit"
+                           name="close"
+                           value="CREATE NEW TASK">
+                    <input id="newgroupbutton" class="btn btn-round btn-fill btn-danger" type="submit"
+                           name="close"
+                           value="CREATE NEW GROUP">
+                    <div id="newticketdiv" style="display:none;" align="center">
+
+                        <h2>Creating New Task</h2>
+                        <p>Note: This feature can be used to assign tasks to yourself or others
+                            .</p>
+
+
+                        <div align="center">
+
+                            <div class="card-body table-responsive">
+                                <form id="newtaskform" name="newtask" action="newtask" method="POST">
+                                    {% csrf_token %}
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th style="width: 250px;"><b></b></th>
+                                        <th><b></b></th>
+
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td><b> Task Description</b></td>
+                                            <td><b>
+                                                        <textarea rows="4" name="task_description" cols="10" value=""
+                                                                  required
+                                                                  class="form-control"></textarea>
+
+
+                                            </b></td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b>Assigned By</b><br>
+                                                <p>Note: Select your name if you are creating this task</p></td>
+                                            <td>
+                                                <div class="controls2">
+                                                    {% for item in list_of_customer_service_reps %}
+
+
+                                                        <label class="radio2">
+                                                            <input type="radio"
+                                                                   {% if assigned_to == item %}checked="checked"{% endif %}
+                                                                   required name="assignedfrom" value="{{ item }}">
+                                                            {{ item }}
+                                                        </label>
+
+
+
+                                                    {% endfor %}
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b>Priority(Highest=5)</b>
+                                                <p>Note: 5 is the highest priority!</p>
+                                            </td>
+                                            <td>
+
+                                                <div class="controls">
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               required name="priority" value="1">
+                                                        1
+                                                    </label>
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               required name="priority" value="2">
+                                                        2
+                                                    </label>
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               required name="priority" value="3">
+                                                        3
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               required name="priority" value="4">
+                                                        4
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               required name="priority" value="5">
+                                                        5
+                                                    </label>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b>Assigned To</b>
+                                                <p>Note: Select your name if the task is for you</p></td>
+                                            <td>
+                                                <div class="controls2">
+                                                    {% for item in list_of_customer_service_reps %}
+
+
+                                                        <label class="radio2">
+
+                                                            <input type="radio"
+                                                                    {% if assigned_to == item %}checked="checked"{% endif %}
+                                                                   required name="assignedto" value="{{ item }}">
+                                                            {{ item }}
+                                                        </label>
+
+
+
+                                                    {% endfor %}
+                                                </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><b> Estimated End Date</b></td>
+                                            <td><b>
+                                                <input type="date" class="form-control" name="estimated_end_date" value=""
+                                                       placeholder="MM/DD/YYYY"
+                                                       required
+                                                      >
+
+                                            </b></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><b>Groups:</b>
+                                                <p>Note: Selecting a group will override the Assigned to person as
+                                                    Groups are for personal tasks.</p>
+                                            </td>
+                                            <td>{% if showgroups %}
+                                                <div class="controls2">
+                                                    {% for group in list_of_available_task_groups %}
+
+
+                                                        <label class="radio2">
+                                                            <input type="radio"
+                                                                   name="task_group" value="{{ group }}">
+                                                            {{ group }}
+                                                        </label>
+
+
+
+                                                    {% endfor %}
+                                                </div>
+                                            {% else %}
+                                                <h2>No groups created!</h2>
+                                            {% endif %}
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <div align="center">
+
+                                                    <input id="btn_create_task"
+                                                           class="btn btn-round btn-fill btn-success" type="submit"
+                                                           name="open"
+                                                           value="CREATE TASK">
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div id="newgroupdiv" style="display:none;" align="center">
+
+                        <h2>Creating New Group</h2>
+                        <p>Note: This feature can be used to put tasks in a new group. Groups are private and are meant
+                            for personal use only. If you wish to transfer a task belonging to a group to another
+                            person, You can do that in the task details section.
+                            .</p>
+
+
+                        <div align="center">
+
+                            <div class="card-body table-responsive">
+                                <form id="newgroupform" name="newgroup" action="newgroup" method="POST">
+                                    {% csrf_token %}
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th><b></b></th>
+                                        <th><b></b></th>
+
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td><b> Group Name</b></td>
+                                            <td><b>
+
+                                                <input type="text" name="group_name" value=""
+                                                       required
+                                                       class="form-control">
+
+                                            </b></td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <div align="center">
+
+                                                    <input id="btn_create_group"
+                                                           class="btn btn-round btn-fill btn-success" type="submit"
+                                                           name="open"
+                                                           value="CREATE GROUP">
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="card card-plain">
+                        <div class="card-header card-header-tabs card-header-primary">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title"></span>
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="nav-item">
+                                                <a class="nav-link " href="/tasklist">
+                                                    <i class="material-icons">group_work</i>
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+                                        {% for key,value in customer_service_users_with_pending_task_count_dict.items %}
+
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="?assigned_to={{ key }}">
+                                                    <i class="material-icons">account_circle</i> {{ key }}
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+{#                                            <a href="#" class="test">{{ value }}#}
+{#                                            </a>#}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    {% if showfilters %}
+                        <div class="card-header card-header-tabs card-header-primary">
+                            <div class="nav-tabs-navigation">
+                                <div class="nav-tabs-wrapper">
+                                    <span class="nav-tabs-title"></span>
+                                    <ul class="nav nav-tabs" data-tabs="tabs">
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="?type=ONGOING">
+                                                <i class="material-icons">assignment</i> ONGOING TASKS
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="?type=PIPELINE">
+                                                <i class="material-icons">assignment_returned</i> PIPELINE
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="?type=COMPLETED">
+                                                <i class="material-icons">assignment_turned_in</i> COMPLETED
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <br><br>
+
+
+                        <div class="content">
+                            <div class="container-fluid">
+
+                                <div class="row">
+
+                                    {% if showtasks %}
+
+                                        {% if show_recurring_tasks %}
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b>RECURRING CHECKLIST FOR TODAY
+                                                        </b></h4>
+                                                        <p>Note: After completing the tasks please click on the check
+                                                            icon beside it to mark the item as done for the day. It will
+                                                            again show up on the next day.</p>
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+
+                                                            <th><b>Task</b></th>
+                                                            <th><b></b></th>
+
+
+                                                            </thead>
+                                                            <tbody>
+
+                                                            {% for task in  recurring_tasks_lists %}
+                                                                <form action="recurring_task_completed" method="POST">
+                                                                    {% csrf_token %}
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="/tasklist?id={{ task.0 }}">{{ task.1 }}</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" name="task_id"
+                                                                                   value="{{ task.0 }}" hidden>
+                                                                            <input type="text" name="assigned_to" value="{{ assigned_to }}" hidden>
+
+                                                                            <input type="image"
+                                                                                   name="task_done"
+                                                                                   src="{% static  '/img/check.png' %}"
+                                                                                   height="30"
+                                                                                   title="Done">
+
+
+                                                                        </td>
+
+                                                                    </tr>
+                                                                </form>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            {#                                            <h2>Great Job {{ user.first_name }} !<br>All recurring tasks done for today.#}
+                                            {#                                            </h2>#}
+                                        {% endif %}
+
+
+
+
+
+
+                                        {% if showpending %}
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b>ONGOING TASKS FOR TODAY
+                                                        </b></h4>
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+                                                            <th><b>Priority</b></th>
+                                                            <th><b>Name</b></th>
+
+                                                            <th><b>Task</b></th>
+                                                            <th><b>Target</b></th>
+                                                            <th><b>Status</b></th>
+                                                            <th></th>
+
+
+                                                            </thead>
+                                                            <tbody>
+
+                                                            {% for task in pending_tasks_objects %}
+                                                                {% if task.7 %}
+                                                                    <tr bgcolor="#FFDD99">
+                                                                        {% else %}
+                                                                        {% if task.4 < 0 %}
+                                                                            <tr bgcolor="#FA8072">
+                                                                                {% else %}
+                                                                            <tr>
+                                                                        {% endif %}
+                                                                {% endif %}
+                                                            <td>
+                                                                {{ task.1 }}
+                                                            </td>
+                                                            <td>
+                                                                {{ task.2 }}
+                                                            </td>
+                                                            <td style="width:263px;word-wrap:break-word;">
+                                                                {{ task.3 }}
+                                                            </td>
+                                                            <td>
+                                                                {{ task.6 }}
+                                                            </td>
+                                                            <td>
+                                                                {% if task.4 < 0 %}
+                                                                    <b>Over Due</b>
+                                                                {% else %}
+                                                                    <b>{{ task.4 }}</b>
+                                                                {% endif %}
+                                                            </td>
+
+
+                                                            <td>
+                                                                <a href="/tasklist?id={{ task.0 }}" target="_blank">
+                                                                    <i class="material-icons">arrow_right_alt</i></a>
+                                                            </td>
+
+                                                            </tr>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if showpipeline %}
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b>TASKS IN PIPELINE
+                                                        </b></h4>
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+                                                            <th><b>Priority</b></th>
+                                                            <th><b>Name</b></th>
+
+                                                            <th><b>Task</b></th>
+
+                                                            <th></th>
+
+
+                                                            </thead>
+                                                            <tbody>
+
+                                                            {% for task in list_of_paused_tasks %}
+                                                                <tr>
+
+                                                                    <td>
+                                                                        {{ task.1 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.2 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.3 }}
+                                                                    </td>
+
+
+                                                                    <td>
+                                                                        <a href="/tasklist?id={{ task.0 }}"
+                                                                           target="_blank">
+                                                                            <i class="material-icons">arrow_right_alt</i></a>
+                                                                    </td>
+
+                                                                </tr>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if showcompleted %}
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b>COMPLETED TASKS
+                                                        </b></h4>
+                                                        <p>Note: Completed tasks will be removed after a week of being
+                                                            completed.</p>
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+                                                            <th><b>Priority</b></th>
+                                                            <th><b>Name</b></th>
+
+                                                            <th><b>Task</b></th>
+
+                                                            <th></th>
+
+
+                                                            </thead>
+                                                            <tbody>
+
+                                                            {% for task in list_of_completed_tasks %}
+                                                                <tr>
+
+                                                                    <td>
+                                                                        {{ task.1 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.2 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.3 }}
+                                                                    </td>
+
+
+                                                                    <td>
+                                                                        <a href="/tasklist?id={{ task.0 }}"
+                                                                           target="_blank">
+                                                                            <i class="material-icons">arrow_right_alt</i></a>
+                                                                    </td>
+
+                                                                </tr>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                        {% if show_grouped_tasks %}
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b>PRIVATE GROUPED TASKS
+                                                        </b></h4>
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+                                                            <th><b>Priority</b></th>
+                                                            <th><b>Name</b></th>
+
+                                                            <th><b>Task</b></th>
+                                                            <th><b>Target</b></th>
+                                                            <th><b>Group</b></th>
+                                                            <th></th>
+
+
+                                                            </thead>
+                                                            <tbody>
+
+
+                                                            {% for task in list_of_grouped_tasks %}
+
+                                                                <tr>
+
+                                                                    <td>
+                                                                        {{ task.1 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.2 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.3 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.6 }}
+                                                                    </td>
+                                                                    <td>
+                                                                        {{ task.7 }}
+                                                                    </td>
+
+
+                                                                    <td>
+                                                                        <a href="/tasklist?id={{ task.0 }}"
+                                                                           target="_blank">
+                                                                            <i class="material-icons">arrow_right_alt</i></a>
+                                                                    </td>
+
+                                                                </tr>
+
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% else %}
+                                        <h2>No Tasks found!</h2>
+                                    {% endif %}
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </div>
+        {% else %}
+            <div>
+                <h1>You are not authorized to view this page. Please contact Admin!</h1>
+            </div>
+        {% endif %}
+</div>
+</div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+
+        $("#newticketbutton").click(function () {
+
+            $("#newticketdiv").toggle();
+            $("#newgroupdiv").hide();
+        });
+        $("#newgroupbutton").click(function () {
+
+            $("#newgroupdiv").toggle();
+            $("#newticketdiv").hide();
+        });
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#newtaskform').submit(function (event) {
+            // disable to avoid double submission
+            $('#btn_create_task').attr('disabled', true);
+        });
+        $('#newgroupform').submit(function (event) {
+            // disable to avoid double submission
+            $('#btn_create_group').attr('disabled', true);
+        });
+    });
+</script>

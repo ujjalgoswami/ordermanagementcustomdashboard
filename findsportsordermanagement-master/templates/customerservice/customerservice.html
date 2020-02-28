@@ -1,0 +1,152 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-9 col-md-12">
+
+
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title"><b> Customer Service Tracker </b>
+                        <p class="card-category">
+
+                            This is a daily entry for customer service check
+
+                        </p>
+
+                    </div>
+                    <div class="card-body table-responsive">
+                        <form action="changepurchaseorderstatus" method="post">
+                            {% csrf_token %}
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+
+
+                                <tr>
+                                    <td><b>Purchase Order ID</b></td>
+                                    <td><b>{{ purchase_order_id }}</b></td>
+                                    <input type="text" class="btn btn-round btn-fill btn-success" name="pid"
+                                           value="{{ purchase_order_id }}" hidden/>
+
+                                </tr>
+
+                                <tr>
+                                    <td><b>Created Date</b></td>
+                                    <td><b>{{ purchase_order_created_date }}</b>
+
+                                        <input type="submit" name="movetoday"
+                                               class="btn btn-round btn-fill btn-info"
+                                               value="Change To Today"/>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Supplier Name</b></td>
+                                    <td><b>{{ purchase_order_suppliername }}</b></td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Total Cost</b></td>
+                                    <td><b>$ {{ costprice }}</b></td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Tracking ID</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="trackingid"
+                                               value="{{ purchase_order_trackingid }}"/>
+
+                                    </b></td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Courier Name</b></td>
+                                    <td><b>
+
+                                        <input type="text" class="form-control" name="courier"
+                                               value="{{ purchase_order_courier }}"/>
+                                    </b>
+                                        <label class="bmd-label-floating">startrack , geelong express , fastway ,
+                                            tasmania freight , tnt , Aus post</label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>Alias</b></td>
+                                    <td><b> <input type="text" class="form-control" name="alias"
+                                                   value="{{ purchase_order_submitted_alias }}"/>
+                                    </b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Received Date</b></td>
+                                    <td><b> {{ received_date }}
+                                    </b></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><b>Internal Notes</b></td>
+                                    <td><b> <input type="text" class="form-control" name="internal_notes"
+                                                   value="{{ internal_notes }}"/>
+                                    </b></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            {% if viewsubpurchaseorders %}
+                                <div align="center">
+
+                                    <a href="subpurchaseorders?pid={{ purchase_order_id }}" target="_blank"
+                                       class="btn btn-round btn-fill btn-success">View DropShip Purchase Orders</a>
+
+                                </div>
+                            {% endif %}
+                            <div align="center">
+                                <input type="submit" name="save" class="btn btn-round btn-fill btn-info"
+                                       value="Update Purchase Order"/>
+                            </div>
+                            <div align="center">
+
+                                {% if purchase_order_submitted %}
+                                    <input type="submit" name="unsubmit" class="btn btn-round btn-fill btn-danger"
+                                           value="UnSubmit Purchase Order"/>
+                                {% else %}
+                                    <input type="submit" name="submit" class="btn btn-round btn-fill btn-success"
+                                           value="Submit Purchase Order"/>
+                                    {% if eligible %}
+                                        <p><b>{{ msg }}</b></p>
+                                    {% else %}
+                                        <p><b>{{ msg }}</b></p>
+                                    {% endif %}
+
+                                {% endif %}
+
+
+                            </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            </form>
+
+
+        </div>
+
+
+        {% include "mastertemplates/jsfiles.html" %}
+
+

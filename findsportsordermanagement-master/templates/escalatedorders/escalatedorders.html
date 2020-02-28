@@ -1,0 +1,437 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<!-- End Navbar -->
+
+
+<div class="content">
+    <div class="container-fluid">
+    {% if request.user.is_staff %}
+        <div class="row">
+
+
+
+            <div class="col-md-12">
+                <input id="newticketbutton" class="btn btn-round btn-fill btn-danger" type="submit"
+                       name="close"
+                       value="CREATE NEW TICKET">
+                <div id="newticketdiv" style="display:none;" align="center">
+                    {#                <div id="newticketdiv" >#}
+
+                    <h2>Assigning New Ticket</h2>
+                    <p>Note: This feature can be used to assign items which don't have any Order ID attached to it .</p>
+
+
+                    <div align="center">
+
+                        <div class="card-body table-responsive">
+                            <form name="newticket" action="newticket" method="POST">
+                                {% csrf_token %}
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th><b></b></th>
+                                    <th><b></b></th>
+
+
+                                    </thead>
+                                    <tbody>
+
+                                    <tr>
+                                        <td><b> Internal Notes</b></td>
+                                        <td><b>
+                                                        <textarea rows="4" name="internalnotes" cols="10" value=""
+                                                                  required
+                                                                  class="form-control"></textarea>
+
+
+                                        </b></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><b> Zendesk #</b></td>
+                                        <td><b>
+                                            <input type="text" class="form-control"
+                                                   name="zendesk"
+                                                   value=""
+                                            >
+
+
+                                        </b></td>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><b> Operator Name</b></td>
+                                        <td><b>
+                                            <input type="text" class="form-control"
+                                                   placeholder="Name of Handler"
+                                                   name="handler" required
+                                                   value="{{ handler }}">
+
+
+                                        </b></td>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><b>Priority(Highest=5)</b></td>
+                                        <td>
+
+                                            <div class="controls">
+
+
+                                                <label class="radio">
+                                                    <input type="radio"
+                                                           required name="priority" value="1">
+                                                    1
+                                                </label>
+
+
+                                                <label class="radio">
+                                                    <input type="radio"
+                                                           required name="priority" value="2">
+                                                    2
+                                                </label>
+
+                                                <label class="radio">
+                                                    <input type="radio"
+                                                           required name="priority" value="3">
+                                                    3
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio"
+                                                           required name="priority" value="4">
+                                                    4
+                                                </label>
+                                                <label class="radio">
+                                                    <input type="radio"
+                                                           required name="priority" value="5">
+                                                    5
+                                                </label>
+                                            </div>
+
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Escalation Type</b></td>
+                                        <td>
+
+                                            <div class="controls">
+
+
+                                                <label class="radio2">
+                                                    <input type="radio"
+                                                           required name="escalate" value="tracking">
+                                                    Tracking
+                                                </label>
+
+
+                                                <label class="radio2">
+                                                    <input type="radio"
+                                                           required name="escalate" value="refunds">
+                                                    Refunds
+                                                </label>
+
+                                                <label class="radio2">
+                                                    <input type="radio"
+                                                           required name="escalate" value="others">
+                                                    Others
+                                                </label>
+                                            </div>
+
+
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><b>Assigned To</b></td>
+                                        <td>
+                                            <div class="controls2">
+                                                {% for item in list_of_customer_service_reps %}
+
+
+                                                    <label class="radio2">
+                                                        <input type="radio"
+                                                               {% if assigned_to == item %}checked="checked"{% endif %}
+                                                               required name="assignedto" value="{{ item }}">
+                                                        {{ item }}
+                                                    </label>
+
+
+
+                                                {% endfor %}
+                                            </div>
+
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="2">
+                                            <div align="center">
+
+                                                <input class="btn btn-round btn-fill btn-danger" type="submit"
+                                                       name="open"
+                                                       value="Escalate">
+
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="card card-plain">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title"></span>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+
+                                    {% for item in list_of_customer_service_reps %}
+
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="?handler={{ item }}">
+                                                <i class="material-icons">account_circle</i> {{ item }}
+                                                <div class="ripple-container"></div>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title"></span>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        {#                                                <a href="?order_status=New" >#}
+                                        {#                                                <a class="nav-link active" href="#profile" data-toggle="tab">#}
+                                        <a class="nav-link " href="?escalation_status=tracking">
+                                            <i class="material-icons">code</i> Tracking
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                        {#                                                </a>#}
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="?escalation_status=refunds">
+                                            <i class="material-icons">code</i> Refunds
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="?escalation_status=others">
+                                            <i class="material-icons">code</i> Others
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="?escalation_status=resolved">
+                                            <i class="material-icons">code</i> Resolved
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <div class="container-fluid">
+
+
+                            <div class="row">
+
+
+                                {% if showorders %}
+                                    <div class="col-lg-12 col-md-12">
+
+                                        <div class="card">
+                                            <div class="card-header card-header-warning">
+                                                <h4 class="card-title"><b>ESCALATED OPEN ORDERS
+                                                </b></h4>
+                                            </div>
+                                            <div class="card-body table-responsive">
+                                                <table id="notrefunded" class="table table-hover">
+                                                    <thead class="text-warning">
+                                                    <th><b>Order ID</b></th>
+                                                    <th><b>Zendesk</b></th>
+
+                                                    <th><b>Internal Notes</b></th>
+                                                    <th><b>Handler</b></th>
+                                                    <th><b>Status</b></th>
+                                                    <th><b>Hrs</b></th>
+
+                                                    </thead>
+                                                    <tbody>
+
+                                                    {% for order in List_of_escalated_orders %}
+                                                        {% if order.6 >= 24 %}
+                                                            <tr bgcolor="#FA8072">
+                                                                {% else %}
+                                                            <tr>
+                                                        {% endif %}
+                                                    <td>
+                                                        <a href="/orders/?order_id={{ order.0 }}"
+                                                           target="_blank">{{ order.0 }}</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://findsports.zendesk.com/agent/tickets/{{ order.5 }}"
+                                                           target="_blank">{{ order.5 }}</a>
+                                                    </td>
+                                                    <td>
+                                                        {{ order.2 }}
+                                                    </td>
+                                                    <td>
+                                                        {{ order.3 }}
+                                                    </td>
+                                                    <td>
+                                                        {{ order.4 }}
+                                                    </td>
+                                                    <td>
+                                                        {{ order.6 }}
+                                                    </td>
+
+                                                    </tr>
+                                                    {% endfor %}
+
+
+                                                    </tbody>
+                                                </table>
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                {% else %}
+                                    <h2>No escalated orders found!</h2>
+
+                                {% endif %}
+
+                                {% if showorders2 %}
+
+                                    <div class="col-lg-12 col-md-12">
+                                    <div class="card">
+                                    <div class="card-header card-header-warning">
+                                        <h4 class="card-title"><b>INDEPENDENT ESCALATED OPEN ORDERS
+                                        </b></h4>
+                                    </div>
+                                    <div class="card-body table-responsive">
+                                        <table id="notrefunded" class="table table-hover">
+                                            <thead class="text-warning">
+                                            <th><b>Zendesk</b></th>
+
+                                            <th><b>Internal Notes</b></th>
+                                            <th><b>Handler</b></th>
+                                            <th><b>Status</b></th>
+                                            <th><b>Hrs</b></th>
+                                            <th><b></b></th>
+
+                                            </thead>
+                                            <tbody>
+                                            <form name="updateticket" action="updateticket" method="POST">
+                                                {% csrf_token %}
+
+                                                {% for order in List_of_escalated_orders2 %}
+                                                    <tr>
+
+                                                        <td>
+                                                            <a href="https://findsports.zendesk.com/agent/tickets/{{ order.4 }}"
+                                                               target="_blank">{{ order.4 }}</a>
+                                                        </td>
+                                                        <td>
+                                                            {{ order.1 }}
+                                                        </td>
+                                                        <td>
+                                                            {{ order.2 }}
+                                                        </td>
+                                                        <td>
+                                                            {{ order.3 }}
+                                                        </td>
+                                                        <td>
+                                                            {{ order.6 }}
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" class="form-control"
+                                                                   name="independent_ticket_id"
+                                                                   value="{{ order.5 }}" hidden
+                                                            >
+                                                            <input class="btn btn-round btn-fill btn-success"
+                                                                   type="submit"
+                                                                   value="Done">
+
+                                                        </td>
+
+                                                    </tr>
+                                                {% endfor %}
+                                            </form>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                {% else %}
+                                    <h2></h2>
+
+                                {% endif %}
+
+
+                                </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      {% else %}
+     <div>
+         <h1>You are not authorized to view this page. Please contact Admin!</h1>
+     </div>
+    {% endif %}
+    </div>
+</div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+{##}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+
+        $("#newticketbutton").click(function () {
+
+            $("#newticketdiv").toggle();
+        });
+
+    });
+</script>

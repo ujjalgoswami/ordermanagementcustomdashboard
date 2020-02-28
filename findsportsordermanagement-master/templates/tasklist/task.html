@@ -1,0 +1,360 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<style>
+    .controls {
+        display: flex;
+    }
+
+    .radio {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    .controls2 {
+        display: flex;
+    }
+
+    .radio2 {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+</style>
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            {% if request.user.is_staff %}
+                <div class="col-md-12 ml-auto mr-auto">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">FINDSPORTS TASK DETAILS </h4>
+                            <p class="card-category"></p>
+                        </div>
+                        <div class="card-body">
+
+
+                            <div align="center">
+                                <div class="card-body table-responsive">
+                                    <form id="existingtaskform" action="updatetask" method="post">
+                                        {% csrf_token %}
+                                        <table class="table table-hover">
+                                            <thead class="text-warning">
+                                            <th><b></b></th>
+                                            <th><b></b></th>
+
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td><b> Task Notes</b></td>
+                                                <td><b>
+                                                        <textarea rows="4" name="task_description" cols="10" value=""
+                                                                  required
+                                                                  class="form-control">{{ task_description }}</textarea>
+
+
+                                                </b></td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Start Date</b></td>
+                                                <td><b>
+                                                    <input type="text" name="start_date" value="{{ start_date }}"
+                                                           required
+                                                           class="form-control" readonly>
+                                                    <input type="text" name="task_id" value="{{ task_id }}"
+                                                           required
+                                                           class="form-control" hidden>
+
+                                                </b></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td><b>Estimated Completion Date</b>
+                                                <p>Note: The current completion date is {{ estimated_end_date }}<br>If you change this date then your task will be highlighted as 'Extended'.</p>
+
+                                                </td>
+                                                <td><b>
+                                                    <input type="date" name="estimated_end_date" min="{{ current_date }}" value="{{ estimated_end_date }}"
+                                                       placeholder="MM/DD/YYYY"
+
+                                                       class="form-control">
+
+
+
+
+                                                </b></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td><b>Completed Date</b></td>
+                                                <td><b>
+                                                    <input type="text" name="completed_date"
+                                                           value="{{ completed_date }}"
+                                                           required
+                                                           class="form-control" readonly>
+
+                                                </b></td>
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <td><b>Priority(Highest=5)</b></td>
+                                                <td>
+
+                                                    <div class="controls">
+
+
+                                                        <label class="radio">
+                                                            <input type="radio"
+                                                                   {% if task_priority == 1 %}checked="checked"{% endif %}
+                                                                   required name="priority" value="1">
+                                                            1
+                                                        </label>
+
+
+                                                        <label class="radio">
+                                                            <input type="radio"
+                                                                   {% if task_priority == 2 %}checked="checked"{% endif %}
+                                                                   required name="priority" value="2">
+                                                            2
+                                                        </label>
+
+                                                        <label class="radio">
+                                                            <input type="radio"
+                                                                   {% if task_priority == 3 %}checked="checked"{% endif %}
+                                                                   required name="priority" value="3">
+                                                            3
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"
+                                                                   {% if task_priority == 4 %}checked="checked"{% endif %}
+                                                                   required name="priority" value="4">
+                                                            4
+                                                        </label>
+                                                        <label class="radio">
+                                                            <input type="radio"
+                                                                   {% if task_priority == 5 %}checked="checked"{% endif %}
+                                                                   required name="priority" value="5">
+                                                            5
+                                                        </label>
+                                                    </div>
+                                                    <div align="center"><input id="btn_update_task"
+                                                                               class="btn btn-round btn-fill btn-danger"
+                                                                               type="submit"
+                                                                               name="task_submit_type"
+                                                                               value="MOVE TO HIGHEST PRIORITY">
+                                                        <p>WARNING: All other tasks for this user will de-prioritized by
+                                                            level 1 automatically</p>
+                                                    </div>
+
+
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td><b>Assigned To</b></td>
+                                                <td>
+                                                    <div class="controls2">
+                                                        {% for item in list_of_customer_service_reps %}
+
+                                                            <label class="radio2">
+                                                                <input type="radio"
+                                                                       {% if name == item %}checked="checked"{% endif %}
+                                                                       required name="assignedto" value="{{ item }}">
+                                                                {{ item }}
+                                                            </label>
+
+
+
+                                                        {% endfor %}
+
+                                                    </div>
+                                                    {% if is_group_present %}
+                                                        <p>WARNING: This task belongs to a group. Assigning it to
+                                                            someone else will remove this task from the existing group
+                                                            and make this task public.</p>
+                                                    {% endif %}
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td><b>Recurring Task</b></td>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" name="recurring"
+                                                                   type="checkbox"
+                                                                   {% if recurring_task_object.monday %}checked=""{% endif %}
+                                                                   value="Monday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Monday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.tuesday %}checked=""{% endif %}value="Tuesday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Tuesday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.wednesday %}checked=""{% endif %}value="Wednesday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Wednesday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.thursday %}checked=""{% endif %}
+                                                                   value="Thursday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Thursday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.friday %}checked=""{% endif %}
+                                                                   value="Friday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Friday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.saturday %}checked=""{% endif %}
+                                                                   value="Saturday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Saturday
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                   name="recurring"
+                                                                   {% if recurring_task_object.sunday %}checked=""{% endif %}
+                                                                   value="Sunday"
+                                                            >
+                                                            <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                        </label>
+                                                        Sunday
+                                                    </div>
+
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div align="center">
+
+                                                        {% if completed %}
+                                                            <h2>This task has been marked as completed !</h2>
+                                                        {% else %}
+                                                            <input id="btn_update_task"
+                                                                   class="btn btn-round btn-fill btn-info" type="submit"
+                                                                   name="task_submit_type"
+                                                                   value="Update">
+                                                            {% if paused %}
+                                                                <input id="btn_resume_task"
+                                                                       class="btn btn-round btn-fill btn-success"
+                                                                       type="submit"
+                                                                       name="task_submit_type"
+                                                                       value="Resume">
+                                                            {% else %}
+                                                                <input id="btn_pause_task"
+                                                                       class="btn btn-round btn-fill btn-danger"
+                                                                       type="submit"
+                                                                       name="task_submit_type"
+                                                                       value="Push To Pipeline">
+                                                            {% endif %}
+                                                            <input id="btn_complete_task"
+                                                                   class="btn btn-round btn-fill btn-success"
+                                                                   type="submit"
+                                                                   name="task_submit_type"
+                                                                   value="Completed">
+                                                        {% endif %}
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><b> History</b></td>
+                                                <td><b>
+                                                        <textarea rows="15" cols="10" name="history" value="" readonly
+                                                                  class="form-control">{{ history }}</textarea>
+
+                                                </b></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td><b>USER LOG</b></td>
+                                                <td><b>
+                                                      <textarea rows="15" cols="10" value="" readonly
+                                                                  class="form-control">{{ recurring_task__log_object }}</textarea>
+
+                                                </b></td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% include "mastertemplates/jsfiles.html" %}

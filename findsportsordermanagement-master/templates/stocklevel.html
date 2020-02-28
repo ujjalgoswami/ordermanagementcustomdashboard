@@ -1,0 +1,415 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+
+        <!-- End Navbar -->
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+{#                    <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                        <div class="card card-stats">#}
+{#                            <div class="card-header card-header-warning card-header-icon">#}
+{#                                <div class="card-icon">#}
+{#                                    <i class="material-icons">content_copy</i>#}
+{#                                </div>#}
+{#                                <p class="card-category">Used Space</p>#}
+{#                                <h3 class="card-title">49/50#}
+{#                                    <small>GB</small>#}
+{#                                </h3>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons text-danger">warning</i>#}
+{#                                    <a href="#pablo">Get More Space...</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                        <div class="card card-stats">#}
+{#                            <div class="card-header card-header-success card-header-icon">#}
+{#                                <div class="card-icon">#}
+{#                                    <i class="material-icons">store</i>#}
+{#                                </div>#}
+{#                                <p class="card-category">Revenue</p>#}
+{#                                <h3 class="card-title">$34,245</h3>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">date_range</i> Last 24 Hours#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                        <div class="card card-stats">#}
+{#                            <div class="card-header card-header-danger card-header-icon">#}
+{#                                <div class="card-icon">#}
+{#                                    <i class="material-icons"><img class="img" src="{% static  '/img/catch/catchlogo.svg' %}" /></i>#}
+{#                                </div>#}
+{#                                <p class="card-category">Missing Tracking IDS</p>#}
+{#                                <h3 class="card-title">{{ missing_tracking_ids }}</h3>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">local_offer</i> Synced from Neto#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                        <div class="card card-stats">#}
+{#                            <div class="card-header card-header-danger card-header-icon">#}
+{#                                <div class="card-icon">#}
+{#                                    <i class="material-icons"><img class="img" src="{% static  '/img/catch/catchlogo.svg' %}" /></i>#}
+{#                                </div>#}
+{#                                <p class="card-category">Issues</p>#}
+{#                                <h3 class="card-title">{{ pending_issues }}</h3>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">local_offer</i> Synced from Neto#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>#}
+{#    <script type="text/javascript">#}
+{#      google.charts.load('current', {'packages':['line']});#}
+{#      google.charts.setOnLoadCallback(drawChart);#}
+{##}
+{#    function drawChart() {#}
+{##}
+{#      var data = new google.visualization.DataTable();#}
+{#      data.addColumn('number', 'Orders');#}
+{#      data.addColumn('number', 'Catch');#}
+{#      data.addColumn('number', 'Website');#}
+{##}
+      {#[day,numberofdaysfor_catch,numberofdaysfor_amazon],#}
+{##}
+{#      data.addRows([#}
+{#        [1,  37.8, 80.8],#}
+{#        [2,  30.9, 69.5],#}
+{#        [3,  25.4,   57],#}
+{#        [4,  11.7, 18.8],#}
+{#        [5,  11.9, 17.6],#}
+{#        [6,  37.8, 80.8],#}
+{#        [7,  30.9, 69.5],#}
+{#        [8,  25.4,   57],#}
+{#        [9,  11.7, 18.8],#}
+{#        [10,  11.9, 17.6]#}
+{#      ]);#}
+{##}
+{#      var options = {#}
+{#        chart: {#}
+{#          title: 'Box Office Earnings in First Two Weeks of Opening',#}
+{#          subtitle: 'in millions of dollars (USD)'#}
+{#        },#}
+{#        width: 900,#}
+{#        height: 500,#}
+{#        axes: {#}
+{#          x: {#}
+{#            0: {side: 'top'}#}
+{#          }#}
+{#        }#}
+{#      };#}
+{##}
+{#      var chart = new google.charts.Line(document.getElementById('line_top_x'));#}
+{##}
+{#      chart.draw(data, google.charts.Line.convertOptions(options));#}
+{#    }#}
+{#  </script>#}
+{#                    <div id="line_top_x"></div>#}
+
+
+
+
+{#                    <div class="col-lg-3 col-md-6 col-sm-6">#}
+{#                        <div class="card card-stats">#}
+{#                            <div class="card-header card-header-info card-header-icon">#}
+{#                                <div class="card-icon">#}
+{#                                    <i class="fa fa-twitter"></i>#}
+{#                                </div>#}
+{#                                <p class="card-category">Followers</p>#}
+{#                                <h3 class="card-title">+245</h3>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">update</i> Just Updated#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+{#                <div class="row">#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="card card-chart">#}
+{#                            <div class="card-header card-header-success">#}
+{#                                <div class="ct-chart" id="dailySalesChart"></div>#}
+{#                            </div>#}
+{#                            <div class="card-body">#}
+{#                                <h4 class="card-title">Daily Sales</h4>#}
+{#                                <p class="card-category">#}
+{#                                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase#}
+{#                                    in today sales.</p>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">access_time</i> updated 4 minutes ago#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="card card-chart">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <div class="ct-chart" id="websiteViewsChart"></div>#}
+{#                            </div>#}
+{#                            <div class="card-body">#}
+{#                                <h4 class="card-title">Email Subscriptions</h4>#}
+{#                                <p class="card-category">Last Campaign Performance</p>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">access_time</i> campaign sent 2 days ago#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4">#}
+{#                        <div class="card card-chart">#}
+{#                            <div class="card-header card-header-danger">#}
+{#                                <div class="ct-chart" id="completedTasksChart"></div>#}
+{#                            </div>#}
+{#                            <div class="card-body">#}
+{#                                <h4 class="card-title">Completed Tasks</h4>#}
+{#                                <p class="card-category">Last Campaign Performance</p>#}
+{#                            </div>#}
+{#                            <div class="card-footer">#}
+{#                                <div class="stats">#}
+{#                                    <i class="material-icons">access_time</i> campaign sent 2 days ago#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+                <div class="row">
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title">Out of Stock Percentage</h4>
+                                <p class="card-category">Synced from Neto</p>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th>Supplier Name</th>
+                                     <th>Active</th>
+                                    <th>Back Order</th>
+                                    <th>Out of Stock</th>
+
+                                    <th>Percentage</th>
+
+                                    </thead>
+                                    <tbody>
+
+
+{% for supplier in suppliers_qty %}
+
+
+ {% if supplier.4 >= 65 %}
+                                    <tr bgcolor="#dc143c">
+                                     <td>{{supplier.3}}</td>
+                                         <td>{{supplier.0}}</td>
+                                        <td>{{ supplier.1 }}</td>
+                                         <td>{{supplier.2}}</td>
+                                        <td>{{supplier.4}}</td>
+
+
+                                    </tr>
+     {% else %}
+                                        <tr>
+                                     <td>{{supplier.3}}</td>
+                                         <td>{{supplier.0}}</td>
+                                        <td>{{ supplier.1 }}</td>
+                                         <td>{{supplier.2}}</td>
+                                        <td>{{supplier.4}}</td>
+
+
+                                    </tr>
+       {% endif %}
+
+
+{% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+{#                             <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">NOT REFUNDED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in not_refunded_orders %}#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{#                                        <td>{{ today|sub:order.updated_date }}</td>#}
+{#                                        <td>{{ order.completed_date|sub:order.invoice_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                                 <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">REFUNDS ISSUED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table id="redunds_issued" class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in refunded_orders %}#}
+{#               <tr bgcolor="#dc143c">#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{##}
+{#                                        <td>{{ order.completed_date|sub:order.updated_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+
+
+
+
+                     <div class="row">
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="card">
+      <div id="myFirstchart-container">{{ output|safe }}</div>
+                        </div>
+                    </div>
+{#                             <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">NOT REFUNDED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in not_refunded_orders %}#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{#                                        <td>{{ today|sub:order.updated_date }}</td>#}
+{#                                        <td>{{ order.completed_date|sub:order.invoice_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                                 <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">REFUNDS ISSUED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table id="redunds_issued" class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in refunded_orders %}#}
+{#               <tr bgcolor="#dc143c">#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{##}
+{#                                        <td>{{ order.completed_date|sub:order.updated_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+
+

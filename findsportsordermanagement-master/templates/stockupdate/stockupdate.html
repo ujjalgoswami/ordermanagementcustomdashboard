@@ -1,0 +1,213 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            {#                   showing list of purchase orders created on a specific date #}
+
+            {% if Permission %}
+
+                <div class="col-lg-12 col-md-12">
+                    {% if showdates %}
+                        <div class="col-lg-6 col-md-12">
+
+                            <div class="card">
+                                <div class="card-header card-header-warning">
+                                    <h4 class="card-title"><b><a href="?download=purchaseorders"> STOCK UPDATE DATES
+                                    </a> </b></h4>
+                                    <p class="card-category">Select a date to view all stock updates on that date</p>
+
+                                </div>
+                                <div class="card-body table-responsive" style="overflow-y: scroll; height:400px;">
+                                    <table id="notrefunded" class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th><b>Stock Updated On</b></th>
+
+                                        </thead>
+                                        <tbody>
+
+                                        {% for date in list_of_stock_update_created_on_dates %}
+
+
+                                            <tr>
+                                                <td><b><a href="?created_on={{ date }}">{{ date }}</a></b></td>
+
+                                            </tr>
+
+
+                                        {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    {% else %}
+
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Stock Update
+                                    Configuration</a>
+                                </b>
+                                </h4>
+                                <p class="card-category">NOTE! Before approving a stock update , make sure to import the
+                                    file and run it in Neto .</p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+                                <div align="center">
+                                <h3> Suppliers Stock Update Pending</h3>
+
+                                    {% for supplier in list_of_suppliers_not_been_stock_taken_today %}
+                                        <a href="#"
+                                           class="btn btn-round btn-fill btn-danger">{{ supplier }}</a>
+                                    {% endfor %}
+
+                                </div>
+
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+
+                                    <th>Supplier</th>
+
+                                    <th>OOS</th>
+                                    <th>InStock(P)</th>
+                                    <th>InStock(N)</th>
+                                    <th>PossNewProds</th>
+                                    <th>RT(Mins)</th>
+                                    <th>Comments</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+
+
+                                    </thead>
+                                    <tbody>
+
+                                    {% for value in stockupdate_items %}
+                                        <form action="/stockupdate/" method="post">
+                                            {% csrf_token %}
+                                            <tr>
+
+                                                <td><b>{{ value.1 }}
+                                                    <input type="text" name="run_id" hidden value="{{ value.0 }}">
+                                                </b></td>
+
+                                                <td><b>{{ value.4 }}</b></td>
+                                                <td><b>{{ value.5 }}</b></td>
+                                                <td><b>{{ value.6 }}</b></td>
+                                                <td><b>{{ value.9 }}</b></td>
+                                                <td><b>{{ value.7 }}</b></td>
+                                                <td><b>{{ value.8 }}</b></td>
+                                                <td><b>{{ value.3 }}</b></td>
+                                                <td><b>
+                                                    {% if value.3 != "Failed" %}
+
+
+                                                        <input type="image" name="download_stock_update"
+                                                               src="{% static  '/img/download.png' %}" height="30"
+                                                               title="Download">
+
+                                                    {% endif %}
+                                                </b>
+                                                </td>
+                                                <td><b>
+                                                    {% if value.3 != "Failed" %}
+
+                                                        {% if value.9 %}
+
+
+
+
+                                                            <input type="image" disabled name="approve_stock_update"
+                                                                   src="{% static  '/img/approved.png' %}" height="30"
+                                                                   title="Approve">
+
+
+                                                        {% else %}
+
+
+
+                                                            <input type="image" name="approve_stock_update"
+                                                                   src="{% static  '/img/approve.png' %}" height="30"
+                                                                   title="Approve">
+
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </b>
+                                                </td>
+                                                <td><b>
+                                                    {% if value.9 == False %}
+
+
+                                                        <input type="image" name="delete_stock_update"
+                                                               src="{% static  '/img/delete.png' %}" height="30"
+                                                               title="Delete">
+
+
+                                                    {% endif %}
+                                                </b>
+                                                </td>
+
+                                            </tr>
+                                        <input type="text" value="{{ created_on }}" name="created_on" hidden>
+                                        </form>
+                                    {% endfor %}
+
+
+                                    </tbody>
+                                </table>
+                                <div align="center">
+                                    <form action="bulkdownload" method="post">
+                                        {% csrf_token %}
+                                        <input type="text" name="created_on" value="{{ created_on }}" hidden>
+                                        <input type="submit" name="runcron" class="btn btn-round btn-fill btn-success"
+                                               value="Download All Approved Stocks">
+
+
+                                    </form>
+                                </div>
+                                <div align="center">
+
+                                        <form action="stockupdate_file_upload" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            <div class="col-lg-12 col-md-12">
+
+
+                                <div class="card">
+
+                                    <div class="card-body table-responsive">
+
+
+                                        <h2>For other suppliers</h2>
+                                        <ul>
+                                            <li><b>CAPEBYRON:</b> Download and rename the stockupdate file as CAPEBYRON_STOCK_UPDATE.xlsx and keep it in the downloads folder. Next run the CAPE_BYRON_STOCKUPDATE.py file.</p>
+                                            </li>
+                                        </ul>
+
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    {% endif %}
+                </div>
+            {% else %}
+                <h1>You don't have permission to authorize a stock update. Please contact Admin</h1>
+            {% endif %}
+
+        </div>
+
+{% include "mastertemplates/jsfiles.html" %}

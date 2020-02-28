@@ -1,0 +1,169 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+        <!-- End Navbar -->
+
+
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-stats">
+                            <a href="?marketplace=catch">
+                            <div class="card-header card-header-danger card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons"> <img class="img" src="{% static  '/img/catch/catchlogo.svg' %}" /> </i>
+                                </div>
+                                <p class="card-category">Marketplace</p>
+                                <h3 class="card-title">Catch</h3>
+                            </div>
+                            </a>
+                            <div class="card-footer">
+                                <div class="stats">
+                                    <i class="material-icons">local_offer</i> Marketplace
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="card-header card-header-tabs card-header-primary">
+                                <div class="nav-tabs-navigation">
+                                    <div class="nav-tabs-wrapper">
+                                        <span class="nav-tabs-title">Order Type:</span>
+                                        <ul class="nav nav-tabs" data-tabs="tabs">
+                                            <li class="nav-item">
+{#                                                <a href="?order_status=New" >#}
+{#                                                <a class="nav-link active" href="#profile" data-toggle="tab">#}
+                                                <a class="nav-link " href="?order_status=New&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> New
+                                                    <div class="ripple-container"></div>
+                                                </a>
+{#                                                </a>#}
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="?order_status=Pick&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> Pick
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="?order_status=New Backorder&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> New Backorder
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="?order_status=Backorder Approved&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> Backorder Approved
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link " href="?order_status=Dispatched&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> Dispatched
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+                                                                     <li class="nav-item">
+                                                <a class="nav-link " href="?order_status=Uncommitted&marketplace={{ marketplace }}" >
+                                                    <i class="material-icons">code</i> Uncommitted
+                                                    <div class="ripple-container"></div>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+
+                                    </div>
+                                </div>
+                            </div>
+{% if show_orders %}
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title mt-0"> Showing List of {{ order_status }} orders {{ marketplace }}</h4>
+                                <p class="card-category"> All orders are being fetched from neto</p>
+                            </div>
+
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="">
+                                        <th>
+                                            ORDER ID
+                                        </th>
+                                        <th>
+                                            Channel Name
+                                        </th>
+                                        <th>
+                                        Date Placed
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                        </thead>
+                                        <tbody>
+
+{% regroup list_of_order_dicts by order as order_details %}
+
+<ul>
+{% for order in order_details %}
+
+
+
+        {% for single_order in order.list %}
+
+              <tr>
+                                            <td>
+                                               <a href="order?orderid={{ single_order.OrderID }}" >{{ single_order.OrderID }}</a>
+                                            </td>
+                                            <td>
+                                                 {{ single_order.SalesChannel }}
+                                            </td>
+                                            <td>
+{{ single_order.DatePlaced }}
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+
+        {% endfor %}
+
+{% endfor %}
+</ul>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+ {% else %}
+    <div class="card-body">
+
+             <h1>Please select an order status</h1>
+                            </div>
+{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+
+

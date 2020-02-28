@@ -1,0 +1,85 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+     {% if request.user.is_staff %}
+        <div class="row">
+
+
+        <div class="col-lg-12 col-md-12">
+
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title"><b><a href="?download=purchaseorders"> Pending Refunds -</a> </b></h4>
+                                <p class="card-category">List of all pending refunds due to purchase order out of stock .These orderids have not been refunded,pending refund,dispatched </p>
+
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+
+                                    <th><b>ORDERID</b></th>
+                                    <th><b>ORDERLINEID</b></th>
+                                    <th><b>SKU</b></th>
+                                    <th><b>QTY</b></th>
+                                    <th><b>STOCK</b></th>
+                                    <th><b>PURCHASEORDERID</b></th>
+                                    <th><b>SUBMITTED DATE</b></th>
+                                    <th><b>InStoreAvailability</b></th>
+                                    <th><b>Status</b></th>
+                                    </thead>
+                                    <tbody>
+
+                                    {% for key,value in dict_orderlineid.items %}
+
+                                        <tr>
+                                         <form name="productavailableinstore" action="productavailableinstore" method="POST">
+                                                {% csrf_token %}
+                                            <td><b>
+                                                <a href="https://www.findsports.com.au/_cpanel/order/vieworder?id= {{ value.orderid }}"
+                                                target="_blank">
+                                                     {{ value.orderid }}
+                                                </a>
+                                               </b></td>
+                                            <td><b>{{ key }}
+                                            <input name="orderlineid" value="{{ key }}" hidden>
+                                            </b></td>
+                                        <td><b>{{ value.sku }}</b></td>
+                                        <td><b>{{ value.qty }}</b></td>
+                                        <td><b>{{ value.instock }}</b></td>
+                                        <td><b><a href="/purchaseorder?pid={{ value.purchase_orderid_id }}" target="_blank">{{ value.alias }}</a></b></td>
+                                        <td><b>{{ value.submitted_date }}</b></td>
+                                        <td>   <input type="submit" name="available_in_store"
+                                       class="btn btn-round btn-fill btn-success"
+                                       value="Available"/></td>
+                                                   <td>   <input type="submit" name="resolved"
+                                       class="btn btn-round btn-fill btn-success"
+                                       value="Resolved"/></td>
+                                         </form>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+        </div>
+        {% else %}
+     <div>
+         <h1>You are not authorized to view this page. Please contact Admin!</h1>
+     </div>
+    {% endif %}
+
+    </div>
+</div>
+
+{% include "mastertemplates/jsfiles.html" %}

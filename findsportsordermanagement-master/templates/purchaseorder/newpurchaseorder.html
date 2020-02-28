@@ -1,0 +1,196 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <form id="purchaseorderform" action="generatePurchaseOrder" method="post">
+                {% csrf_token %}
+
+                <div class="col-lg-12 col-md-12">
+
+
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b><a href="?download=purchaseorders"> Purchase Order Details</a>
+                            </b></h4>
+                            <p class="card-category">Total Order Cost Price: {{ costprice }}</p>
+
+                        </div>
+                        <div class="card-body table-responsive">
+
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+
+
+                                <tr>
+                                    <td><b>Created Date</b></td>
+                                    <td><b>
+                                        <div class="form-group bmd-form-group">
+
+                                            <input type="text" class="form-control" value="{{ today }}" disabled>
+                                            <input type="text" class="form-control" name="v_date" value="{{ today }}"
+                                                   hidden>
+                                        </div>
+
+                                    </b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>Supplier Name</b></td>
+                                    <td><b>
+                                        <div class="form-group bmd-form-group">
+
+                                            <input type="text" class="form-control" value="{{ supplier }}" disabled>
+
+                                            <input type="text" class="form-control" name="v_sup" value="{{ supplier }}"
+                                                   hidden>
+
+                                        </div>
+                                    </b></td>
+
+                                </tr>
+                                <tr>
+
+                                    {#                                    <td colspan="2"><b>{{  }}</b></td>#}
+
+
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b><a href="?download=purchaseorders"> Products Details</a> </b></h4>
+
+                        </div>
+                        <div class="card-body table-responsive">
+
+
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th><b>SKU</b></th>
+                                <th><b>Order ID</b></th>
+
+                                <th><b>Name</b></th>
+                                <th><b>Part No</b></th>
+                                <th><b>Qty</b></th>
+
+                                </thead>
+                                <tbody>
+                                {% for key,value in dict_sku_order_id_qty.items %}
+                                    <tr>
+                                        <td><b><label class="bmd-label-floating">{{ key.0 }}</label></b></td>
+                                        <input type="text" class="form-control" name="{{ key.0 }};{{ key.1 }}:sku"
+                                               value="{{ key.0 }}"
+                                               hidden>
+
+
+                                        <td><b><label class="bmd-label-floating">{{ key.1 }}</label></b>
+                                        </td>
+
+                                        <input type="text" class="form-control"
+                                               name="{{ key.0 }};{{ key.1 }}:orderid"
+                                               value="{{ key.1 }}" hidden>
+
+
+                                        <input type="text" class="form-control"
+                                               name="{{ key.0 }};{{ key.1 }}:order_line_id"
+                                               value="{{ value.order_line_id }}" hidden>
+
+
+                                        <td><b><label class="bmd-label-floating">{{ value.name }}</label></b>
+                                        </td>
+
+                                        <input type="text" class="form-control" name="{{ key.0 }};{{ key.1 }}:name"
+                                               value="{{ value.name }}" hidden>
+
+
+                                        <td><b>
+                                            <div class="form-group bmd-form-group">
+
+                                                <input type="text" class="form-control"
+                                                       name="{{ key.0 }};{{ key.1 }}:partnumber"
+                                                       value="{{ value.part_number }}">
+                                            </div>
+                                        </b></td>
+
+
+                                        <td><b>
+                                            <div class="form-group bmd-form-group">
+
+                                                <input type="text" class="form-control"
+                                                       value="{{ value.qty }}" disabled>
+
+                                                <input type="text" class="form-control"
+                                                       name="{{ key.0 }};{{ key.1 }}:qty"
+                                                       value="{{ value.qty }}" hidden>
+
+                                            </div>
+                                        </b></td>
+
+
+                                    </tr>
+                                {% endfor %}
+
+                                </tbody>
+                            </table>
+                            <div align="center">
+                                <h3>Warning ! Only assign if purchase order is yet to be sent to supplier.</h3>
+                                <div class="col-lg-4 col-md-12">
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <input type="text" class="form-control"
+                                           placeholder="Purchase id of unsubmitted supplier {{ supplier }}"
+                                           name="purchase_id_override"
+                                           value="{{ purchaseorder_override }}">
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                </div>
+
+
+                            </div>
+
+                            <div align="center">
+
+                                <input id="btn_generate_purchaseorder" class="btn btn-round btn-fill btn-success" type="submit"
+                                       value="Generate Purchase Order">
+
+
+                            </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+<script>
+    {#M.toast({html:"{{ supplier_message|safe }}",classes:'blue'})#}
+    alert("{{ supplier_message|safe }}")
+</script>
+
+{% include "mastertemplates/jsfiles.html" %}
+
+<script>
+$(document).ready(function(){
+$('#purchaseorderform').submit( function(event) {
+    // disable to avoid double submission
+    $('#btn_generate_purchaseorder').attr('disabled', true);
+});
+});
+</script>

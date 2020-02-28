@@ -1,0 +1,374 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+
+<div class="sidebar-wrapper">
+    <ul class="nav">
+             {% if request.user.is_staff %}
+        {% if dashboard %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/">
+                    <i class="material-icons">dashboard</i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/">
+                    <i class="material-icons">dashboard</i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+        {% endif %}
+
+         {% if tasklist %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/tasklist?assigned_to={{ request.user.first_name }}">
+                <i class="material-icons"><img class="img" src="{% static  '/img/new.png' %}"
+                                                               height="20px"/></i>
+                    <p>Task List</p>
+                </a>
+
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/tasklist">
+                 <i class="material-icons"><img class="img" src="{% static  '/img/new.png' %}"
+                                                               height="20px"/></i>
+                    <p>Task List</p>
+                </a>
+
+            </li>
+        {% endif %}
+        {% if escalatedorders %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/escalatedorders">
+                    <i class="material-icons">content_paste</i>
+                    <p>Orders & Tickets</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/escalatedorders">
+                    <i class="material-icons">content_paste</i>
+                    <p>Orders & Tickets</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+
+        {% if customers %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/customers">
+                    <i class="material-icons">content_paste</i>
+                    <p>Customers</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/customers">
+                    <i class="material-icons">content_paste</i>
+                    <p>Customers</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if suppliers %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/suppliers">
+                    <i class="material-icons">content_paste</i>
+                    <p>Suppliers</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/suppliers">
+                    <i class="material-icons">content_paste</i>
+                    <p>Suppliers</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if marketplace %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/marketplace">
+                    <i class="material-icons">content_paste</i>
+                    <p>Marketplace</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/marketplace">
+                    <i class="material-icons">content_paste</i>
+                    <p>Marketplace</p>
+                </a>
+            </li>
+        {% endif %}
+
+        {#                        {% if zendesk %}#}
+        {#                <li class="nav-item active  ">#}
+        {#                    <a class="nav-link" href="/zendesk">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Zendesk</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                {% else %}#}
+        {#                    <li class="nav-item  ">#}
+        {#                    <a class="nav-link" href="/zendesk">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Zendesk</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                {% endif %}#}
+
+
+        {% if purchaseorder %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/purchaseorder">
+                    <i class="material-icons">content_paste</i>
+                    <p>Purchase Order</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/purchaseorder">
+                    <i class="material-icons">content_paste</i>
+                    <p>Purchase Order</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if trackingid %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/trackingid">
+                    <i class="material-icons">content_paste</i>
+                    <p>Tracking ID</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/trackingid">
+                    <i class="material-icons">content_paste</i>
+                    <p>Tracking ID</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if refunds %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/refunds">
+                    <i class="material-icons">content_paste</i>
+                    <p>Refunds Tracker</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/refunds">
+                    <i class="material-icons">content_paste</i>
+                    <p>Refunds Tracker</p>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if warehouse %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/warehouse">
+                    <i class="material-icons">content_paste</i>
+                    <p>Warehouse</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/warehouse">
+                    <i class="material-icons">content_paste</i>
+                    <p>Warehouse</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+        {% if usermanual %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/usermanual">
+                    <i class="material-icons">content_paste</i>
+                    <p>User manual</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/usermanual">
+                    <i class="material-icons">content_paste</i>
+                    <p>User manual</p>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if timebomb %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/timebomb">
+                    <i class="material-icons">content_paste</i>
+                    <p>Time Bomb</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/timebomb">
+                    <i class="material-icons">content_paste</i>
+                    <p>Time Bomb</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+
+
+
+        {% if customerservice %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">content_paste</i>
+                    <p>CustomerService</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="#">
+                    <i class="material-icons">content_paste</i>
+                    <p>CustomerService</p>
+                </a>
+            </li>
+        {% endif %}
+        {% if stockupdate %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/stockupdate">
+                    <i class="material-icons">content_paste</i>
+                    <p>Stock Update</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/stockupdate">
+                    <i class="material-icons">content_paste</i>
+                    <p>Stock Update</p>
+                </a>
+            </li>
+        {% endif %}
+    {% endif %}
+         {% if newsletter %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/newsletter">
+                    <i class="material-icons">content_paste</i>
+                    <p>Newsletter</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/newsletter">
+                    <i class="material-icons">content_paste</i>
+                    <p>Newsletter</p>
+                </a>
+            </li>
+        {% endif %}
+         {% if categorization %}
+            <li class="nav-item active  ">
+                <a class="nav-link" href="/categorization">
+                    <i class="material-icons">content_paste</i>
+                    <p>Categorization</p>
+                </a>
+            </li>
+        {% else %}
+            <li class="nav-item  ">
+                <a class="nav-link" href="/categorization">
+                    <i class="material-icons">content_paste</i>
+                    <p>Categorization</p>
+                </a>
+            </li>
+        {% endif %}
+
+
+
+
+
+
+
+        {#                {% if stocklevel %}#}
+        {#                <li class="nav-item active">#}
+        {#                    <a class="nav-link" href="/stocklevel">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Stocklevel</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#            {% else %}#}
+        {#            <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="/stocklevel">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Stocklevel</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#             {% endif %}#}
+        {#              {% if orders %}#}
+        {#                <li class="nav-item active">#}
+        {#                    <a class="nav-link" href="/orders">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Orders</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#            {% else %}#}
+        {#            <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="/orders">#}
+        {#                        <i class="material-icons">content_paste</i>#}
+        {#                        <p>Orders</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#             {% endif %}#}
+
+
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="/order">#}
+        {#                        <i class="material-icons">person</i>#}
+        {#                        <p>Order</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="./typography.html">#}
+        {#                        <i class="material-icons">library_books</i>#}
+        {#                        <p>Typography</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="./icons.html">#}
+        {#                        <i class="material-icons">bubble_chart</i>#}
+        {#                        <p>Icons</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="./map.html">#}
+        {#                        <i class="material-icons">location_ons</i>#}
+        {#                        <p>Maps</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="./notifications.html">#}
+        {#                        <i class="material-icons">notifications</i>#}
+        {#                        <p>Notifications</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item ">#}
+        {#                    <a class="nav-link" href="./rtl.html">#}
+        {#                        <i class="material-icons">language</i>#}
+        {#                        <p>RTL Support</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+        {#                <li class="nav-item active-pro ">#}
+        {#                    <a class="nav-link" href="./upgrade.html">#}
+        {#                        <i class="material-icons">unarchive</i>#}
+        {#                        <p>Upgrade to PRO</p>#}
+        {#                    </a>#}
+        {#                </li>#}
+    </ul>
+</div>

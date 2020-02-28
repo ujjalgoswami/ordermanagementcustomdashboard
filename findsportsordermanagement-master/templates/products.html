@@ -1,0 +1,115 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+        <!-- End Navbar -->
+
+
+<div class="content">
+            <div class="container-fluid">
+                      <div class="row">
+
+                    <div class="col-lg-8 col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title">Out of Stock Percentage</h4>
+                                <p class="card-category">Synced from Neto</p>
+                            </div>
+                            <div class="card-body table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="text-warning">
+                                    <th>Product Details</th>
+                                    <th>Product Details</th>
+
+                                    </thead>
+                                    <tbody>
+
+{% for key, value in product_details.items %}
+                                    <tr>
+                                            <td>{{key}}</td>
+                                         <td>{{value}}</td>
+                                    </tr>
+{% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+{#                             <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">NOT REFUNDED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in not_refunded_orders %}#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{#                                        <td>{{ today|sub:order.updated_date }}</td>#}
+{#                                        <td>{{ order.completed_date|sub:order.invoice_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{##}
+{#                                 <div class="col-lg-6 col-md-12">#}
+{#                        <div class="card">#}
+{#                            <div class="card-header card-header-warning">#}
+{#                                <h4 class="card-title">REFUNDS ISSUED</h4>#}
+{#                                <p class="card-category">Synced from Neto</p>#}
+{#                            </div>#}
+{#                            <div class="card-body table-responsive">#}
+{#                                <table id="redunds_issued" class="table table-hover">#}
+{#                                    <thead class="text-warning">#}
+{#                                    <th>Order ID</th>#}
+{#                                    <th>Updated Date</th>#}
+{#                                    <th>Completed Date</th>#}
+{#                                    <th>Sales Channel</th>#}
+{#                                    <th>Total Days</th>#}
+{##}
+{#                                    </thead>#}
+{#                                    <tbody>#}
+{##}
+{#{% for order in refunded_orders %}#}
+{#               <tr bgcolor="#dc143c">#}
+{#                                    <tr>#}
+{#                                    <td><a href="/order?orderid={{ order.order_id }}"> {{ order.order_id }}</a></td>#}
+{#                                        <td>{{order.updated_date}}</td>#}
+{#                                     <td>{{order.completed_date}}</td>#}
+{#                                        <td>{{order.sales_channel}}</td>#}
+{##}
+{#                                        <td>{{ order.completed_date|sub:order.updated_date }}</td>#}
+{##}
+{#                                    </tr>#}
+{#{% endfor %}#}
+{#                                    </tbody>#}
+{#                                </table>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+
+

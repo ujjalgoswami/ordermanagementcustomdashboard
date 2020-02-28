@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Purchase Order</title>
+</head>
+<body>
+
+<style type="text/css">
+    .div1 {
+  width: 20px;
+  height: 20px;
+  border: 1px solid blue;
+}
+    table.tableizer-table {
+        font-size: 12px;
+        border: 1px solid #CCC;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tableizer-table td {
+        padding: 4px;
+        margin: 3px;
+        border: 1px solid #CCC;
+    }
+
+    .tableizer-table th {
+        background-color: #104E8B;
+        color: #FFF;
+        font-weight: bold;
+    }
+</style>
+<table class="tableizer-table">
+
+    <thead>
+    <tr class="tableizer-firstrow">
+        <th></th>
+        <th>&nbsp;</th>
+        <th>Purchase Order Stock Confirm</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td colspan="6" bgcolor="#F68641">
+            Note: If OrderlineID is N10101594-0 then its Order ID is N10101594. OrderlineID is a unique number assigned by Neto for every item in an order.
+        </td>
+    </tr>
+    <tr>
+
+        <td>POrder ID</td>
+        <td>&nbsp;</td>
+        <td>{{ purchase_order_submitted_alias }}</td>
+        <td>&nbsp;</td>
+         <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+        <tr>
+
+        <td>POrder ID</td>
+        <td>(Dashboard)</td>
+        <td>{{ purchase_order_id }}</td>
+        <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+    </tr>
+
+
+        <tr>
+
+        <td>Submitted Date</td>
+        <td>&nbsp;</td>
+        <td>{{ purchase_order_submitted_date }}</td>
+        <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+    </tr>
+
+        <tr>
+
+        <td>Supplier Name</td>
+        <td>&nbsp;</td>
+        <td>{{ purchase_order_suppliername }}</td>
+        <td>&nbsp;</td>
+               <td>&nbsp;</td>
+             <td>&nbsp;</td>
+    </tr>
+
+
+
+
+
+
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>OrderLineID</td>
+        <td>SKU</td>
+        <td>Product Description</td>
+        <td>Stock</td>
+        <td>Part Number</td>
+        <td>Stock Check</td>
+    </tr>
+
+
+    {% for sample_row in sample_rows %}
+        {{ sample_row|safe }}<td><div class="div1"></div></td></tr>
+    {% endfor %}
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+
+
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Total QTY</td>
+        <td>{{ totalqty }}</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>After confirming the stock . Please update the stock in the Dashboard.</td>
+        <td>&nbsp;</td>
+    </tr>
+
+    </tbody>
+</table>
+
+</body>
+</html>

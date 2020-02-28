@@ -1,0 +1,92 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+    {% if request.user.is_staff %}
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12">
+                <h3>Customers having order shipped within 7 days or less</h3>
+                <a href="?download=customers_data" class="btn btn-round btn-fill btn-info">Download</a>
+
+            </div>
+
+            {% if error_count > 0 %}
+                <div class="col-lg-6 col-md-12">
+
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card card-stats">
+                            <div class="card-header">
+
+                                <div align="center" class="card-icon">
+                                    <i class="material-icons"><img class="img" src="{% static  '/img/error-flat.png' %}"
+                                                                   height="60px"/></i>
+
+
+                                </div>
+                                <div align="center">
+                                    <h3 class="card-title"> {{ error_count }} </h3>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b>NEW ORDERS </b></h4>
+                            <p class="card-category">Not yet synced</p>
+
+                        </div>
+                        <div class="card-body table-responsive">
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+                                <th><b>Order ID</b></th>
+
+                                <th></th>
+
+                                </thead>
+                                <tbody>
+
+                                {% for order in OrdersYetToSync %}
+                                    <tr bgcolor="#FA8072">
+                                        <td><b><a
+                                                href="https://www.findsports.com.au/_cpanel/order/vieworder?id={{ order }}"
+                                                target="_blank">{{ order }}</a></b></td>
+                                        <td><img src="{% static  '/img/neto.png' %}"/></td>
+
+
+                                    </tr>
+
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            {% endif %}
+
+
+        </div>
+    {% else %}
+     <div>
+         <h1>You are not authorized to view this page. Please contact Admin!</h1>
+     </div>
+    {% endif %}
+    </div>
+</div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+

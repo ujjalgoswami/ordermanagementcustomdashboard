@@ -1,0 +1,66 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+                <div class="col-lg-12 col-md-12">
+
+
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b> NEWS LETTER RECOMMENDER (Top 100 most ordered products in past 30 days)</b>
+                            </h4>
+                        </div>
+                        <div class="card-body table-responsive">
+
+                            <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+
+                                    <th>IMAGE</th>
+                                    <th>SKU</th>
+                                     <th>QTY</th>
+                                     <th>NAME</th>
+                                      <th>NETO LINK</th>
+                                    <th>PRODUCT LINK</th>
+
+                                    </thead>
+                                    <tbody>
+
+                                    {% for key,value in dict_prod_details.items %}
+                                    <tr>
+                                        <td><img src="{{ value.IMAGE_PATH }}" height="300" width="300" /></td>
+                                          <td>{{ value.SKU }}</td>
+                                             <td>{{ value.QTY }}</td>
+                                             <td>{{ value.NAME }}</td>
+                                         <td><a href="{{ value.NETO_LINK }}" target="_blank">NETO LINK</a></td>
+                                    <td><a href="{{ value.PRODUCT_LINK }}" target="_blank">PRODUCT LINK</a></td>
+
+                                    </tr>
+                                    {% endfor %}
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                </form>
+
+
+
+        </div>
+
+
+        {% include "mastertemplates/jsfiles.html" %}

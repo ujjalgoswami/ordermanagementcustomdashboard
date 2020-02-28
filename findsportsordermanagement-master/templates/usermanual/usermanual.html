@@ -1,0 +1,1118 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+
+                {% if request.user.is_staff %}
+
+
+
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12">
+                <h2>Refunds</h2>
+                <button id="tutorialbuttonreturns" class="btn btn-round btn-fill btn-info">Returns
+                </button>
+
+                <h2>Purchase Orders</h2>
+                <button id="tutorialbuttonpurchaseorders" class="btn btn-round btn-fill btn-info">How to Generate a
+                    Purchase
+                    Order ?
+                </button>
+
+
+                <h2>Customer Service</h2>
+                <button id="tutorialbuttoncustomerservice" class="btn btn-round btn-fill btn-info">FAQ
+                </button>
+
+
+                <h2>Partial Orders</h2>
+                <button id="tutorialbuttonpartialorders" class="btn btn-round btn-fill btn-info">FAQ
+                </button>
+
+
+            </div>
+        </div>
+
+
+        <div id="tutorialdivreturns" style="display: none" class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Returns – Exchange product (change of mind)</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Customer pays to send it back to 4 Maxwell St, Dandenong South</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Create RMA (Return Authority No.) in Neto
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Give customer RMA number
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Create new order for new product
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Get customer to pay shipping only if the order is from
+                                            Findsports.com.au
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Move order to PICK folder to be ordered
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Returns – We sent wrong/faulty item</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Ask customer for photo of item incl. barcode</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            If wrong item, send them return label (eparcel website)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Issue RMA
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Ask customer to send back with invoice
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Create new order in Neto $0
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            We cover all shipping costs
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Update Zendesk ticket
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Returns - Change of mind refund</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Has to be within 30 days of receiving item</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            New condition, tags attached
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Issue RMA
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Put order in uncommitted once return received
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Update Zendesk ticket
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Refunds</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Get approval from LIZ</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Change dropdown box to uncommitted and apply
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Update Zendesk ticket
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">WARRANTY</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Website order – Ask customer to send photos through</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            If broken on arrival – Aus post label for small items under 100cm
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            TNT (courier) for items over 110cm or over 20kg (surfboards etc)
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            If non surf item broken during use, ask customer for explanation – Liz to
+                                            check
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            If damaged during use No warranty on surfboard, softboard, bodyboard <a
+                                                target="_blank"
+                                                href="https://www.findsports.com.au/v/surfboard-bodyboard-warranty/1388">link</a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            If purchased in store or local, bring back to store for us to check out
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Send warranty pics to supplier if faulty, damaged in transit to us. Ask for
+                                            credit or replacement
+                                        </td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tutorialdivcustomerservice" style="display: none" class="row">
+             <div class="col-lg-8 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">How to handle Customers</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                       <div>
+    <p>
+                           <b>What is your Order-Number, Name, Ticket Number?</b>
+
+<br>
+<b>Look up order id or name in NETO</b><br>
+<b> Has it got a tracking number ?</b><br>
+if it has been lodged with Australia post or toll :<br>
+	a)Click through and track the order<br>
+	b)Eg: It's with ____ courier and about to be delivered<br>
+otherwise<br>
+	a)If there is no lodged on date on the then look at the order date and add the business days (taken from the website product page)<br>
+	b)This item is in the dispatch process and will be dispatched in the advertised time period shortly .<br>
+<br>
+	if it's a regular late order :<br>
+		a)Hi Sir, I can see that your order is running late (1 day late,2 day late etc). I apologize for it , we are working on it.<br>
+	if it's a seriously late order:<br>
+		a) Contact IT or Operations and update the customer that we will update you shortly (Note:Probably will cancel and refund the order)<br>
+<br>
+
+<b>If the order is 5 business days late :</b><br>
+Send them an email if the order is about to reach them
+                           </p>
+
+                       </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tutorialdivpurchaseorders" style="display: none" class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">Steps to create a purchase order</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Before creating a purchase order make sure that you have imported Kogan
+                                            Orders into Neto from the manifest file sent to orders@findsports.com.au
+                                            and
+                                            transferred all new/pick/hold orders (as applicable) to "New Back Order"
+                                            status.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Click on the Green "Generate New Purchase Order" button .</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>You should see a list of suppliers in this page. If you don't see any
+                                            suppliers then click on the force run cron button
+                                            and wait till the page loads completely . This might take upto 5 mins or
+                                            more so be patient . If due to some reason you get any error while
+                                            running the cron please contact admin asap to run the cron instantly or
+                                            wait for a max 2 hrs for the cron to run automatically .
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>After selecting a supplier (You will see a small summary of that
+                                            supplier) click
+                                            the generate button and then click on create purchase order button . If
+                                            you wish to transfer the purchase order to another existing purchase
+                                            order , you need to supply the purchase order id (not the alias) of the
+                                            previous
+                                            purchase order at the bottom.This step is useful for those cases when a
+                                            previous purchase order has been created but is not submitted due to low
+                                            cost value.You can add the new items in the old purchase order so that
+                                            it becomes eligible to be submitted. Otherwise simply click on the
+                                            generate
+                                            purchase order button.
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>You will then be taken to the purchase order details page of the newly
+                                            created purchase order. You can edit the purchase order her and download
+                                            the purchase order as well.
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>After sending the downloaded purchase order to the supplier you need to
+                                            go to the purchase orders home page and mark the purchase order as
+                                            submitted .
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>After a purchase order is marked as submitted you need to confirm the
+                                            stock of the purchase order . In a typlical case you would wait for the
+                                            supplier's email with stock confirmation and then mark the products out
+                                            of stock in this section. Once the stock is updated it will
+                                            automatically show which orders need to be refunded under the refund
+                                            tracker page.
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Last step is to chase and add tracking id to the purchase order from the
+                                            supplier and updated the tracking details in the Tracking ID section of
+                                            the dashboard.
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td><h3>Note: If a supplier is already in the pending submit stage and you
+                                            attempt to create another purchase order for the same supplier ,by
+                                            default the system will alert you to create it under the existing
+                                            purchase order and will autofill the previous purchase order id(You dont
+                                            need to do it manually!). It is important that you read the alert boxes
+                                            (if any) on every page carefully as after a purchase order is created
+                                            it's products cannot be transferred to another purchase order.If you add
+                                            new products to an existing unsubmitted purchase order don't forget to
+                                            change the date to today(If you plan to submit it today,otherwise it
+                                            will remain assigned in the original date)</h3></td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="messages">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                           checked="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Flooded: One year later, assessing what was lost and what was found when
+                                            a ravaging rain swept through metro Detroit
+                                        </td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-primary btn-link btn-sm"
+                                                    data-original-title="Edit Task">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-link btn-sm"
+                                                    data-original-title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-primary btn-link btn-sm"
+                                                    data-original-title="Edit Task">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-link btn-sm"
+                                                    data-original-title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="settings">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-primary btn-link btn-sm"
+                                                    data-original-title="Edit Task">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-link btn-sm"
+                                                    data-original-title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                           checked="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Flooded: One year later, assessing what was lost and what was found when
+                                            a ravaging rain swept through metro Detroit
+                                        </td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-primary btn-link btn-sm"
+                                                    data-original-title="Edit Task">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-link btn-sm"
+                                                    data-original-title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                           checked="">
+                                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                        <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-primary btn-link btn-sm"
+                                                    data-original-title="Edit Task">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" title=""
+                                                    class="btn btn-danger btn-link btn-sm"
+                                                    data-original-title="Remove">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="tutorialdivpartialorders" style="display: none" class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <span class="nav-tabs-title">How to handle Partial Orders</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div>
+            <ul>
+                <li>
+                    If an item is in stock and ready to send and has a value of over $49 Please go ahead and send to the
+                    customer immediately and do not wait for the other items to arrive
+                </li>
+                <li>
+                    Email the customer : Let them know which items have been sent and which one are coming seperately
+                    (This needs to be done at the time of printing the consignments)
+                </li>
+                <li>
+                    if the order is a surfboard package with a wetsuit, a seperate order needs to be created for the
+                    customer with $0 for the product and shipping and put it to “pick” to be ordered . Then the old
+                    order needs to be fully dispathced .
+                </li>
+            </ul>
+            <b>
+                Details- How to email the customer:
+            </b>
+            <ul>
+                <li>Search for order and select the orderid from the list</li>
+                <li>Scroll to the bottom of the page and click on Email-> Message</li>
+                <li>Select the appropriate email template(canned email)</li>
+                <li>Select on “email me a copy”</li>
+            </ul>
+
+            <b>Note:</b>
+            <p>
+                Once the order is partially dispatched the order status changes to Pending dispatched automatically .
+                In order to keep a track of what item is yet to be sent - Write a comment in “System internal notes” and
+                save the changes.
+                <br>
+                Once the supplier sends the remaining items check the “pending dispatched” folder and also check
+                “backorder approved”</p>
+
+            <b>Alternative product offering:</b>
+            <p>
+                Place the order on hold until the customer replies
+                <br>
+                if (they reply yes - they want the alternative):<br>
+                Change the prodyuct to the one that they want in the order itself and put it to “Pick” so it can be
+                ordered.<br>
+                <br>
+                If (they say no they want a refund ):<br>
+                The order goes from hold to uncomitted<br>
+            </p>
+
+
+            <b>Pending Pickup:</b>
+            <p>Check physical items in the warehouse against the Neto folder
+                whatever is not there must have already been dispatched so Diispatch it in Neto
+                (Specially if its over a month old)
+
+                <br>
+
+                Send weekly emails to pending pickup people to remind them about their order</p>
+
+
+        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% else %}
+            <div>
+                <h1>You are not authorized to view this page. Please contact Admin!</h1>
+            </div>
+        {% endif %}
+
+
+    </div>
+</div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#tutorialbuttonpurchaseorders").click(function () {
+
+            $("#tutorialdivpurchaseorders").toggle();
+        });
+
+        $("#tutorialbuttonreturns").click(function () {
+
+            $("#tutorialdivreturns").toggle();
+        });
+
+
+        $("#tutorialbuttoncustomerservice").click(function () {
+
+            $("#tutorialdivcustomerservice").toggle();
+        });
+
+        $("#tutorialbuttonpartialorders").click(function () {
+            $("#tutorialdivpartialorders").toggle();
+        });
+
+    });
+</script>

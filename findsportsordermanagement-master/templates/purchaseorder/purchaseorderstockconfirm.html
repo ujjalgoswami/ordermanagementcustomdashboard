@@ -1,0 +1,262 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            {% if purchase_order_details %}
+                <div class="col-lg-6 col-md-12">
+
+
+                    <div class="card">
+                        <div class="card-header card-header-warning">
+                            <h4 class="card-title"><b> Purchase Order Details </b>
+                            </h4>
+                            <p class="card-category">
+
+                            <div class="col-lg-12 col-md-12">
+                                {% if tracking %}
+                                    <a target="_blank" href="{{ courier_link }}" class="btn btn-round btn-fill btn-success">Track
+                                        Purchase Order</a>
+                                {% else %}
+                                    <a href="#" class="btn btn-round btn-fill btn-danger">Track Purchase Order</a>
+                                {% endif %}
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                {% if purchase_order_submitted %}
+                                    <h3><img class="img" src="{% static  '/img/check.png' %}" height="45px"/> Submitted
+                                        on {{ purchase_order_submitted_date }}</h3>
+                                {% else %}
+
+                                    <h3><img class="img" src="{% static  '/img/error-flat.png' %}" height="30px"/>
+                                        Purchase Order not submitted!</h3>
+
+                                {% endif %}
+                            </div>
+
+
+                            </p>
+
+                        </div>
+                        <div class="card-body table-responsive">
+                            <form action="purchaseorderstockconfirm" method="post">
+                                {% csrf_token %}
+                                <table id="notrefunded" class="table table-hover">
+                                    <thead class="text-warning">
+
+                                    <th></th>
+                                    <th></th>
+                                    </thead>
+                                    <tbody>
+
+
+                                    <tr>
+                                        <td><b>Purchase Order ID</b></td>
+                                        <td><b>{{ purchase_order_id }}</b></td>
+                                        <input type="text" class="btn btn-round btn-fill btn-success" name="pid"
+                                               value="{{ purchase_order_id }}" hidden/>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Created Date</b></td>
+                                        <td><b>{{ purchase_order_created_date }}</b>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Supplier Name</b></td>
+                                        <td><b>{{ purchase_order_suppliername }}</b></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><b>Total Cost</b></td>
+                                        <td><b>$ {{ costprice }}</b></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><b>Tracking ID</b></td>
+                                        <td><b>
+                                            {{ purchase_order_trackingid }}
+
+                                        </b></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><b>Courier Name</b></td>
+                                        <td><b>
+
+                                            {{ purchase_order_courier }}
+                                        </b>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>Alias</b></td>
+                                        <td><b> {{ purchase_order_submitted_alias }}
+                                        </b></td>
+                                    </tr>
+
+
+                                    </tbody>
+                                </table>
+                                <div align="center">
+                                    <input type="submit" name="save" class="btn btn-round btn-fill btn-success"
+                                           value="All Stock Available"/>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-lg-6 col-md-12">
+
+                    <div class="row">
+                        <form action="purchaseorderstockconfirm" method="post">
+                            {% csrf_token %}
+
+                            <div class="col-lg-12 col-md-12">
+
+
+                                <div class="card">
+
+                                    <div class="card-body table-responsive">
+
+
+                                        <table id="notrefunded" class="table table-hover">
+                                            <thead class="text-warning">
+
+                                            <th><b>SKU</b></th>
+                                            <th><b>Part No</b></th>
+                                            <th><b>Qty</b></th>
+                                            <th><b>Stock</b></th>
+
+                                            </thead>
+                                            <tbody>
+                                            {% for key,value in dict_order_line_id_sku_partno_qty_instock.items %}
+                                                <tr>
+                                                    <td><b><label class="bmd-label-floating">{{ value.sku }}</label></b>
+                                                    </td>
+
+                                                    <input type="text" class="btn btn-round btn-fill btn-success" name="pid"
+                                               value="{{ purchase_order_id }}" hidden/>
+{#                                                    <input type="text" class="form-control"#}
+{#                                                           name="{{ key.0 }};{{ key.1 }}:sku"#}
+{#                                                           value="{{ key.0 }}"#}
+{#                                                           hidden>#}
+
+
+                                                    <td><b><label class="bmd-label-floating">{{ value.part_number }}</label></b>
+                                                    </td>
+
+{#                                                    <input type="text" class="form-control"#}
+{#                                                           name="{{ key.0 }};{{ key.1 }}:orderid"#}
+{#                                                           value="{{ key.1 }}" hidden>#}
+
+{##}
+{#                                                    <input type="text" class="form-control"#}
+{#                                                           name="{{ key.0 }};{{ key.1 }}:order_line_id"#}
+{#                                                           value="{{ value.order_line_id }}" hidden>#}
+
+
+                                                    <td><b><label
+                                                            class="bmd-label-floating">{{ value.qty }}</label></b>
+                                                    </td>
+
+{#                                                    <input type="text" class="form-control"#}
+{#                                                           name="{{ key.0 }};{{ key.1 }}:name"#}
+{#                                                           value="{{ value.name }}" hidden>#}
+
+
+                                                    <td><b>
+{#                                                        <label#}
+{#                                                            class="bmd-label-floating">{{ value.instock }}</label>#}
+
+                                                           <input type="text" class="form-control"#}
+                                                                   name="{{ value.order_line_id }}:instock"
+                                                                   value="{{ value.instock }}">
+
+
+
+
+
+
+{#                                                        <div class="form-group bmd-form-group">#}
+{##}
+{#                                                            <input type="text" class="form-control"#}
+{#                                                                   name="{{ key.0 }};{{ key.1 }}:partnumber"#}
+{#                                                                   value="{{ value.part_number }}">#}
+{#                                                        </div>#}
+                                                    </b></td>
+
+
+{#                                                    <td><b>#}
+{#                                                        <div class="form-group bmd-form-group">#}
+{##}
+{#                                                            <input type="text" class="form-control"#}
+{#                                                                   value="{{ value.qty }}" disabled>#}
+{##}
+{#                                                            <input type="text" class="form-control"#}
+{#                                                                   name="{{ key.0 }};{{ key.1 }}:qty"#}
+{#                                                                   value="{{ value.qty }}" hidden>#}
+{##}
+{#                                                        </div>#}
+{#                                                    </b></td>#}
+{##}
+{##}
+{#                                                    <td><b>#}
+{#                                                        <div class="form-group bmd-form-group">#}
+                                                            {#                                                <label class="bmd-label-floating">{{ value.qty }}</label>#}
+{##}
+{#                                                            <input type="text" class="form-control"#}
+{#                                                                   name="{{ key.0 }};{{ key.1 }}:stock"#}
+{#                                                                   value="{{ value.qty }}">#}
+{#                                                        </div>#}
+{#                                                    </b></td>#}
+
+
+                                                </tr>
+                                            {% endfor %}
+
+                                            </tbody>
+                                        </table>
+
+
+                                        <div align="center">
+
+                                            <input class="btn btn-round btn-fill btn-success" name="update" type="submit"
+                                                   value="UPDATE AVAILABLE STOCK">
+
+
+                                        </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+
+
+            {% endif %}
+
+
+        </div>
+<script>
+    {#M.toast({html:"{{ supplier_message|safe }}",classes:'blue'})#}
+    alert("Note: Update the stock only after you have received an invoice from the supplier. This is important as any OOS item will put that order in the pending refunds list .")
+</script>
+
+        {% include "mastertemplates/jsfiles.html" %}
+
+

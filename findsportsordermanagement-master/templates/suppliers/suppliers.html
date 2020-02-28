@@ -1,0 +1,287 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function () {
+            $.ajax({
+                    url: '/suppliers/viewoutofstockpercentage',
+                    dataType: 'json',
+                    success: function (data) {
+
+                        FusionCharts.ready(function () {
+                            var chartObj = new FusionCharts(data);
+                            chartObj.render();
+
+
+                        });
+                    }
+                });
+});
+    </script>
+
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+      {% if request.user.is_staff %}
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 id="number_of_order_ids2" class="card-title">Supplier Active Status</h4>
+                        <p class="card-category">Click on any button to toggle the staus</p>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table id="notrefunded" class="table table-hover">
+                            <thead class="text-warning">
+                            <th><b>Supplier Name</b></th>
+                            <th><b>Status</b></th>
+                            <th></th>
+
+                            </thead>
+                            <tbody>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                {% for supplier in List_of_suppliers %}
+
+
+                                    <tr>
+                                        <td><b><a
+                                                href="?supplier_name={{ supplier.0 }}">{{ supplier.0 }}</a></b>
+
+                                            <input type="submit" class="btn btn-round btn-fill btn-success"
+                                                   name="{{ supplier.0 }}"
+                                                   value="{{ supplier.0 }}" hidden>
+
+                                        </td>
+
+                                        <td><b>
+                                            {% if supplier.1 %}
+
+                                                <input type="submit" class="btn btn-round btn-fill btn-danger"
+                                                       name="{{ supplier.0 }}:status"
+                                                       value="On Hold">
+
+
+                                            {% else %}
+
+
+
+                                                <input type="submit" class="btn btn-round btn-fill btn-success"
+                                                       name="{{ supplier.0 }}:status"
+                                                       value="Active">
+
+                                            {% endif %}
+
+                                        </b></td>
+
+
+                                        <td><b>
+                                            {% if supplier.1 %}
+                                                <label class="bmd-label-floating">{{ supplier.2 }}</label>
+                                            {% endif %}
+
+                                        </b></td>
+
+                                    </tr>
+
+
+                                {% endfor %}
+                            </form>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            {% if showsupplierdetails %}
+
+
+            <div class="col-lg-6 col-md-12">
+
+
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title"><b> Supplier Details </b>
+                        </h4>
+
+
+                    </div>
+                    <div class="card-body table-responsive">
+                        <form action="updatesupplierdetails" method="post">
+                            {% csrf_token %}
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+
+
+                                <tr>
+                                    <td><b>supplier_name</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="supplier_name"
+                                               value="{{ supplier_name }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>supplier_email</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="supplier_email"
+                                               value="{{ supplier_email }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>minimum_order</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="minimum_order"
+                                               value="{{ minimum_order }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>website_name</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="website_name"
+                                               value="{{ website_name }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><b>website_link</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="website_link"
+                                               value="{{ website_link }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+                                <tr>
+                                    <td><b>username</b></td>
+                                    <td><b>
+                                        Note: Check Super Admin
+                                    </b></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><b>password</b></td>
+                                    <td><b>
+                                         Note: Check Super Admin
+                                    </b></td>
+                                </tr>
+
+                                   <tr>
+                                    <td><b>website_order_placement</b></td>
+                                    <td><b>
+                                         <input type="text" class="form-control" name="website_order_placement"
+                                               value="{{ website_order_placement }}" readonly/>
+                                    </b></td>
+                                </tr>
+
+
+
+
+
+
+                                <tr>
+                                    <td><b>contact_name</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="contact_name"
+                                               value="{{ contact_name }}"/>
+                                    </b></td>
+                                </tr>
+                                <tr>
+                                    <td><b>contact_email</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="contact_email"
+                                               value="{{ contact_email }}"/>
+                                    </b></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><b>contact_number</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="contact_number"
+                                               value="{{ contact_number }}"/>
+                                    </b></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td><b>contact_position</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" name="contact_position"
+                                               value="{{ contact_position }}"/>
+                                    </b></td>
+                                </tr>
+
+                                     <tr>
+                                    <td><b>Last Stock Update</b></td>
+                                    <td><b>
+                                        <input type="text" class="form-control" disabled name="last_stock_update"
+                                               value="{{ last_stock_update }}"/>
+                                             <input type="text" class="form-control" hidden  name="stock_update_file_name"
+                                               value="{{ stock_update_file_name }}"/>
+                                    </b></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div align="center">
+                                <input type="submit" name="save" class="btn btn-round btn-fill btn-info"
+                                       value="Update Contact Details"/>
+                                <input type="submit" class="btn btn-round btn-fill btn-danger" name="download_stock_update"
+                                       value="Download Stock Update File"/>
+                            </div>
+
+                                       <div align="center">
+                                        {% for message in messages %}
+                                            <h3>
+                                                {{ message }}
+                                            </h3>
+                                        {% endfor %}
+                                    </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+        {% endif %}
+
+        </div>
+
+        <div class="row">
+        <div id="chart-container">FusionCharts XT will load here!</div>
+
+        </div>
+    {% else %}
+     <div>
+         <h1>You are not authorized to view this page. Please contact Admin!</h1>
+     </div>
+    {% endif %}
+    </div>
+</div>
+
+
+{% include "mastertemplates/jsfiles.html" %}
+
+

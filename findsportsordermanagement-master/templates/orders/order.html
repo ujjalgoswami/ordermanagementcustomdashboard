@@ -1,0 +1,598 @@
+{% load static %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+<style>
+    .controls {
+        display: flex;
+    }
+
+    .radio {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+        .controls2 {
+        display: flex;
+    }
+
+    .radio2 {
+        flex: 1 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+</style>
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 ml-auto mr-auto">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">FINDSPORTS ORDER DETAILS for ORDER ID : {{ orderid }}  </h4>
+                        <p class="card-category">All the details here are being fetched via NETO API</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive table-upgrade">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center"></th>
+                                    <th class="text-center"></th>
+                                    <th class="text-center"></th>
+                                    <th class="text-center"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                {% for key, value in jsontemp.items %}
+
+                                    <tr>
+                                        <td>{{ key }}</td>
+                                        <td class="text-center"></td>
+                                        {% if value|length > 0 %}
+                                            <td class="text-center">{{ value }}</td>
+                                        {% else %}
+                                            <td class="text-center"></td>
+                                        {% endif %}
+
+                                    </tr>
+
+
+
+                                {% endfor %}
+
+                                {% if partial_order_eligible %}
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+
+                                            <div class="col-lg-12 col-md-12">
+
+                                                <div class="card">
+                                                    <div class="card-header card-header-warning">
+                                                        <h4 class="card-title"><b><a href="?download=purchaseorders">
+                                                            <img class="img"
+                                                                 src="{% static  '/img/error-flat.png' %}"
+                                                                 height="20px"/>
+                                                            Partial Order </a> </b></h4>
+                                                        <p class="card-category">Note: This feature is to track partial
+                                                            orders . Unselect the items which are not available and
+                                                            click Save </p>
+
+                                                    </div>
+                                                    <div class="card-body table-responsive">
+                                                        <table id="notrefunded" class="table table-hover">
+                                                            <thead class="text-warning">
+                                                            <th><b>Orderline ID</b></th>
+                                                            <th><b>SKU</b></th>
+                                                            <th><b>QTY</b></th>
+                                                            <th><b>Availability</b></th>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for orderline in list_of_found_orderlineids %}
+                                                                <tr>
+                                                                    <td><b> {{ orderline.0 }}</b></td>
+                                                                    <td><b>{{ orderline.1 }}</b></td>
+                                                                    <td><b>{{ orderline.2 }}</b></td>
+                                                                    <td>
+
+                                                                        <div class="form-check">
+                                                                            <label class="form-check-label">
+                                                                                <input class="form-check-input"
+                                                                                       type="checkbox" value="" checked>
+                                                                                <span class="form-check-sign">
+                                    <span class="check"></span>
+                                  </span>
+                                                                            </label>
+                                                                        </div>
+
+                                                                    </td>
+                                                                </tr>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+                                                        </table>
+                                                        <div align="center">
+                                                            <input type="submit" name="save"
+                                                                   class="btn btn-round btn-fill btn-danger"
+                                                                   value="Initiate Tracking"/>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td colspan="4" class="text-center">
+                                            <h2>Partial order not available</h2>
+                                        </td>
+                                    </tr>
+                                {% endif %}
+
+
+
+
+                                <tr>
+                                    <td colspan="4" class="text-center">
+                                        <a target="_blank"
+                                           href="https://www.findsports.com.au/_cpanel/order/vieworder?id={{ orderid }}"
+                                           class="btn btn-round btn-fill btn-info">View on Neto</a>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+
+                                    </td>
+
+                                    {#                          <td class="text-center"></td>#}
+                                    {#                          <td class="text-center">#}
+                                    {#                            <a href="#" class="btn btn-round btn-fill btn-default disabled">Current Version</a>#}
+                                    {##}
+                                    {#                          </td>#}
+                                    {#                          <td class="text-center">#}
+                                    {#                                  #}
+                                    {#                          </td>#}
+                                    {#                            <td class="text-center">#}
+                                    {#                          </td>#}
+                                    {#                            <td class="text-center">#}
+                                    {#                          </td>#}
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Purchase Orders
+                                    </td>
+                                    <td colspan="4">
+                                        {% if purchase_order %}
+
+
+                                            {% for purchaseid in list_of_purchase_ids %}
+                                                <a target="_blank" href="/purchaseorder?pid={{ purchaseid }}"
+                                                   class="btn btn-round btn-fill btn-success">{{ purchaseid }}</a>
+                                            {% endfor %}
+
+
+                                        {% else %}
+                                            <a href="#" class="btn btn-round btn-fill btn-danger">Purchase Order</a>
+                                        {% endif %}
+                                        <div align="center">
+                                            {% for message in messages %}
+                                                <h3>
+                                                    {{ message }}
+                                                </h3>
+                                            {% endfor %}
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-hover">
+                                                <thead class="text-warning">
+                                                <th><b>PurchaseOrder ID</b></th>
+                                                <th><b>Alias</b></th>
+                                                <th><b>Tracking ID</b></th>
+                                                <th><b>Created Date</b></th>
+                                                <th><b>Received Date</b></th>
+                                                <th><b>Notes</b></th>
+
+                                                </thead>
+                                                <tbody>
+                                                {% for key,value in dict_purchaseorderid_details.items %}
+                                                    <tr>
+                                                        <td><b>
+
+                                                            <a target="_blank" href="/purchaseorder?pid={{ value.pid }}"
+                                                            > {{ value.pid }}</a>
+
+                                                        </b></td>
+                                                        <td><b> {{ value.alias }}</b></td>
+                                                        <td><b>{{ value.tracking_id }}</b></td>
+                                                        <td><b>{{ value.created_date }}</b></td>
+                                                        <td><b>{{ value.received_date }}</b></td>
+                                                        <td><b>{{ value.internal_comments }}</b></td>
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+
+                                        <div class="card-body table-responsive">
+                                            <table class="table table-hover">
+                                                <thead class="text-warning">
+                                                <th><b>Orderline ID</b></th>
+                                                <th><b>Qty</b></th>
+                                                <th><b>Warehouse Stock</b></th>
+                                                <th><b>In Shop Availability</b></th>
+
+                                                </thead>
+                                                <tbody>
+                                                {% for key,value in dict_orderlineid_stock.items %}
+                                                    <tr>
+                                                        <td><b> {{ value.orderline_id }}</b></td>
+                                                        <td><b>{{ value.qty }}</b></td>
+                                                        <td><b>{{ value.stock }}</b></td>
+                                                     <td><b>
+                                                         {% if value.instore_available %}
+                                                         <i class="material-icons">check</i>
+                                                         {% endif %}
+
+                                                         </b></td>
+                                                    </tr>
+                                                {% endfor %}
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div align="center">
+<h1>ESCALATION CENTER</h1>
+                            <div class="card-body table-responsive">
+                                <form action="escalate" method="post">
+                                    {% csrf_token %}
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th><b></b></th>
+                                        <th><b></b></th>
+
+
+
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td><b> Internal Notes</b></td>
+                                            <td><b>
+                                                        <textarea rows="4" name="internalnotes" placeholder="{{ internal_notes }}" cols="10" value=""
+                                                                  required
+                                                                  class="form-control"></textarea>
+
+
+                                            </b></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><b> Zendesk #</b></td>
+                                            <td><b>
+                                                <input type="text" class="form-control"
+                                                       name="zendesk"
+                                                       value="{{ zendesk }}"
+                                                >
+
+
+                                            </b></td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b> Operator Name</b></td>
+                                            <td><b>
+                                                <input type="text" class="form-control"
+                                                       placeholder="Name of Handler"
+                                                       name="handler" required
+                                                       value="">
+
+                                                <input type="text" class="form-control"
+                                                       name="orderid" required hidden
+                                                       value="{{ orderid }}"
+                                                >
+
+
+                                            </b></td>
+
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b>Priority(Highest=5)</b></td>
+                                            <td>
+
+                                                <div class="controls">
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if priority == 1 %}checked="checked"{% endif %}
+                                                               required name="priority" value="1">
+                                                        1
+                                                    </label>
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if priority == 2 %}checked="checked"{% endif %}
+                                                               required name="priority" value="2">
+                                                        2
+                                                    </label>
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if priority == 3 %}checked="checked"{% endif %}
+                                                               required name="priority" value="3">
+                                                        3
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if priority == 4 %}checked="checked"{% endif %}
+                                                               required name="priority" value="4">
+                                                        4
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if priority == 5 %}checked="checked"{% endif %}
+                                                               required name="priority" value="5">
+                                                        5
+                                                    </label>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Escalation Type</b></td>
+                                            <td>
+
+                                                <div class="controls">
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if status == 'tracking' %}checked="checked"{% endif %}
+                                                               required name="escalate" value="tracking">
+                                                        Tracking
+                                                    </label>
+
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if status == 'refunds' %}checked="checked"{% endif %}
+                                                               required name="escalate" value="refunds">
+                                                        Refunds
+                                                    </label>
+
+                                                    <label class="radio">
+                                                        <input type="radio"
+                                                               {% if status == 'others' %}checked="checked"{% endif %}
+                                                               required name="escalate" value="others">
+                                                        Others
+                                                    </label>
+                                                </div>
+
+
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td><b>Assigned To</b></td>
+                                            <td>
+                                              <div class="controls2">
+                                                {% for item in list_of_customer_service_reps %}
+
+
+                                                    <label class="radio2">
+                                                        <input type="radio"
+                                                               {% if assigned_to == item %}checked="checked"{% endif %}
+                                                               required name="assignedto" value="{{ item }}">
+                                                        {{ item }}
+                                                    </label>
+
+
+
+                                                      {% endfor %}
+                                               </div>
+
+
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <div align="center">
+
+                                                    <input class="btn btn-round btn-fill btn-danger" type="submit"
+                                                           name="open"
+                                                           value="Escalate">
+
+                                                    {% if open %}
+                                                        <input class="btn btn-round btn-fill btn-success" type="submit"
+                                                               name="close"
+                                                               value="Resolve">
+                                                    {% endif %}
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b> History</b></td>
+                                            <td><b>
+                                                        <textarea rows="15" cols="10" name="history" value="" readonly
+                                                                  class="form-control">{{ history }}</textarea>
+
+                                            </b></td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                             <div align="center">
+<h1>EMAIL CENTER</h1>
+                            <div class="card-body table-responsive">
+                                <form action="sendorderemail" method="post">
+                                    {% csrf_token %}
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th><b></b></th>
+                                        <th><b></b></th>
+
+
+
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td><b> From</b></td>
+                                            <td><b>
+                                                <input  name="email_from"   class="form-control" value="support@findsports.com.au" required readonly>
+
+
+
+                                            </b></td>
+
+                                        </tr>
+                                      <tr>
+                                            <td><b> To</b></td>
+                                            <td><b>
+                                                        <input  name="email_to"  class="form-control" value="{{ customer_email }}" required>
+
+
+                                            </b></td>
+
+                                        </tr>
+ <tr>
+                                            <td><b> Operator Name</b>
+                                            <br><p>*For internal usage only</p></td>
+                                            <td><b>
+                                                <input type="text" class="form-control"
+                                                       placeholder="Name of Handler"
+                                                       name="handler" required
+                                                       value="">
+
+                                                <input type="text" class="form-control"
+                                                       name="orderid" required hidden
+                                                       value="{{ orderid }}"
+                                                >
+
+
+                                            </b></td>
+
+                                        </tr>
+                                         <tr>
+                                            <td><b> Message</b></td>
+                                            <td><b>
+                                                        <textarea rows="4" name="email_msg" rows="35" cols="10" value=""
+                                                                  required
+                                                                  class="form-control"></textarea>
+
+
+                                            </b></td>
+
+                                        </tr>
+
+
+
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <div align="center">
+
+                                                    <input class="btn btn-round btn-fill btn-danger" type="submit"
+                                                           name="sendemail"
+                                                           value="Send Email">
+
+                                                </div>
+                                                      <div align="center">
+                                        {% for message in messages %}
+                                            <h3>
+                                                {{ message }}
+                                            </h3>
+                                        {% endfor %}
+                                    </div>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td><b>Email History</b></td>
+                                            <td><b>
+                                                        <textarea rows="15" cols="10" name="email_history" value="" readonly
+                                                                  class="form-control">{{ email_history_string }}</textarea>
+
+                                            </b></td>
+
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "mastertemplates/jsfiles.html" %}
+
+
+

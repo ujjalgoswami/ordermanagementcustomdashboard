@@ -1,0 +1,160 @@
+{% load static %}
+{% load mathfilters %}
+{% static "images" as baseUrl %}
+{% include "mastertemplates/header.html" %}
+
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-9 col-md-12">
+
+
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title"><b> NEWS LETTER CONFIG </b>
+                        </h4>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <form id="newsletter" action="changenewsletter" method="post">
+                            {% csrf_token %}
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th>Product</th>
+                                <th>SKU</th>
+                                <th>HEIGHT</th>
+                                <th>WIDTH</th>
+
+                                </thead>
+                                <tbody>
+
+                                {% for key,value in dict_prod_details.items %}
+                                    <tr>
+                                        <td><b><input type="text" class="form-control"
+                                                      value="{{ key }}" readonly/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:sku"
+                                                      value="{{ value.sku }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:height"
+                                                      value="{{ value.height }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:width"
+                                                      value="{{ value.width }}"/></b></td>
+
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+
+
+
+                                    <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th>Product</th>
+                                <th>Prod Link</th>
+                                <th>Image Link</th>
+                                <th>Width</th>
+                                <th>Height</th>
+
+
+                                </thead>
+                                <tbody>
+
+                                {% for key,value in dict_product_tiles_row.items %}
+                                    <tr>
+                                        <td><b><input type="text" class="form-control"
+                                                      value="{{ key }}" readonly name="{{ key }}:alias"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:product_link"
+                                                      value="{{ value.product_link }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:image_url"
+                                                      value="{{ value.product_image_link }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:width"
+                                                      value="{{ value.width }}"/></b></td>
+                                        <td><b><input type="text" class="form-control"
+                                                      name="{{ key }}:height"
+                                                      value="{{ value.height }}"/></b></td>
+
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+
+
+                            <table id="notrefunded" class="table table-hover">
+                                <thead class="text-warning">
+
+                                <th>Product</th>
+                                <th>Desc</th>
+                                <th>Prod Link</th>
+                                <th>Image Link</th>
+                                <th>Starting Price</th>
+
+
+                                </thead>
+                                <tbody>
+
+                                {% for key,value in dict_featured_prod_categ_details.items %}
+                                    <tr>
+                                        <td><b><input type="text" class="form-control"
+                                                      value="{{ key }}" readonly/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:description"
+                                                      value="{{ value.description }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:product_link"
+                                                      value="{{ value.product_link }}"/></b></td>
+                                        <td><b><input type="text" class="form-control" name="{{ key }}:image_url"
+                                                      value="{{ value.image_url }}"/></b></td>
+                                        <td><b><input type="text" class="form-control"
+                                                      name="{{ key }}:price_starting_from"
+                                                      value="{{ value.price_starting_from }}"/></b></td>
+
+                                    </tr>
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+
+
+                            <div align="center">
+                                <input id="update_newsletter" type="submit" name="save"
+                                       class="btn btn-round btn-fill btn-info"
+                                       value="Update NEWSLETTER"/>
+                            </div>
+
+                            <div align="center">
+                                <a href="shownewsletter" target="_blank" class="btn btn-round btn-fill btn-success">View
+                                    Newsletter</a>
+                            </div>
+
+                            <div align="center">
+                                <a href="newsletterecommender" target="_blank" class="btn btn-round btn-fill btn-info">View
+                                    Newsletter Recommender</a>
+                            </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            </form>
+
+
+        </div>
+
+
+        {% include "mastertemplates/jsfiles.html" %}
+
+
+        <script>
+            $(document).ready(function () {
+                $('#newsletter').submit(function (event) {
+                    // disable to avoid double submission
+                    $('#update_newsletter').attr('disabled', true);
+                });
+            });
+        </script>

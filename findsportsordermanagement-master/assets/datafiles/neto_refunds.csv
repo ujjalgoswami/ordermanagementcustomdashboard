@@ -1,0 +1,602 @@
+Refund ID,Date Issued,Company Name,First Name,Last Name,Username,Refund Notes,Order ID,Status,Payment Method,Date Paid,Amount,Exported To 3rd Party Software
+6952,17-Jan-20,,Justin,Groos,justingroos4816,Credit from RMA #7508 Adjustment Note #N10106344,N10103410,Completed,PayPal Express,17-Jan-20,$222.25 ,No
+6953,17-Jan-20,,Chris,Pendrey,1hoppa123571919,Credit from RMA #7509 Adjustment Note #N10106346,N10105186,Completed,Visa,17-Jan-20,$21.95 ,No
+6954,17-Jan-20,,Mel,Howell,mel_howell_1803,Credit from RMA #7510 Adjustment Note #N10106347,N10103859,Completed,MasterCard,17-Jan-20,$31.10 ,No
+6955,17-Jan-20,,Matthew,Furlong,2.1402E+11,Credit from RMA #7511 Adjustment Note #N10106348,N10103476,Completed,PayPal Express,17-Jan-20,$395.91 ,No
+6956,17-Jan-20,,,,noreg,Credit from RMA #7512 Adjustment Note #N10106354,MD0401202148108,Completed,Afterpay,17-Jan-20,$38.40 ,No
+6957,17-Jan-20,,,,noreg,Credit from RMA #7513 Adjustment Note #N10106356,MD0301201755010,Completed,Afterpay,17-Jan-20,$40.40 ,No
+6958,17-Jan-20,,,,noreg,Credit from RMA #7514 Adjustment Note #N10106357,KOGAN-10286562,Completed,Kogan Payment,17-Jan-20,$17.95 ,No
+6959,17-Jan-20,,,,noreg,Credit from RMA #7515 Adjustment Note #N10106358,KOGAN-9876859,Completed,Kogan Payment,17-Jan-20,$204.95 ,No
+6960,17-Jan-20,,Tyson,Ockelford,9359738_cotd,Credit from RMA #7516 Adjustment Note #N10106359,N10105963,Completed,Catch,17-Jan-20,$71.90 ,No
+6961,17-Jan-20,Muswellbrook Steel,Katelyn,Hall,28192752_cotd,Credit from RMA #7517 Adjustment Note #N10106360,N10105901,Completed,Catch,17-Jan-20,$62.90 ,No
+6962,17-Jan-20,,Louise,Sinclair,30423996_cotd,Credit from RMA #7518 Adjustment Note #N10106361,N10105863,Completed,Catch,17-Jan-20,$24.90 ,No
+6963,17-Jan-20,,Lisa,Rodrigues,30362198_cotd,Credit from RMA #7519 Adjustment Note #N10106363,N10104952,Completed,Catch,17-Jan-20,$112.95 ,No
+6964,17-Jan-20,,Johann,Bancilhon,jbancilhon47361,Credit from RMA #7520 Adjustment Note #N10106376,N10103750,Completed,PayPal Express,17-Jan-20,$189.99 ,No
+6965,17-Jan-20,,Tess,Hains,thoiwalkps23459,Credit from RMA #7521 Adjustment Note #N10106377,N10105060,Completed,PayPal Express,17-Jan-20,$127.90 ,No
+6966,17-Jan-20,,,,noreg,Credit from RMA #7522 Adjustment Note #N10106378,MD2711190951281,Completed,Afterpay,17-Jan-20,$103.95 ,No
+6937,15-Jan-20,,Kate,McDermott,katemcdermott22,Credit from RMA #7494 Adjustment Note #N10106210,N10104710,Completed,Visa,15-Jan-20,$135.00 ,No
+6938,15-Jan-20,,Hilda,De Luca,hildadeluca1609,Credit from RMA #7495 Adjustment Note #N10106213,N10104819,Completed,MasterCard,15-Jan-20,$102.87 ,No
+6939,15-Jan-20,,Penelope,Thomas,penelope_thomas,Credit from RMA #7496 Adjustment Note #N10106214,N10103619,Completed,PayPal Express,15-Jan-20,$134.95 ,No
+6940,15-Jan-20,,Alan,Prothero,alanprothero112,Credit from RMA #7497 Adjustment Note #N10106216,N10105078,Completed,PayPal Express,15-Jan-20,$173.95 ,No
+6941,15-Jan-20,,Helen,Smith,helenlrose22442,Credit from RMA #7498 Adjustment Note #N10106218,N10104817,Completed,PayPal Express,15-Jan-20,$37.90 ,No
+6942,15-Jan-20,,Karen,Ward,kaz723508202911,Credit from RMA #7499 Adjustment Note #N10106226,N10103399,Completed,PayPal Express,15-Jan-20,$119.99 ,No
+6943,15-Jan-20,,Tahli,Mastores,tahlishepherd20,Credit from RMA #7500 Adjustment Note #N10106230,N10104773,Completed,PayPal Express,15-Jan-20,$101.80 ,No
+6944,15-Jan-20,,,,noreg,Credit from RMA #7501 Adjustment Note #N10106232,MD1112190842133,Completed,Afterpay,15-Jan-20,$84.40 ,No
+6945,15-Jan-20,,Dion,Hughes,dion_hughes7513,Credit from RMA #7502 Adjustment Note #N10106234,N10104270,Completed,PayPal Express,15-Jan-20,$101.75 ,No
+6946,15-Jan-20,,Leila,Gaitskell,finnertylee4508,Credit from RMA #7503 Adjustment Note #N10106236,N10105601,Completed,Afterpay,15-Jan-20,$20.95 ,No
+6947,15-Jan-20,,Laura,O&#39;Neill,laurammhenry351,Credit from RMA #7504 Adjustment Note #N10106237,N10105810,Completed,MasterCard,15-Jan-20,$33.40 ,No
+6948,15-Jan-20,,Lee,Murdoch,leemud190521111,Credit from RMA #7505 Adjustment Note #N10106238,N10104476,Completed,Afterpay,15-Jan-20,$144.45 ,No
+6949,15-Jan-20,,Susan,Pearse,susiepearsetrai,Credit from RMA #7506 Adjustment Note #N10106249,N10101850,Completed,PayPal Express,15-Jan-20,$40.95 ,No
+6950,15-Jan-20,,Dylan,Cleary,dylan_drew_clea,Credit from RMA #7045 Adjustment Note #N10106250,N10102156,Completed,PayPal Express,15-Jan-20,$127.95 ,No
+6951,15-Jan-20,,Sean,Fenning,knightsfan96353,Credit from RMA #7507 Adjustment Note #N10106251,N10102473,Completed,PayPal Express,15-Jan-20,$55.95 ,No
+6920,14-Jan-20,,,,noreg,Credit from RMA #7477 Adjustment Note #N10106158,KOGAN-9171005,Completed,Kogan Payment,14-Jan-20,$45.95 ,No
+6921,14-Jan-20,,Darren,Palmer,darrenpalmer381,Credit from RMA #7478 Adjustment Note #N10106163,N10106101,Completed,Visa,14-Jan-20,$30.40 ,No
+6922,14-Jan-20,,John,Bonanno,30435134_cotd,Credit from RMA #7479 Adjustment Note #N10106164,N10106059,Completed,Catch,14-Jan-20,$20.90 ,No
+6923,14-Jan-20,,Gordon,Stockham,gordonstockham9,Credit from RMA #7480 Adjustment Note #N10106165,N10104389,Completed,Afterpay,14-Jan-20,$51.80 ,No
+6924,14-Jan-20,,Colin,Neu,colinneu2614475,Credit from RMA #7481 Adjustment Note #N10106167,N10106048,Completed,MasterCard,14-Jan-20,$27.40 ,No
+6925,14-Jan-20,,david,j mclellan,melaroo_6410151,Credit from RMA #7482 Adjustment Note #N10106175,N10105539,Completed,PayPal Express,14-Jan-20,$580.95 ,No
+6926,14-Jan-20,,Renay,Mealing,rlmealing024311,Credit from RMA #7483 Adjustment Note #N10106178,N10105080,Completed,PayPal Express,14-Jan-20,$69.40 ,No
+6927,14-Jan-20,,Bonnie,Allan,bonniesandford3,Credit from RMA #7484 Adjustment Note #N10106179,N10105571,Completed,PayPal Express,14-Jan-20,$34.40 ,No
+6928,14-Jan-20,,Rex,Court,28463673_cotd,Credit from RMA #7485 Adjustment Note #N10106181,N10104648,Completed,Catch,14-Jan-20,$19.90 ,No
+6929,14-Jan-20,,Chris,Green,cpgr76160811100,Credit from RMA #7486 Adjustment Note #N10106182,N10105985,Completed,PayPal Express,14-Jan-20,$26.95 ,No
+6930,14-Jan-20,,DANE,LIDDY,daneliddy020207,Credit from RMA #7487 Adjustment Note #N10106183,N10105603,Completed,PayPal Express,14-Jan-20,$85.40 ,No
+6931,14-Jan-20,,sandra,halliwell,rshalliwell5555,Credit from RMA #7488 Adjustment Note #N10106185,N10105453,Completed,PayPal Express,14-Jan-20,$33.35 ,No
+6932,14-Jan-20,,Sharee,Weeks,wytchweeks19441,Credit from RMA #7489 Adjustment Note #N10106187,N10104809,Completed,PayPal Express,14-Jan-20,$173.95 ,No
+6933,14-Jan-20,"BlackSand Neuropsychological Services, Inc.",Shannon,Freedle,swfreedle573915,Credit from RMA #7490 Adjustment Note #N10106190,N10105687,Completed,PayPal Express,14-Jan-20,$313.05 ,No
+6934,14-Jan-20,private,MARCO,DELGADO,marcodelgado561,Credit from RMA #7491 Adjustment Note #N10106191,N10103252,Completed,PayPal Express,14-Jan-20,$224.95 ,No
+6935,14-Jan-20,,Louise,Gough,lgough451922041,Credit from RMA #7492 Adjustment Note #N10106192,N10103887,Completed,Visa,14-Jan-20,$12.95 ,No
+6936,14-Jan-20,,David,Guy,davidguy1973401,Credit from RMA #7493 Adjustment Note #N10106193,N10105173,Completed,PayPal Express,14-Jan-20,$132.95 ,No
+6913,10-Jan-20,,Brenton,Clarke,brentonclarke42,Credit from RMA #7470 Adjustment Note #N10105972,N10102657,Completed,Afterpay,10-Jan-20,$54.95 ,No
+6914,10-Jan-20,,Dean,Butt,deanbutt8443547,Credit from RMA #7471 Adjustment Note #N10105974,N10104482,Completed,Afterpay,10-Jan-20,$9.95 ,No
+6915,10-Jan-20,,William,Cookson,jcookson2841143,Credit from RMA #7472 Adjustment Note #N10105976,N10105442,Completed,Visa,10-Jan-20,$176.95 ,No
+6916,10-Jan-20,,Tyson,Ockelford,9359738_cotd,Credit from RMA #7473 Adjustment Note #N10105977,N10103017,Completed,Catch,10-Jan-20,$71.90 ,No
+6917,10-Jan-20,Japan Australia LNg,Chrislo,Van Tonder,24985943_cotd,Credit from RMA #7474 Adjustment Note #N10105978,N10104784,Completed,Catch,10-Jan-20,$36.85 ,No
+6918,10-Jan-20,,Rachael,Green,green_rl1435092,Credit from RMA #7475 Adjustment Note #N10105989,N10103338,Completed,Visa,10-Jan-20,$126.95 ,No
+6919,10-Jan-20,,Breahn,Lapham,breahn092716281,Credit from RMA #7476 Adjustment Note #N10105992,N10105290,Completed,Afterpay,10-Jan-20,$59.95 ,No
+6912,9-Jan-20,,Brett,Hutchinson,brettlhutchinso,Credit from RMA #7468 Adjustment Note #N10105940,N10103298,Completed,Afterpay,9-Jan-20,$36.95 ,No
+6894,9-Jan-20,,Peter,Tillett,petertillett340,Credit from RMA #7451 Adjustment Note #N10105909,N10105784,Completed,Visa,9-Jan-20,$42.07 ,No
+6895,9-Jan-20,,Madeleine,wakeham,maddiewakeham02,Credit from RMA #7452 Adjustment Note #N10105910,N10105753,Completed,MasterCard,9-Jan-20,$69.40 ,No
+6896,9-Jan-20,,John,Piscopo,9526690_cotd,Credit from RMA #7453 Adjustment Note #N10105911,N10105481,Completed,Catch,9-Jan-20,$20.90 ,No
+6897,9-Jan-20,,Duy,Tran,30053575_cotd,Credit from RMA #7454 Adjustment Note #N10105912,N10105199,Completed,Catch,9-Jan-20,$22.90 ,No
+6898,9-Jan-20,,Lauren,Doherty,laurendelafonta,Credit from RMA #7455 Adjustment Note #N10105914,N10105155,Completed,Visa,9-Jan-20,$149.00 ,No
+6899,9-Jan-20,,Jake,Keet,jakekeet172721172609,Credit from RMA #7456 Adjustment Note #N10105915,N10102769,Completed,MasterCard,9-Jan-20,$35.95 ,No
+6900,9-Jan-20,,Amanda,Wade,mandywade201017,Credit from RMA #7457 Adjustment Note #N10105917,N10102510,Completed,PayPal Express,9-Jan-20,$144.95 ,No
+6901,9-Jan-20,,Caelum,McSharry,immodestwizard5,Credit from RMA #7458 Adjustment Note #N10105921,N10105152,Completed,PayPal Express,9-Jan-20,$49.35 ,No
+6902,9-Jan-20,,Roxana,Vasile,14124942834,Credit from RMA #7459 Adjustment Note #N10105922,N10104601,Completed,PayPal Express,9-Jan-20,$39.40 ,No
+6903,9-Jan-20,,Craig,Rush,crushstar680818,Credit from RMA #7460 Adjustment Note #N10105923,N10104419,Completed,PayPal Express,9-Jan-20,$21.95 ,No
+6904,9-Jan-20,,Emma,Banks,nathanandemmaba,Credit from RMA #7461 Adjustment Note #N10105924,N10103559,Completed,PayPal Express,9-Jan-20,$9.95 ,No
+6905,9-Jan-20,,Paul,Rumbal,paulrumbal60420,Credit from RMA #6678 Adjustment Note #N10105925,N1098466,Completed,PayPal Express,9-Jan-20,$55.95 ,No
+6906,9-Jan-20,,Krystyna,Venn,krystynavenn123,Credit from RMA #7462 Adjustment Note #N10105931,N10105776,Completed,PayPal Express,9-Jan-20,$69.40 ,No
+6907,9-Jan-20,,Trudy,Habner,habneta35461012,Credit from RMA #7463 Adjustment Note #N10105933,N10104508,Completed,PayPal Express,9-Jan-20,$78.45 ,No
+6908,9-Jan-20,,luke,moreta,lukemoreta13441,Credit from RMA #7464 Adjustment Note #N10105935,N10103762,Completed,PayPal Express,9-Jan-20,$78.25 ,No
+6909,9-Jan-20,,Virginia,Carlson,virginia2914201,Credit from RMA #7465 Adjustment Note #N10105936,N10104739,Completed,PayPal Express,9-Jan-20,$24.95 ,No
+6910,9-Jan-20,,Stacey,Page,stuss8302401416,Credit from RMA #7466 Adjustment Note #N10105937,N10104796,Completed,PayPal Express,9-Jan-20,$71.36 ,No
+6911,9-Jan-20,,Jan,Donnithorne,jandonnithorne0,Credit from RMA #7467 Adjustment Note #N10105939,N10103903,Completed,Visa,9-Jan-20,$170.49 ,No
+6887,8-Jan-20,,scott,moore,skot689,Credit from RMA #7444 Adjustment Note #N10105866,N10101711,Completed,PayPal Express,8-Jan-20,$43.90 ,No
+6888,8-Jan-20,,Jenny,Hills,jennyhills58521,Credit from RMA #7445 Adjustment Note #N10105868,N10104724,Completed,PayPal Express,8-Jan-20,$46.95 ,No
+6889,8-Jan-20,,Nathan,Donnelly,nathan_d8456482,Credit from RMA #7446 Adjustment Note #N10105869,N10103874,Completed,Afterpay,8-Jan-20,$52.95 ,No
+6890,8-Jan-20,,dave,mills,middemo20440026,Credit from RMA #7447 Adjustment Note #N10105870,N10105193,Completed,MasterCard,8-Jan-20,$10.95 ,No
+6891,8-Jan-20,,Joshua,Dickinson,geordieshell575,Credit from RMA #7448 Adjustment Note #N10105871,N10104798,Completed,zipPay,8-Jan-20,$167.87 ,No
+6892,8-Jan-20,,Coralie,Maillard,cocomail0000951,Credit from RMA #7449 Adjustment Note #N10105872,N10104229,Completed,MasterCard,8-Jan-20,$32.40 ,No
+6893,8-Jan-20,,Jessica ,Sheppard ,jesssheppard133,Credit from RMA #7450 Adjustment Note #N10105874,N10103536,Completed,Visa,8-Jan-20,$85.50 ,No
+6865,7-Jan-20,,,,noreg,Credit from RMA #7422 Adjustment Note #N10105777,KOGAN-10130547,Completed,Kogan Payment,7-Jan-20,$39.99 ,No
+6866,7-Jan-20,,,,noreg,Credit from RMA #7423 Adjustment Note #N10105779,KOGAN-10016525,Completed,Kogan Payment,7-Jan-20,$35.95 ,No
+6867,7-Jan-20,,,,noreg,Credit from RMA #7424 Adjustment Note #N10105781,Alex-4395,Completed,POS Card,7-Jan-20,$53.95 ,No
+6868,7-Jan-20,,Chris,Twyman,christwyman4037,Credit from RMA #7425 Adjustment Note #N10105787,N10105522,Completed,Visa,7-Jan-20,$40.07 ,No
+6869,7-Jan-20,,Susan,Richards,millss362120010,Credit from RMA #7426 Adjustment Note #N10105788,N10105503,Completed,Visa,7-Jan-20,$152.95 ,No
+6870,7-Jan-20,,Lauren,Peterson,peterson1275550,Credit from RMA #7427 Adjustment Note #N10105790,N10105356,Completed,MasterCard,7-Jan-20,$83.82 ,No
+6871,7-Jan-20,,Michael,Jonas,mickjonas552848,Credit from RMA #7428 Adjustment Note #N10105791,N10105343,Completed,zipPay,7-Jan-20,$95.90 ,No
+6872,7-Jan-20,,Melanie,Schultz,smschultz180914,Credit from RMA #7429 Adjustment Note #N10105799,N10103524,Completed,PayPal Express,7-Jan-20,$136.90 ,No
+6873,7-Jan-20,,Paul,Murphy,paulmurphy27280,Credit from RMA #7430 Adjustment Note #N10105800,N10103940,Completed,MasterCard,7-Jan-20,$220.48 ,No
+6874,7-Jan-20,,Kathi ,Kyriakides ,kathik563519151,Credit from RMA #7431 Adjustment Note #N10105801,N10104736,Completed,MasterCard,7-Jan-20,$69.95 ,No
+6875,7-Jan-20,CEDAR CARAVANS,DYAN,HAMMOUD,info35011011121,Credit from RMA #7432 Adjustment Note #N10105802,N10104426,Completed,Visa,7-Jan-20,$119.00 ,No
+6876,7-Jan-20,,Jack,Cremen,14334994060,Credit from RMA #7433 Adjustment Note #N10105803,N10103995,Completed,MasterCard,7-Jan-20,$85.95 ,No
+6877,7-Jan-20,,Robin,Testa,acrohc473512061,Credit from RMA #7434 Adjustment Note #N10105804,N10103983,Completed,Visa,7-Jan-20,$52.95 ,No
+6878,7-Jan-20,,Mark,Lott,marklottscribes,Credit from RMA #7435 Adjustment Note #N10105805,N10103877,Completed,Visa,7-Jan-20,$39.43 ,No
+6879,7-Jan-20,,Dianne,White,diannemwhite271,Credit from RMA #7436 Adjustment Note #N10105806,N10103419,Completed,Visa,7-Jan-20,$216.45 ,No
+6880,7-Jan-20,,,,noreg,Credit from RMA #7437 Adjustment Note #N10105808,MD2711191157478,Completed,Afterpay,7-Jan-20,$102.49 ,No
+6881,7-Jan-20,,Leigh,Steger,leigh_steger251,Credit from RMA #7438 Adjustment Note #N10105812,N10103294,Completed,MasterCard,7-Jan-20,$72.44 ,No
+6882,7-Jan-20,,Dave,Adamson,d4vidadamson002,Credit from RMA #7439 Adjustment Note #N10105813,N10102354,Completed,MasterCard,7-Jan-20,$158.95 ,No
+6883,7-Jan-20,,Andrew,Gaw,andrew023601301,Credit from RMA #7440 Adjustment Note #N10105815,N10105341,Completed,PayPal Express,7-Jan-20,$35.07 ,No
+6884,7-Jan-20,,Leigh,Patton,lpatton24471927,Credit from RMA #7441 Adjustment Note #N10105817,N10105251,Completed,PayPal Express,7-Jan-20,$45.40 ,No
+6885,7-Jan-20,,Melissa,Habashi,shabashi0702211,Credit from RMA #7442 Adjustment Note #N10105818,N10105167,Completed,PayPal Express,7-Jan-20,$42.35 ,No
+6886,7-Jan-20,,Desiree,Brown,deegreacen46190,Credit from RMA #7443 Adjustment Note #N10105819,N10104755,Completed,PayPal Express,7-Jan-20,$73.49 ,No
+6858,3-Jan-20,,Sandra,Leyman,sleyman85050707,Credit from RMA #7414 Adjustment Note #N10105558,N10103326,Completed,PayPal Express,3-Jan-20,$472.95 ,No
+6859,3-Jan-20,,Rachel,Esler,racheleslerre09,Credit from RMA #7415 Adjustment Note #N10105559,N10103818,Completed,Visa,3-Jan-20,$40.40 ,No
+6860,3-Jan-20,,Liz,Whelan,elizabethwhelan,Credit from RMA #7416 Adjustment Note #N10105561,N10104631,Completed,Afterpay,3-Jan-20,$74.36 ,No
+6861,3-Jan-20,,Byran,Lee,leejerb37111210,Credit from RMA #7417 Adjustment Note #N10105562,N10104341,Completed,Afterpay,3-Jan-20,$34.95 ,No
+6862,3-Jan-20,,Tamara,Bucci-Ciampa,tamara_bucci024,Credit from RMA #7419 Adjustment Note #N10105566,N10103692,Completed,Visa,3-Jan-20,$122.32 ,No
+6863,3-Jan-20,,,,noreg,Credit from RMA #7418 Adjustment Note #N10105564,MD2712192001527,Completed,Afterpay,3-Jan-20,$85.40 ,No
+6864,3-Jan-20,,Jody,Blythe ,jodyblythe45450,Credit from RMA #7420 Adjustment Note #N10105576,N10104415,Completed,Visa,3-Jan-20,$40.00 ,No
+6839,31-Dec-19,,Mike,Leite,mikemleite38372,Credit from RMA #7395 Adjustment Note #N10105415,N10103953,Completed,PayPal Express,31-Dec-19,$299.95 ,No
+6840,31-Dec-19,,alison,surman,allyluvsrickyal,Credit from RMA #7396 Adjustment Note #N10105419,N10105303,Completed,Afterpay,31-Dec-19,$280.75 ,No
+6841,31-Dec-19,,,,noreg,Credit from RMA #7397 Adjustment Note #N10105421,Alex-4533,Completed,POS Card,31-Dec-19,$369.00 ,No
+6842,31-Dec-19,,Sean,Boles,seanjacinta2002,Credit from RMA #7398 Adjustment Note #N10105427,N10105271,Completed,MasterCard,31-Dec-19,$45.40 ,No
+6843,31-Dec-19,,Diana,Davis,dianadavis50421,Credit from RMA #7399 Adjustment Note #N10105428,N10105255,Completed,MasterCard,31-Dec-19,$127.95 ,No
+6844,31-Dec-19,,Jeffrey,Relf,relfjt225617271,Credit from RMA #7400 Adjustment Note #N10105431,N10105246,Completed,Visa,31-Dec-19,$41.87 ,No
+6845,31-Dec-19,,,,noreg,Credit from RMA #7401 Adjustment Note #N10105432,MD1612192305494,Completed,Afterpay,31-Dec-19,$88.01 ,No
+6846,31-Dec-19,,Matt,Collins,mattcollins3812,Credit from RMA #7402 Adjustment Note #N10105434,N10104402,Completed,zipPay,31-Dec-19,$60.00 ,No
+6847,31-Dec-19,,Derek,Nix,derek1141120812,Credit from RMA #7403 Adjustment Note #N10105435,N10104161,Completed,Visa,31-Dec-19,$226.02 ,No
+6848,31-Dec-19,,Jill,Ryan,thajillsta26150,Credit from RMA #7404 Adjustment Note #N10105436,N10103804,Completed,Afterpay,31-Dec-19,$61.95 ,No
+6849,31-Dec-19,,jenna,mcclaren,jennamcclaren16,Credit from RMA #7405 Adjustment Note #N10105438,N10103342,Completed,Afterpay,31-Dec-19,$85.95 ,No
+6850,31-Dec-19,,Letitia,Potashnyk,letitiapotashny,Credit from RMA #7406 Adjustment Note #N10105443,N10103360,Completed,MasterCard,31-Dec-19,$440.10 ,No
+6851,31-Dec-19,,Michael,Rose,michaellloydros,Credit from RMA #7407 Adjustment Note #N10105444,N10101898,Completed,Visa,31-Dec-19,$170.95 ,No
+6852,31-Dec-19,,Geoffrey,Dobson,geoffreydobson5,Credit from RMA #7408 Adjustment Note #N10105445,N10101766,Completed,Visa,31-Dec-19,$27.95 ,No
+6853,31-Dec-19,,Melissa,Penman,penman012615160,Credit from RMA #7409 Adjustment Note #N10105446,N10101757,Completed,PayPal Express,31-Dec-19,$179.99 ,No
+6854,31-Dec-19,,Michelle,Newstead,michellenewstea,Credit from RMA #7410 Adjustment Note #N10105448,N10101994,Completed,PayPal Express,31-Dec-19,$127.95 ,No
+6855,31-Dec-19,,Bronwyn,Allen,bronwynallen281,Credit from RMA #7411 Adjustment Note #N10105449,N10102072,Completed,PayPal Express,31-Dec-19,$118.95 ,No
+6856,31-Dec-19,,Joshua,McLean,20444582852,Credit from RMA #7412 Adjustment Note #N10105451,N10102366,Completed,PayPal Express,31-Dec-19,$72.95 ,No
+6857,31-Dec-19,,Cheryl,McCarthy,cherylmccarthy1,Credit from RMA #7413 Adjustment Note #N10105452,N10102706,Completed,PayPal Express,31-Dec-19,$15.00 ,No
+6804,30-Dec-19,,yvette,norton,yvetteparkin275,Credit from RMA #7360 Adjustment Note #N10105345,N10103815,Completed,Afterpay,30-Dec-19,$266.90 ,No
+6805,30-Dec-19,,Christine,Johnson,ckjohnson560857,Credit from RMA #7361 Adjustment Note #N10105346,N10104379,Completed,Afterpay,30-Dec-19,$55.90 ,No
+6806,30-Dec-19,,Alexander,Groves,algroves2758541,Credit from RMA #7362 Adjustment Note #N10105347,N10102690,Completed,Afterpay,30-Dec-19,$162.95 ,No
+6807,30-Dec-19,,,,noreg,Credit from RMA #7363 Adjustment Note #N10105348,KOGAN-9343187,Completed,Kogan Payment,30-Dec-19,$20.95 ,No
+6808,30-Dec-19,,Sakiko,Ormes,sakikong1904034,Credit from RMA #7364 Adjustment Note #N10105350,N10104317,Completed,Visa,30-Dec-19,$53.40 ,No
+6809,30-Dec-19,,Natasha ,Reece,tashgoldenfleec,Credit from RMA #7365 Adjustment Note #N10105352,N10104758,Completed,MasterCard,30-Dec-19,$57.35 ,No
+6810,30-Dec-19,Ray White Tamworth,Tamie,Waugh,tamie_waugh5030,Credit from RMA #7366 Adjustment Note #N10105354,N10104908,Completed,Visa,30-Dec-19,$57.35 ,No
+6811,30-Dec-19,,Peter,Jankowski,07.pete,Credit from RMA #7367 Adjustment Note #N10105355,N10105092,Completed,PayPal Express,30-Dec-19,$52.55 ,No
+6812,30-Dec-19,,Pei En,Lim,mscharissalim22,Credit from RMA #7368 Adjustment Note #N10105357,N10100954,Completed,PayPal Express,30-Dec-19,$104.85 ,No
+6813,30-Dec-19,,,,noreg,Credit from RMA #7369 Adjustment Note #N10105359,MD2012191854305,Completed,Afterpay,30-Dec-19,$43.93 ,No
+6814,30-Dec-19,,,,noreg,Credit from RMA #7370 Adjustment Note #N10105360,MD1812191137070,Completed,Afterpay,30-Dec-19,$16.40 ,No
+6815,30-Dec-19,,chris,hemsworth,chris4935355115,Credit from RMA #7371 Adjustment Note #N10105362,N10104946,Completed,PayPal Express,30-Dec-19,$24.35 ,No
+6816,30-Dec-19,,Vivienne,Parkes,tonyvivp1725101,Credit from RMA #7372 Adjustment Note #N10105363,N10104906,Completed,PayPal Express,30-Dec-19,$54.40 ,No
+6817,30-Dec-19,,Stacey,Walder,staceysew195809,Credit from RMA #7373 Adjustment Note #N10105364,N10104034,Completed,PayPal Express,30-Dec-19,$27.95 ,No
+6818,30-Dec-19,,Diogracia,Napoles,jnapoles,Credit from RMA #7374 Adjustment Note #N10105366,N10103978,Completed,zipPay,30-Dec-19,$27.80 ,No
+6819,30-Dec-19,,Loretta,Fitzgerald,lorettatf213907,Credit from RMA #7375 Adjustment Note #N10105367,N10103717,Completed,PayPal Express,30-Dec-19,$19.90 ,No
+6820,30-Dec-19,,Nereda,Christian,neredachristian,Credit from RMA #7376 Adjustment Note #N10105368,N10104131,Completed,PayPal Express,30-Dec-19,$19.95 ,No
+6821,30-Dec-19,,Karen,McLeod,kmcleod19552102,Credit from RMA #7377 Adjustment Note #N10105369,N10103707,Completed,PayPal Express,30-Dec-19,$24.95 ,No
+6822,30-Dec-19,,Kylie,Andrews,makaone35260914,Credit from RMA #7378 Adjustment Note #N10105376,N10103606,Completed,PayPal Express,30-Dec-19,$21.95 ,No
+6823,30-Dec-19,,Jennifer,Burke,jenniferhatcher,Credit from RMA #7379 Adjustment Note #N10105377,N10104213,Completed,PayPal Express,30-Dec-19,$65.82 ,No
+6824,30-Dec-19,,jan,crean,peterncrean5318,Credit from RMA #7380 Adjustment Note #N10105378,N10104840,Completed,PayPal Express,30-Dec-19,$57.35 ,No
+6825,30-Dec-19,,Noelene,Hastie,edhastie3521580,Credit from RMA #7381 Adjustment Note #N10105380,N10104824,Completed,PayPal Express,30-Dec-19,$43.77 ,No
+6826,30-Dec-19,,Lisa,Wise,kinglisa4554091,Credit from RMA #7382 Adjustment Note #N10105381,N10104771,Completed,PayPal Express,30-Dec-19,$57.35 ,No
+6827,30-Dec-19,,Alexander,Sawtell,asawtell3425122,Credit from RMA #7383 Adjustment Note #N10105383,N10105081,Completed,PayPal Express,30-Dec-19,$284.00 ,No
+6828,30-Dec-19,,Kym,Meyers,kmeyers365812241116,Credit from RMA #7384 Adjustment Note #N10105385,N10102922,Completed,PayPal Express,30-Dec-19,$78.95 ,No
+6829,30-Dec-19,,Benjamin,Schultz,bnschultz420912,Credit from RMA #7385 Adjustment Note #N10105387,N10102944,Completed,PayPal Express,30-Dec-19,$54.90 ,No
+6830,30-Dec-19,,nicholas,monks,nickysurf200407,Credit from RMA #7386 Adjustment Note #N10105388,N10104759,Completed,PayPal Express,30-Dec-19,$40.07 ,No
+6831,30-Dec-19,,Candice,Lea,candiceelea4612,Credit from RMA #7387 Adjustment Note #N10105390,N10104666,Completed,PayPal Express,30-Dec-19,$57.35 ,No
+6832,30-Dec-19,,liane,sheve,liane4205111312,Credit from RMA #7388 Adjustment Note #N10105391,N10104602,Completed,PayPal Express,30-Dec-19,$57.35 ,No
+6833,30-Dec-19,,Georgina,Lopez,1.53955E+11,Credit from RMA #7389 Adjustment Note #N10105392,N10104258,Completed,PayPal Express,30-Dec-19,$49.44 ,No
+6834,30-Dec-19,,Elizabeth,Kelly,libkelly1546152,Credit from RMA #7390 Adjustment Note #N10105393,N10103378,Completed,PayPal Express,30-Dec-19,$24.95 ,No
+6835,30-Dec-19,,Ben,Seyffer,pseyffer3359131,Credit from RMA #7391 Adjustment Note #N10105395,N10102624,Completed,PayPal Express,30-Dec-19,$79.90 ,No
+6836,30-Dec-19,,Ashlee,Elton,horsegal_631241,Credit from RMA #7392 Adjustment Note #N10105396,N10104207,Completed,PayPal Express,30-Dec-19,$43.35 ,No
+6837,30-Dec-19,,Sarah,Payne,sp2627465500171,Credit from RMA #7393 Adjustment Note #N10105397,N10104372,Completed,PayPal Express,30-Dec-19,$161.95 ,No
+6838,30-Dec-19,,tony,knight,tpknight6138041,Credit from RMA #7394 Adjustment Note #N10105398,N10105084,Completed,PayPal Express,30-Dec-19,$497.61 ,No
+6802,29-Dec-19,,Sharee,Leslie,shareeleslie054,Credit from RMA #7358 Adjustment Note #N10105331,N10103952,Completed,MasterCard,29-Dec-19,$81.48 ,No
+6803,29-Dec-19,,Erin,Mosely,erinjcam3614062,Credit from RMA #7359 Adjustment Note #N10105332,N10105024,Completed,zipPay,29-Dec-19,$171.02 ,No
+6801,28-Dec-19,,Tracy,Lamoon,cre8ivescraps40,Credit from RMA #7357 Adjustment Note #N10105287,N10103970,Completed,PayPal Express,28-Dec-19,$28.10 ,No
+6798,27-Dec-19,,Shannon,Wong,shannos78213318,Credit from RMA #7354 Adjustment Note #N10105239,N10101364,Completed,PayPal Express,27-Dec-19,$26.90 ,No
+6799,27-Dec-19,,megan,jackson,bmjackson439150,Credit from RMA #7355 Adjustment Note #N10105240,N10101621,Completed,PayPal Express,27-Dec-19,$28.95 ,No
+6800,27-Dec-19,,Kylie,Jones,1.03047E+11,Credit from RMA #7356 Adjustment Note #N10105241,N10102205,Completed,PayPal Express,27-Dec-19,$11.90 ,No
+6797,26-Dec-19,,Alison,Phillips,alandbrad364914,Credit from RMA #7352 Adjustment Note #N10105202,N10104447,Completed,Visa,26-Dec-19,$115.94 ,No
+6794,25-Dec-19,,Jacqui ,Scott,jacscott8235440,Credit from RMA #7349 Adjustment Note #N10105188,N10103714,Completed,Afterpay,25-Dec-19,$38.40 ,No
+6795,25-Dec-19,,Alynda,Hundt,alynda_h2241072,Credit from RMA #7350 Adjustment Note #N10105189,N10104204,Completed,PayPal Express,25-Dec-19,$106.95 ,No
+6796,25-Dec-19,,Brad,ewin,anitatisdall070,Credit from RMA #7351 Adjustment Note #N10105190,N10103531,Completed,PayPal Express,25-Dec-19,$149.98 ,No
+6793,24-Dec-19,,Mick,Montell,mickmontellcarp,Credit from RMA #7348 Adjustment Note #N10105164,N10104764,Completed,Visa,24-Dec-19,$123.95 ,No
+6758,23-Dec-19,,Rebecca,Johns,rebecca_johns14,Credit from RMA #7313 Adjustment Note #N10105104,N10103581,Completed,PayPal Express,23-Dec-19,$53.40 ,No
+6759,23-Dec-19,,Taryn,Cadigan,tcadigan5338181,Credit from RMA #7314 Adjustment Note #N10105106,N10104866,Completed,Afterpay,23-Dec-19,$130.95 ,No
+6760,23-Dec-19,,Tamara,Jackson,tam_jackson4321,Credit from RMA #7315 Adjustment Note #N10105107,N10104176,Completed,PayPal Express,23-Dec-19,$85.59 ,No
+6761,23-Dec-19,,Taryn,Cadigan,tcadigan5338181,Credit from RMA #7316 Adjustment Note #N10105108,N10103998,Completed,Afterpay,23-Dec-19,$134.22 ,No
+6762,23-Dec-19,,Sheree,Eiseman,she_ra102449150,Credit from RMA #7317 Adjustment Note #N10105109,N10103994,Completed,PayPal Express,23-Dec-19,$80.35 ,No
+6763,23-Dec-19,,Robert,Shaw,robertshaw12113,Credit from RMA #7318 Adjustment Note #N10105110,N10104189,Completed,PayPal Express,23-Dec-19,$59.40 ,No
+6764,23-Dec-19,,Brook,Shaune-Bould,brookshaune3149,Credit from RMA #7319 Adjustment Note #N10105111,N10103757,Completed,Afterpay,23-Dec-19,$21.95 ,No
+6765,23-Dec-19,,Brian,Thompson,brian0622160312,Credit from RMA #7320 Adjustment Note #N10105112,N10103118,Completed,PayPal Express,23-Dec-19,$144.95 ,No
+6766,23-Dec-19,,Cara,McIntyre,amber4us4809132,Credit from RMA #7321 Adjustment Note #N10105113,N10102487,Completed,Afterpay,23-Dec-19,$201.77 ,No
+6767,23-Dec-19,,Karen ,Vogelmann ,klv654100171611,Credit from RMA #7134 Adjustment Note #N10105114,N10105016,Completed,Afterpay,23-Dec-19,$101.95 ,No
+6768,23-Dec-19,,Jennifer ,Schilbach,jen003420191219,Credit from RMA #7322 Adjustment Note #N10105115,N10104783,Completed,MasterCard,23-Dec-19,$144.04 ,No
+6769,23-Dec-19,,Oliver,Squires,sqle51361116121,Credit from RMA #7323 Adjustment Note #N10105116,N10104779,Completed,MasterCard,23-Dec-19,$144.95 ,No
+6770,23-Dec-19,,Louise,Owen,loulouowen84261,Credit from RMA #7324 Adjustment Note #N10105117,N10104775,Completed,MasterCard,23-Dec-19,$174.07 ,No
+6771,23-Dec-19,,Craig,Dick,cmdick011910161,Credit from RMA #7325 Adjustment Note #N10105118,N10104441,Completed,Visa,23-Dec-19,$173.95 ,No
+6772,23-Dec-19,,sharni,devin,sharnidevin0717,Credit from RMA #7326 Adjustment Note #N10105119,N10104352,Completed,MasterCard,23-Dec-19,$42.67 ,No
+6773,23-Dec-19,,Darcy,Tronson,darcytronson493,Credit from RMA #7327 Adjustment Note #N10105120,N10104012,Completed,MasterCard,23-Dec-19,$226.02 ,No
+6774,23-Dec-19,,Paul,Carrigg,2.04652E+11,Credit from RMA #7328 Adjustment Note #N10105121,N10103881,Completed,Visa,23-Dec-19,$130.95 ,No
+6775,23-Dec-19,,Kirsti,Maltby,kirstimae091921,Credit from RMA #7329 Adjustment Note #N10105122,N10102800,Completed,MasterCard,23-Dec-19,$197.92 ,No
+6776,23-Dec-19,,Leah,Anderson-O’Loughlin ,leahandersonolo,Credit from RMA #7330 Adjustment Note #N10105123,N10104222,Completed,Visa,23-Dec-19,$268.46 ,No
+6777,23-Dec-19,,Grant,Weighton,grantweighton33,Credit from RMA #7331 Adjustment Note #N10105124,N10103643,Completed,Visa,23-Dec-19,$364.95 ,No
+6778,23-Dec-19,,peter,turner,peterturner1247,Credit from RMA #7332 Adjustment Note #N10105125,N10104376,Completed,PayPal Express,23-Dec-19,$186.95 ,No
+6779,23-Dec-19,,Melanie,Atkins,melanieatkins24,Credit from RMA #7333 Adjustment Note #N10105126,N10101219,Completed,PayPal Express,23-Dec-19,$85.01 ,No
+6780,23-Dec-19,Elements Jewellery,Beverley,Whip,beverley4736232,Credit from RMA #7335 Adjustment Note #N10105127,N10103834,Completed,PayPal Express,23-Dec-19,$57.85 ,No
+6781,23-Dec-19,,Melissa,Peardon,1.95816E+11,Credit from RMA #7336 Adjustment Note #N10105128,N10103196,Completed,Visa,23-Dec-19,$30.95 ,No
+6782,23-Dec-19,,Jacqueline,Tremewen,trems4703182301,Credit from RMA #7337 Adjustment Note #N10105129,N10100991,Completed,MasterCard,23-Dec-19,$25.60 ,No
+6783,23-Dec-19,,Meredith,Meeves,meredith1928172,Credit from RMA #7338 Adjustment Note #N10105131,N10101533,Completed,Visa,23-Dec-19,$170.95 ,No
+6784,23-Dec-19,,Brian,Menzies,brianmen0312113,Credit from RMA #7339 Adjustment Note #N10105132,N10102581,Completed,Visa,23-Dec-19,$170.95 ,No
+6785,23-Dec-19,,Michael,Fitzgerald,mjfitz660035161,Credit from RMA #7340 Adjustment Note #N10105134,MD0512191444227,Completed,MasterCard,23-Dec-19,$86.27 ,No
+6786,23-Dec-19,,,,noreg,Credit from RMA #7341 Adjustment Note #N10105136,KOGAN-9933033,Completed,Afterpay,23-Dec-19,$58.40 ,No
+6787,23-Dec-19,,,,noreg,Credit from RMA #7342 Adjustment Note #N10105146,N10103797,Completed,Kogan Payment,23-Dec-19,$137.95 ,No
+6788,23-Dec-19,,georgia,gregg,25127820_cotd,Credit from RMA #7343 Adjustment Note #N10105147,N10104244,Completed,Catch,23-Dec-19,$34.90 ,No
+6789,23-Dec-19,,Debbie,Vickery,27042057_cotd,Credit from RMA #7344 Adjustment Note #N10105148,N10104318,Completed,Catch,23-Dec-19,$43.90 ,No
+6790,23-Dec-19,,Jenna,Gillett,28384872_cotd,Credit from RMA #7345 Adjustment Note #N10105149,N10102629,Completed,Catch,23-Dec-19,$75.90 ,No
+6791,23-Dec-19,,Alanna,Murray,27237333_cotd,Credit from RMA #7346 Adjustment Note #N10105150,N10103220,Completed,Catch,23-Dec-19,$42.90 ,No
+6792,23-Dec-19,,Kitty,Roche,27082641_cotd,Credit from RMA #7347 Adjustment Note #N10105151,N10103873,Completed,Catch,23-Dec-19,$34.90 ,No
+6757,20-Dec-19,,Xiwen,Yuan,calvinyuan35645,Credit from RMA #7312 Adjustment Note #N10105045,N10103999,Completed,PayPal Express,20-Dec-19,$170.95 ,No
+6712,19-Dec-19,,terry,ross,terryandrosemar,Credit from RMA #7268 Adjustment Note #N10104955,N10102790,Completed,PayPal Express,19-Dec-19,$26.40 ,No
+6713,19-Dec-19,,Amy,Toms,amytoms46530703,Credit from RMA #7269 Adjustment Note #N10104956,N10104723,Completed,Visa,19-Dec-19,$58.35 ,No
+6714,19-Dec-19,,Riccardo ,Puntillo,1.63121E+11,Credit from RMA #7270 Adjustment Note #N10104957,N10104403,Completed,MasterCard,19-Dec-19,$156.07 ,No
+6715,19-Dec-19,,Olivia,Merry,ocmerry29140611,Credit from RMA #7271 Adjustment Note #N10104959,N10104633,Completed,Afterpay,19-Dec-19,$110.55 ,No
+6716,19-Dec-19,,Glenda,Manu,glendamanu16150,Credit from RMA #7272 Adjustment Note #N10104960,N10104277,Completed,Afterpay,19-Dec-19,$122.90 ,No
+6717,19-Dec-19,,Carly,Boras,carlyanon564118,Credit from RMA #7273 Adjustment Note #N10104961,N10104518,Completed,Afterpay,19-Dec-19,$46.82 ,No
+6718,19-Dec-19,,greta,stanley,gretarosestanle,Credit from RMA #7274 Adjustment Note #N10104962,N10104478,Completed,MasterCard,19-Dec-19,$44.35 ,No
+6719,19-Dec-19,,greta,stanley,gretarosestanle,Credit from RMA #7275 Adjustment Note #N10104963,N10104407,Completed,MasterCard,19-Dec-19,$44.35 ,No
+6720,19-Dec-19,Incite Solutions Group,Danielle,Murphy,incitesolutions,Credit from RMA #7276 Adjustment Note #N10104964,N10104331,Completed,Visa,19-Dec-19,$53.40 ,No
+6721,19-Dec-19,,Phillip,Havas,philliphavas300,Credit from RMA #7277 Adjustment Note #N10104965,KOGAN-9979714,Completed,MasterCard,19-Dec-19,$109.83 ,No
+6722,19-Dec-19,,James,Beere,jamesbeere22290,Credit from RMA #7278 Adjustment Note #N10104967,KOGAN-9965855,Pending,Visa,-,$48.40 ,No
+6723,19-Dec-19,,,,noreg,Credit from RMA #7279 Adjustment Note #N10104968,N10104076,Completed,Kogan Payment,19-Dec-19,$38.95 ,No
+6724,19-Dec-19,,,,noreg,Credit from RMA #7280 Adjustment Note #N10104969,N10104240,Completed,Kogan Payment,19-Dec-19,$38.95 ,No
+6725,19-Dec-19,,Holly,Loughran,hollyloughran17,Credit from RMA #7281 Adjustment Note #N10104970,N10104293,Completed,Visa,19-Dec-19,$22.40 ,No
+6726,19-Dec-19,,Ellen,Spadon,ellenwspadon115,Credit from RMA #7282 Adjustment Note #N10104971,N10104712,Completed,MasterCard,19-Dec-19,$123.95 ,No
+6727,19-Dec-19,,Belinda,Auton ,belindaauton395,Credit from RMA #7283 Adjustment Note #N10104972,N10104268,Completed,Visa,19-Dec-19,$43.88 ,No
+6728,19-Dec-19,,Kate,Fisher,katefisher75040,Credit from RMA #7284 Adjustment Note #N10104973,N10104274,Completed,zipPay,19-Dec-19,$121.23 ,No
+6729,19-Dec-19,,Jacqui,Burgess-Young,jacquiyoung0502,Credit from RMA #7285 Adjustment Note #N10104974,N10103926,Completed,zipPay,19-Dec-19,$154.95 ,No
+6730,19-Dec-19,,Dayna,warren,dayna_warren391,Credit from RMA #7286 Adjustment Note #N10104975,N10103600,Completed,Visa,19-Dec-19,$85.28 ,No
+6731,19-Dec-19,,David,Boyer,davidbrianboyer,Credit from RMA #7287 Adjustment Note #N10104976,N10103543,Completed,Visa,19-Dec-19,$28.40 ,No
+6732,19-Dec-19,,Murray,Wiemers,mkequipt3133040,Credit from RMA #7288 Adjustment Note #N10104977,KOGAN-9916745,Completed,MasterCard,19-Dec-19,$327.95 ,No
+6733,19-Dec-19,,Krystal ,Poulton ,krystalpoulton4,Credit from RMA #7289 Adjustment Note #N10104978,N10103806,Completed,Visa,19-Dec-19,$38.40 ,No
+6734,19-Dec-19,,,,noreg,Credit from RMA #7290 Adjustment Note #N10104979,N10103557,Completed,Kogan Payment,19-Dec-19,$24.95 ,No
+6735,19-Dec-19,,Dee,O&#39;Callaghan,dee532209041219,Credit from RMA #7291 Adjustment Note #N10104980,N10103540,Completed,MasterCard,19-Dec-19,$38.85 ,No
+6736,19-Dec-19,,leah,oliver,leah03261901121,Credit from RMA #7292 Adjustment Note #N10104981,N10103688,Completed,PayPal Express,19-Dec-19,$105.95 ,No
+6737,19-Dec-19,,James,Castles,dianec035716011,Credit from RMA #7293 Adjustment Note #N10104982,N10103371,Completed,PayPal Express,19-Dec-19,$99.45 ,No
+6738,19-Dec-19,,Garry,Bradley,garrybradley500,Credit from RMA #7294 Adjustment Note #N10104983,N10103311,Completed,PayPal Express,19-Dec-19,$50.40 ,No
+6739,19-Dec-19,,Marcus,Haigh,marcus490015291,Credit from RMA #7295 Adjustment Note #N10104984,N10103070,Completed,PayPal Express,19-Dec-19,$84.40 ,No
+6740,19-Dec-19,,deanne,asher,2.02543E+11,Credit from RMA #7296 Adjustment Note #N10104985,N10103000,Completed,PayPal Express,19-Dec-19,$136.65 ,No
+6741,19-Dec-19,,Coralie,Maillard,cocomail0000951,Credit from RMA #7298 Adjustment Note #N10104987,N10102870,Completed,MasterCard,19-Dec-19,$20.95 ,No
+6742,19-Dec-19,,Ashley,Ross,nnpsasc08150925,Credit from RMA #7299 Adjustment Note #N10104988,N10103861,Completed,Visa,19-Dec-19,$498.24 ,No
+6743,19-Dec-19,,Julie ,Wood,woodies30550623,Credit from RMA #7297 Adjustment Note #N10104986,N10102713,Completed,PayPal Express,19-Dec-19,$20.95 ,No
+6744,19-Dec-19,,thomas,carter,thomascarter199,Credit from RMA #7301 Adjustment Note #N10104990,N10104354,Completed,MasterCard,19-Dec-19,$60.85 ,No
+6745,19-Dec-19,,Jelena,Marjanovic,jelena691510522,Credit from RMA #7302 Adjustment Note #N10104992,N10104339,Completed,Visa,19-Dec-19,$127.95 ,No
+6746,19-Dec-19,,Kim,Salter,kimberleya59583,Credit from RMA #7303 Adjustment Note #N10104993,N10104218,Completed,Visa,19-Dec-19,$27.95 ,No
+6747,19-Dec-19,,Chris,Turner,christurner5731,Credit from RMA #7304 Adjustment Note #N10104994,N10103928,Completed,Visa,19-Dec-19,$117.95 ,No
+6748,19-Dec-19,,Tam,Slunsky,tamerelle001301,Credit from RMA #7305 Adjustment Note #N10104995,N10103882,Completed,MasterCard,19-Dec-19,$29.95 ,No
+6749,19-Dec-19,,Cissie,Warrior,fayew9839151405,Credit from RMA #7306 Adjustment Note #N10104996,N10103880,Completed,Visa,19-Dec-19,$24.95 ,No
+6750,19-Dec-19,,Natalie,Lockyer,natalielockyer5,Credit from RMA #7307 Adjustment Note #N10104997,N10102646,Pending,MasterCard,-,$49.90 ,No
+6751,19-Dec-19,,Natalie,Lockyer,natalielockyer5,Credit from RMA #7307 Adjustment Note #N10104997,N10101980,Completed,MasterCard,19-Dec-19,$49.90 ,No
+6752,19-Dec-19,,Aimei,Chin,aimeichin903308,Credit from RMA #7308 Adjustment Note #N10104998,N10101760,Pending,Visa,-,$133.75 ,No
+6753,19-Dec-19,,Aimei,Chin,aimeichin903308,Credit from RMA #7308 Adjustment Note #N10104998,N10104082,Completed,Visa,19-Dec-19,$133.75 ,No
+6754,19-Dec-19,,Alexander,Sabulis,avsabulis372720,Credit from RMA #7309 Adjustment Note #N10104999,N10102620,Completed,MasterCard,19-Dec-19,$98.83 ,No
+6755,19-Dec-19,,Guillaume,Vandenbussche,gill4gardening4,Credit from RMA #7310 Adjustment Note #N10105000,N10102849,Completed,Visa,19-Dec-19,$46.95 ,No
+6756,19-Dec-19,,Jason ,Stoddart,stoddysmechanic,Credit from RMA #7311 Adjustment Note #N10105001,N10104262,Completed,Visa,19-Dec-19,$37.65 ,No
+6696,18-Dec-19,,david,tingay,dtingay38041504,Credit from RMA #7252 Adjustment Note #N10104901,KOGAN-9873084,Completed,PayPal Express,18-Dec-19,$408.49 ,No
+6697,18-Dec-19,,sreekanth,maddi,sreekanth430180,Credit from RMA #7253 Adjustment Note #N10104905,N10102705,Completed,PayPal Express,18-Dec-19,$269.93 ,No
+6698,18-Dec-19,mache,Isabel,Pearce,izzyranga353716,Credit from RMA #7254 Adjustment Note #N10104907,N10104007,Completed,PayPal Express,18-Dec-19,$830.63 ,No
+6699,18-Dec-19,,Sharline,Bahr,bfs311358421509,Credit from RMA #7255 Adjustment Note #N10104920,N10104001,Completed,PayPal Express,18-Dec-19,$123.95 ,No
+6700,18-Dec-19,,,,noreg,Credit from RMA #7256 Adjustment Note #N10104921,N10103431,Completed,Kogan Payment,18-Dec-19,$35.95 ,No
+6701,18-Dec-19,,Pauline,McPherson,paulinemcpherso,Credit from RMA #7257 Adjustment Note #N10104922,KOGAN-9893506,Completed,Afterpay,18-Dec-19,$211.95 ,No
+6702,18-Dec-19,,Megan,Collins,megan_ruth87373,Credit from RMA #7258 Adjustment Note #N10104924,MD1612192200072,Completed,MasterCard,18-Dec-19,$43.77 ,No
+6703,18-Dec-19,,Amber,Nalder,ambernalder1724,Credit from RMA #7259 Adjustment Note #N10104926,MD1312191344485,Completed,PayPal Express,18-Dec-19,$36.40 ,No
+6704,18-Dec-19,,Teuila,Fiu,teuilamaree1025,Credit from RMA #7260 Adjustment Note #N10104927,MD0612191008382,Completed,PayPal Express,18-Dec-19,$179.68 ,No
+6705,18-Dec-19,,,,noreg,Credit from RMA #7261 Adjustment Note #N10104930,MD1212190205067,Completed,Kogan Payment,18-Dec-19,$106.95 ,No
+6706,18-Dec-19,,,,noreg,Credit from RMA #7262 Adjustment Note #N10104932,MD0512191444243,Completed,Afterpay,18-Dec-19,$240.83 ,No
+6707,18-Dec-19,,,,noreg,Credit from RMA #7263 Adjustment Note #N10104935,MD1012191259430,Completed,Afterpay,18-Dec-19,$515.55 ,No
+6708,18-Dec-19,,,,noreg,Credit from RMA #7264 Adjustment Note #N10104937,N10103987,Completed,Afterpay,18-Dec-19,$117.12 ,No
+6709,18-Dec-19,,,,noreg,Credit from RMA #7265 Adjustment Note #N10104938,N10102578,Completed,Afterpay,18-Dec-19,$53.40 ,No
+6710,18-Dec-19,,,,noreg,Credit from RMA #7266 Adjustment Note #N10104939,N10103061,Completed,Afterpay,18-Dec-19,$58.40 ,No
+6711,18-Dec-19,,,,noreg,Credit from RMA #7267 Adjustment Note #N10104943,N10103890,Completed,Afterpay,18-Dec-19,$39.94 ,No
+6695,17-Dec-19,,Lisa,Anderson,1.44848E+11,Credit from RMA #7251 Adjustment Note #N10104856,N10104147,Completed,Afterpay,17-Dec-19,$240.59 ,No
+6691,16-Dec-19,,Jo-Anne,Munzone,jmunzone1721151,Credit from RMA #7247 Adjustment Note #N10104765,N10104328,Completed,PayPal Express,16-Dec-19,$130.95 ,No
+6692,16-Dec-19,,Leanne ,Roberts,leanne296448232,Credit from RMA #7248 Adjustment Note #N10104767,N10103869,Completed,Afterpay,16-Dec-19,$32.95 ,No
+6693,16-Dec-19,,Jo,Thomson,jthomson7800022,Credit from RMA #7249 Adjustment Note #N10104769,N10103243,Completed,MasterCard,16-Dec-19,$110.90 ,No
+6694,16-Dec-19,,Gaynor,French,gayjfrench16371,Credit from RMA #7250 Adjustment Note #N10104770,N10103293,Completed,PayPal Express,16-Dec-19,$103.40 ,No
+6685,14-Dec-19,,Sandra,Ellem,sellem155209101,Credit from RMA #7241 Adjustment Note #N10104643,N10104346,Completed,PayPal Express,14-Dec-19,$247.90 ,No
+6686,14-Dec-19,,Eleanor,Stadly,eleanorpike4141,Credit from RMA #7242 Adjustment Note #N10104651,MD0912192105073,Completed,MasterCard,14-Dec-19,$22.95 ,No
+6687,14-Dec-19,,Sarah ,Bell ,bellnco11306171,Credit from RMA #7243 Adjustment Note #N10104654,N10103663,Completed,Afterpay,14-Dec-19,$103.94 ,No
+6688,14-Dec-19,,Emma,Miller,emmamiller49101,Credit from RMA #7244 Adjustment Note #N10104656,N1097960,Completed,Visa,14-Dec-19,$57.90 ,No
+6689,14-Dec-19,,Justis,Blackwell,justisblackwell,Credit from RMA #7245 Adjustment Note #N10104657,N10100790,Completed,PayPal Express,14-Dec-19,$116.85 ,No
+6690,14-Dec-19,,,,noreg,Credit from RMA #7246 Adjustment Note #N10104660,N10101972,Completed,Afterpay,14-Dec-19,$117.07 ,No
+6679,13-Dec-19,,Celia,McNeilly,celiaberry19471,Credit from RMA #7235 Adjustment Note #N10104603,MD1112190702435,Completed,MasterCard,13-Dec-19,$158.85 ,No
+6680,13-Dec-19,,Kelly,Teagle,kteagle44592115,Credit from RMA #7236 Adjustment Note #N10104615,N10104077,Completed,PayPal Express,13-Dec-19,$149.00 ,No
+6681,13-Dec-19,,Louise,Macquet,louisemacquet42,Credit from RMA #7237 Adjustment Note #N10104621,MD0812191919077,Completed,PayPal Express,13-Dec-19,$32.90 ,No
+6682,13-Dec-19,,Simon,Merrett,gamsat540900111,Credit from RMA #7238 Adjustment Note #N10104624,MD0812191638555,Completed,PayPal Express,13-Dec-19,$44.95 ,No
+6683,13-Dec-19,,,,noreg,Credit from RMA #7239 Adjustment Note #N10104625,MD0612191657142,Completed,Afterpay,13-Dec-19,$176.56 ,No
+6684,13-Dec-19,,Renee,Hurworth,reneehurworth15,Credit from RMA #7240 Adjustment Note #N10104626,MD0812191042313,Completed,zipPay,13-Dec-19,$299.95 ,No
+6656,12-Dec-19,,,,noreg,Credit from RMA #7215 Adjustment Note #N10104555,N10101570,Completed,Afterpay,12-Dec-19,$80.85 ,No
+6657,12-Dec-19,,,,noreg,Credit from RMA #7216 Adjustment Note #N10104556,N10101403,Completed,Afterpay,12-Dec-19,$44.40 ,No
+6658,12-Dec-19,,,,noreg,Credit from RMA #7217 Adjustment Note #N10104557,N10101239,Completed,Afterpay,12-Dec-19,$119.78 ,No
+6659,12-Dec-19,,,,noreg,Credit from RMA #7218 Adjustment Note #N10104558,N1099718,Completed,Afterpay,12-Dec-19,$153.75 ,No
+6660,12-Dec-19,,Gary,Williams,agencon39382030,Credit from RMA #7219 Adjustment Note #N10104560,N10100666,Completed,Visa,12-Dec-19,$75.90 ,No
+6661,12-Dec-19,Mindful Mediation,Caryn,Cridland,caryn1500072810,Credit from RMA #7102 Adjustment Note #N10104561,N10103481,Completed,PayPal Express,12-Dec-19,$70.85 ,No
+6662,12-Dec-19,,Adam,Nash-Smith,ra570213241019,Credit from RMA #7082 Adjustment Note #N10104562,N10103437,Completed,Visa,12-Dec-19,$170.95 ,No
+6663,12-Dec-19,THE GOOD SLICE PTY LTD,Nick,Jovic,info45261217091,Credit from RMA #7220 Adjustment Note #N10104563,N10103421,Completed,Visa,12-Dec-19,$43.95 ,No
+6664,12-Dec-19,,Samantha,Clifford,saminseptember0,Credit from RMA #7089 Adjustment Note #N10104564,N10104337,Completed,Visa,12-Dec-19,$90.90 ,No
+6665,12-Dec-19,,Andrew,Ralphs,andyralphs11220,Credit from RMA #7221 Adjustment Note #N10104566,N10103980,Completed,PayPal Express,12-Dec-19,$266.35 ,No
+6666,12-Dec-19,,Leevi,Eaton,leeviheaton5646,Credit from RMA #7222 Adjustment Note #N10104567,N10103829,Completed,PayPal Express,12-Dec-19,$150.35 ,No
+6667,12-Dec-19,,Lance,Fisher,llancef25430730,Credit from RMA #7223 Adjustment Note #N10104568,N10103785,Completed,PayPal Express,12-Dec-19,$122.95 ,No
+6668,12-Dec-19,,Michelle,Lorquet,smlorquet420711,Credit from RMA #7224 Adjustment Note #N10104569,N10103500,Completed,MasterCard,12-Dec-19,$123.95 ,No
+6669,12-Dec-19,,Lynda ,Harris ,lyndaharris3049,Credit from RMA #7225 Adjustment Note #N10104570,N10103271,Completed,Visa,12-Dec-19,$123.95 ,No
+6670,12-Dec-19,,Warren,Pens,war-wap-pmcxad,Credit from RMA #7226 Adjustment Note #N10104571,N10103249,Completed,Visa,12-Dec-19,$82.37 ,No
+6671,12-Dec-19,Brown Wright Stein,Peter,Wright,amanda003321031,Credit from RMA #7227 Adjustment Note #N10104572,N10102616,Completed,Visa,12-Dec-19,$144.95 ,No
+6672,12-Dec-19,,Haydenspenceractor@gmail.com,Hayden,haydenspencerac,Credit from RMA #7228 Adjustment Note #N10104573,KOGAN-9899127,Completed,MasterCard,12-Dec-19,$382.95 ,No
+6673,12-Dec-19,,Stella,Dyer,stelladyer47727,Credit from RMA #7229 Adjustment Note #N10104575,KOGAN-9884050,Completed,MasterCard,12-Dec-19,$33.40 ,No
+6674,12-Dec-19,,Cassandra,Geering,cassreececlaire,Credit from RMA #7230 Adjustment Note #N10104576,N10103124,Completed,Visa,12-Dec-19,$121.05 ,No
+6675,12-Dec-19,,James,Demetriou,jamesdemetriou1,Credit from RMA #7231 Adjustment Note #N10104577,MD2411192116389,Completed,Visa,12-Dec-19,$53.21 ,No
+6676,12-Dec-19,,,,noreg,Credit from RMA #7232 Adjustment Note #N10104578,MD0112191325360,Completed,Kogan Payment,12-Dec-19,$49.90 ,No
+6677,12-Dec-19,,,,noreg,Credit from RMA #7233 Adjustment Note #N10104579,MD0112192333486,Completed,Kogan Payment,12-Dec-19,$38.95 ,No
+6678,12-Dec-19,,Justine ,Brunell ,juzzykb13511326,Credit from RMA #7234 Adjustment Note #N10104580,MD0612190346094,Completed,Afterpay,12-Dec-19,$344.97 ,No
+6649,12-Dec-19,,,,noreg,Credit from RMA #7208 Adjustment Note #N10104519,N10103765,Completed,Afterpay,12-Dec-19,$63.09 ,No
+6650,12-Dec-19,,,,noreg,Credit from RMA #7209 Adjustment Note #N10104520,N10104073,Completed,Afterpay,12-Dec-19,$41.07 ,No
+6651,12-Dec-19,,,,noreg,Credit from RMA #7210 Adjustment Note #N10104521,MD0812192049350,Completed,Afterpay,12-Dec-19,$43.88 ,No
+6652,12-Dec-19,,,,noreg,Credit from RMA #7211 Adjustment Note #N10104523,N10103300,Completed,Afterpay,12-Dec-19,$68.49 ,No
+6653,12-Dec-19,,Matthew,Bouzalas,30283024_cotd,Credit from RMA #7212 Adjustment Note #N10104551,N10104072,Completed,Catch,12-Dec-19,$81.90 ,No
+6654,12-Dec-19,,Cindy,Wilkinson,29264581_cotd,Credit from RMA #7213 Adjustment Note #N10104552,KOGAN-9724414,Completed,Catch,12-Dec-19,$81.90 ,No
+6655,12-Dec-19,,,,noreg,Credit from RMA #7214 Adjustment Note #N10104554,N10100902,Completed,Afterpay,12-Dec-19,$80.85 ,No
+6641,11-Dec-19,,deanne,Segman,deesegman265118,Credit from RMA #7200 Adjustment Note #N10104427,N10103339,Completed,PayPal Express,11-Dec-19,$176.95 ,No
+6642,11-Dec-19,,John ,Slatter ,jslats263820150,Credit from RMA #7201 Adjustment Note #N10104448,N10103434,Completed,Afterpay,11-Dec-19,$127.05 ,No
+6643,11-Dec-19,,,,noreg,Credit from RMA #7202 Adjustment Note #N10104451,N10103733,Completed,Kogan Payment,11-Dec-19,$16.95 ,No
+6644,11-Dec-19,,Patrick,Monaghan,omra_aus2458081,Credit from RMA #7203 Adjustment Note #N10104453,N10104083,Completed,MasterCard,11-Dec-19,$71.95 ,No
+6645,11-Dec-19,,Ruth,George,ruthgeorge10446,Credit from RMA #7204 Adjustment Note #N10104456,N1099961,Completed,MasterCard,11-Dec-19,$41.40 ,No
+6646,11-Dec-19,,Rachel,Kenworthy,rachel_kenworth,Credit from RMA #7205 Adjustment Note #N10104457,N10103060,Completed,MasterCard,11-Dec-19,$130.95 ,No
+6647,11-Dec-19,,Maree,Young,mareelawford872,Credit from RMA #7206 Adjustment Note #N10104458,N10103328,Completed,MasterCard,11-Dec-19,$54.40 ,No
+6648,11-Dec-19,,Shane ,Towns ,sharlenewilliam,Credit from RMA #7207 Adjustment Note #N10104459,N10102100,Completed,MasterCard,11-Dec-19,$75.63 ,No
+6637,10-Dec-19,Muse Dancewear Pty Ltd,TIM,HEATHCOTE,tim254317230919,Credit from RMA #7196 Adjustment Note #N10104329,N10103763,Completed,PayPal Express,10-Dec-19,$193.95 ,No
+6638,10-Dec-19,,Nick,Davies,nick_davies1876,Credit from RMA #7197 Adjustment Note #N10104330,N10103086,Completed,MasterCard,10-Dec-19,$34.91 ,No
+6639,10-Dec-19,,Baris,Kirci,bk_renesis14220,Credit from RMA #7198 Adjustment Note #N10104363,N10102956,Completed,Afterpay,10-Dec-19,$159.95 ,No
+6640,10-Dec-19,,jeffrey,bell,jeffbell6509430,Credit from RMA #7199 Adjustment Note #N10104365,N10101181,Completed,PayPal Express,10-Dec-19,$98.88 ,No
+6632,9-Dec-19,,Terri,O&#39;Connor,terri_leigh_143,Credit from RMA #7191 Adjustment Note #N10104252,N10100786,Completed,PayPal Express,9-Dec-19,$111.95 ,No
+6633,9-Dec-19,,Michelle,Daly,mdaly2013819102,Credit from RMA #7192 Adjustment Note #N10104253,N10103049,Completed,PayPal Express,9-Dec-19,$44.40 ,No
+6634,9-Dec-19,,Zelna,Goddaer,1.43835E+11,Credit from RMA #7193 Adjustment Note #N10104256,N10103939,Completed,MasterCard,9-Dec-19,$145.64 ,No
+6635,9-Dec-19,,Josua,Kruger,space47k5806122,Credit from RMA #7083 Adjustment Note #N10104257,N10103907,Completed,PayPal Express,9-Dec-19,$20.95 ,No
+6636,9-Dec-19,,Maggie,Brown,maggiebrown4246,Credit from RMA #7194 Adjustment Note #N10104259,N10103847,Completed,PayPal Express,9-Dec-19,$39.90 ,No
+6600,8-Dec-19,,Roland,Chard,26756543_cotd,Credit from RMA #7159 Adjustment Note #N10104110,N10103814,Completed,Catch,8-Dec-19,$95.90 ,No
+6601,8-Dec-19,,Ky,Mayhew,admin5827170512,Credit from RMA #7160 Adjustment Note #N10104115,N10103723,Completed,PayPal Express,8-Dec-19,$123.95 ,No
+6602,8-Dec-19,,Georgina,Lopez ,1.53955E+11,Credit from RMA #7161 Adjustment Note #N10104116,N10103811,Completed,PayPal Express,8-Dec-19,$49.40 ,No
+6603,8-Dec-19,,Kevin,Epps,kmepps002321604,Credit from RMA #7162 Adjustment Note #N10104117,MD0212191641525,Completed,PayPal Express,8-Dec-19,$99.90 ,No
+6604,8-Dec-19,,Kate,Swindells,95723316720,Credit from RMA #7163 Adjustment Note #N10104118,N10103658,Completed,Afterpay,8-Dec-19,$199.95 ,No
+6605,8-Dec-19,,GARTH,Willmott,info42320803121,Credit from RMA #7164 Adjustment Note #N10104119,N10102895,Completed,PayPal Express,8-Dec-19,$41.13 ,No
+6606,8-Dec-19,,Kurt ,Stevens,kurtstevens2350,Credit from RMA #7165 Adjustment Note #N10104123,MD2311191744569,Completed,PayPal Express,8-Dec-19,$177.60 ,No
+6607,8-Dec-19,,,,noreg,Credit from RMA #7166 Adjustment Note #N10104124,MD2411190328447,Completed,Afterpay,8-Dec-19,$65.90 ,No
+6608,8-Dec-19,,Renee,Murphy,instructorrenee,Credit from RMA #7167 Adjustment Note #N10104125,MD0112190700336,Completed,PayPal Express,8-Dec-19,$146.95 ,No
+6609,8-Dec-19,,Jane ,Baijal,janebaijal50251,Credit from RMA #7168 Adjustment Note #N10104126,N10101862,Completed,Visa,8-Dec-19,$44.57 ,No
+6610,8-Dec-19,,,,noreg,Credit from RMA #7169 Adjustment Note #N10104128,N10103567,Completed,Afterpay,8-Dec-19,$43.90 ,No
+6611,8-Dec-19,,,,noreg,Credit from RMA #7170 Adjustment Note #N10104129,N10103541,Completed,Afterpay,8-Dec-19,$311.75 ,No
+6612,8-Dec-19,,,,noreg,Credit from RMA #7171 Adjustment Note #N10104130,N10102626,Completed,Afterpay,8-Dec-19,$84.40 ,No
+6613,8-Dec-19,,Nick,Briggs,nhbriggs2414120,Credit from RMA #7172 Adjustment Note #N10104132,N10102930,Completed,PayPal Express,8-Dec-19,$65.90 ,No
+6614,8-Dec-19,,Antonia,McCafferty,snowmist9023120,Credit from RMA #7173 Adjustment Note #N10104133,N10103386,Completed,PayPal Express,8-Dec-19,$112.95 ,No
+6615,8-Dec-19,,adem,catic,adem80340758160,Credit from RMA #7174 Adjustment Note #N10104135,N10102566,Completed,Visa,8-Dec-19,$145.85 ,No
+6616,8-Dec-19,,Erin,Gray,ergray303814191,Credit from RMA #7175 Adjustment Note #N10104137,N10102074,Completed,PayPal Express,8-Dec-19,$54.95 ,No
+6617,8-Dec-19,,Leigh,Antoney,leigh1414102411,Credit from RMA #7176 Adjustment Note #N10104138,N10103169,Completed,PayPal Express,8-Dec-19,$34.95 ,No
+6618,8-Dec-19,,Nina,Kojovic,amandakojovic55,Credit from RMA #7177 Adjustment Note #N10104140,N10102235,Completed,PayPal Express,8-Dec-19,$75.95 ,No
+6619,8-Dec-19,,wayne,simmons,wayneandlisa123,Credit from RMA #7178 Adjustment Note #N10104141,N10101799,Completed,PayPal Express,8-Dec-19,$17.85 ,No
+6620,8-Dec-19,,Earl,Rickard,earlrickard3916,Credit from RMA #7179 Adjustment Note #N10104142,N10101112,Completed,PayPal Express,8-Dec-19,$109.95 ,No
+6621,8-Dec-19,,Trent,Milgate,tpm_19935124052,Credit from RMA #7180 Adjustment Note #N10104144,N10103889,Completed,Afterpay,8-Dec-19,$26.35 ,No
+6622,8-Dec-19,,jack,fitzgerald,jackfitz2713022,Credit from RMA #7181 Adjustment Note #N10104146,N10102467,Completed,Visa,8-Dec-19,$91.02 ,No
+6623,8-Dec-19,,Alexandra,O&#39;Sullivan,alexosullivan12,Credit from RMA #7182 Adjustment Note #N10104148,N10102404,Completed,PayPal Express,8-Dec-19,$20.95 ,No
+6624,8-Dec-19,Dolmen construction,Leah,Norman,rooandleah20302,Credit from RMA #7183 Adjustment Note #N10104149,N10101350,Completed,Afterpay,8-Dec-19,$151.51 ,No
+6625,8-Dec-19,,Jessica,Clarke,jes495120621290,Credit from RMA #7184 Adjustment Note #N10104151,N10102794,Completed,Afterpay,8-Dec-19,$48.40 ,No
+6626,8-Dec-19,,Jos,Builder,josefbuilder532,Credit from RMA #7185 Adjustment Note #N10104152,N10103651,Completed,Visa,8-Dec-19,$45.21 ,No
+6627,8-Dec-19,,Simon,Charleson ,simoncharleson3,Credit from RMA #7186 Adjustment Note #N10104153,N10101090,Completed,MasterCard,8-Dec-19,$67.94 ,No
+6628,8-Dec-19,,Jennifer,Steel,jmsteel88245020,Credit from RMA #7187 Adjustment Note #N10104164,N10101086,Completed,PayPal Express,8-Dec-19,$251.95 ,No
+6629,8-Dec-19,,Kim,Walton,rbs258030722111,Credit from RMA #7188 Adjustment Note #N10104166,N10104004,Completed,PayPal Express,8-Dec-19,$51.35 ,No
+6630,8-Dec-19,,Philip,Cardamone,philcardamone45,Credit from RMA #7189 Adjustment Note #N10104167,N10103700,Completed,PayPal Express,8-Dec-19,$221.79 ,No
+6631,8-Dec-19,,Zoe,Cozens,zcozens41281521,Credit from RMA #7190 Adjustment Note #N10104168,N10103941,Completed,PayPal Express,8-Dec-19,$81.90 ,No
+6581,7-Dec-19,,Kim,Headridge,headridge111191,Credit from RMA #7140 Adjustment Note #N10104036,KOGAN-9858246,Completed,zipPay,7-Dec-19,$17.95 ,No
+6582,7-Dec-19,,Celia ,Johnston ,celiajohnston56,Credit from RMA #7141 Adjustment Note #N10104038,KOGAN-9768326,Completed,MasterCard,7-Dec-19,$70.02 ,No
+6583,7-Dec-19,,Brendan,Dowling,afdandbfd242720,Credit from RMA #7142 Adjustment Note #N10104046,N10103856,Completed,Visa,7-Dec-19,$244.30 ,No
+6584,7-Dec-19,,Keith ,Bradley ,kbqld0740491705,Credit from RMA #7143 Adjustment Note #N10104047,N10103783,Completed,MasterCard,7-Dec-19,$50.98 ,No
+6585,7-Dec-19,,,,noreg,Credit from RMA #7144 Adjustment Note #N10104048,N10103833,Completed,Kogan Payment,7-Dec-19,$25.95 ,No
+6586,7-Dec-19,,,,noreg,Credit from RMA #7145 Adjustment Note #N10104049,N10103143,Completed,Kogan Payment,7-Dec-19,$22.95 ,No
+6587,7-Dec-19,,Lucas,Clark,lucasjay1655170,Credit from RMA #7146 Adjustment Note #N10104050,N10103164,Completed,Visa,7-Dec-19,$146.95 ,No
+6588,7-Dec-19,,Alicia,Tam,aliciatam404420,Credit from RMA #7147 Adjustment Note #N10104051,N10103117,Completed,Afterpay,7-Dec-19,$96.95 ,No
+6589,7-Dec-19,,mark,bonomelli,selinarose19811,Credit from RMA #7148 Adjustment Note #N10104052,N10103235,Completed,Afterpay,7-Dec-19,$146.95 ,No
+6590,7-Dec-19,,John,Rumball,rumballjk102416,Credit from RMA #7149 Adjustment Note #N10104053,N10103460,Completed,Visa,7-Dec-19,$38.40 ,No
+6591,7-Dec-19,,Yoosun,Jung,2.15548E+11,Credit from RMA #7150 Adjustment Note #N10104054,N10103904,Completed,MasterCard,7-Dec-19,$30.22 ,No
+6592,7-Dec-19,Pacific Custom Sportswear - PCS,Manny,Artango,manny1910122611,Credit from RMA #7151 Adjustment Note #N10104055,N10103718,Completed,Visa,7-Dec-19,$274.49 ,No
+6593,7-Dec-19,,Melissa,Meyers,mmmeyers7874011,Credit from RMA #7152 Adjustment Note #N10104056,N10103599,Completed,Visa,7-Dec-19,$410.99 ,No
+6594,7-Dec-19,,david,clark,dave_way_up_nor,Credit from RMA #7153 Adjustment Note #N10104057,N10103819,Completed,MasterCard,7-Dec-19,$89.40 ,No
+6595,7-Dec-19,Central Otago Electrical,Cindy,Trevathan,trevathancindy5,Credit from RMA #7154 Adjustment Note #N10104059,N10103511,Completed,MasterCard,7-Dec-19,$48.79 ,No
+6596,7-Dec-19,,Thomas,Schneider,28500970_cotd,Credit from RMA #7155 Adjustment Note #N10104060,N10101730,Completed,Catch,7-Dec-19,$65.90 ,No
+6597,7-Dec-19,,David,Zhan,davidz001035209,Credit from RMA #7156 Adjustment Note #N10104061,N10101920,Completed,MasterCard,7-Dec-19,$174.42 ,No
+6598,7-Dec-19,,instore,,john55453453,Credit from RMA #7157 Adjustment Note #N10104063,N10103036,Completed,MasterCard,7-Dec-19,$217.39 ,No
+6599,7-Dec-19,,Oz,Denham-Cole,ozdc10010525120,Credit from RMA #7158 Adjustment Note #N10104067,N10102604,Completed,MasterCard,7-Dec-19,$295.95 ,No
+6580,5-Dec-19,,craig,harmon,luckyharmon1614,Credit from RMA #7138 Adjustment Note #N10103929,N10101914,Completed,Visa,5-Dec-19,$186.95 ,No
+6579,3-Dec-19,,Tim,Adam,timjamesadam242,Credit from RMA #7136 Adjustment Note #N10103729,N10101373,Completed,Visa,3-Dec-19,$50.29 ,No
+6560,2-Dec-19,,Peter,Shortland,instoresales,Credit from RMA #7116 Adjustment Note #N10103611,N10102410,Completed,Visa,2-Dec-19,$57.10 ,No
+6561,2-Dec-19,,Phillip,Wright,mrphillipwright,Credit from RMA #7117 Adjustment Note #N10103612,N1099066,Completed,MasterCard,2-Dec-19,$162.95 ,No
+6562,2-Dec-19,,Chris,Ballantyne,1.24556E+11,Credit from RMA #7118 Adjustment Note #N10103613,N10101305,Completed,Visa,2-Dec-19,$344.95 ,No
+6563,2-Dec-19,,Russell,Dunham,rdunham30481527,Credit from RMA #7119 Adjustment Note #N10103614,N10101324,Completed,Afterpay,2-Dec-19,$79.95 ,No
+6564,2-Dec-19,,Katherine ,Cant,kathcant1982131,Credit from RMA #7120 Adjustment Note #N10103615,N10102688,Completed,Visa,2-Dec-19,$36.90 ,No
+6565,2-Dec-19,,David,Marsh,marshdav2833110,Credit from RMA #6682 Adjustment Note #N10103616,N10103044,Completed,PayPal Express,2-Dec-19,$49.00 ,No
+6566,2-Dec-19,,Stephen,Edge,steve2101172510,Credit from RMA #7121 Adjustment Note #N10103618,N10102251,Completed,MasterCard,2-Dec-19,$179.99 ,No
+6567,2-Dec-19,,danielle,charlton,11627248457,Credit from RMA #7122 Adjustment Note #N10103620,N10102659,Completed,PayPal Express,2-Dec-19,$203.75 ,No
+6568,2-Dec-19,,lee,evans,levans916320191,Credit from RMA #7123 Adjustment Note #N10103621,N10103034,Completed,Visa,2-Dec-19,$35.35 ,No
+6569,2-Dec-19,,Brad,Toovey,tooveybrad19451,Credit from RMA #7124 Adjustment Note #N10103622,N10101807,Completed,zipPay,2-Dec-19,$62.40 ,No
+6570,2-Dec-19,,Minaal,Lawn,minaal254110121,Credit from RMA #7125 Adjustment Note #N10103623,N10102658,Completed,MasterCard,2-Dec-19,$84.90 ,No
+6571,2-Dec-19,,Shane,O&#39;Connell,excavator333470,Credit from RMA #7126 Adjustment Note #N10103624,N10102063,Completed,zipPay,2-Dec-19,$22.95 ,No
+6572,2-Dec-19,,Michael,Nash,nashma215613251,Credit from RMA #7127 Adjustment Note #N10103625,N10101537,Completed,PayPal Express,2-Dec-19,$34.94 ,No
+6573,2-Dec-19,,Gareth,Wreford,garethwreford48,Credit from RMA #7128 Adjustment Note #N10103631,N10102291,Completed,Visa,2-Dec-19,$34.95 ,No
+6574,2-Dec-19,,Nicol,Crombie,nicoleconnor412,Credit from RMA #7129 Adjustment Note #N10103632,N10103171,Completed,Afterpay,2-Dec-19,$46.96 ,No
+6575,2-Dec-19,,FATMA,ALDILA,1.25042E+11,Credit from RMA #7130 Adjustment Note #N10103633,N10103376,Completed,MasterCard,2-Dec-19,$19.95 ,No
+6576,2-Dec-19,,Vijay,Carloz,vijaycarloz4002,Credit from RMA #7131 Adjustment Note #N10103637,KOGAN-9683051,Completed,PayPal Express,2-Dec-19,$27.90 ,No
+6577,2-Dec-19,,MARK,VOYZEY,mvelec007324812,Credit from RMA #7132 Adjustment Note #N10103640,MD2411191452197,Completed,PayPal Express,2-Dec-19,$71.95 ,No
+6578,2-Dec-19,,Adam,O&#39;Donnell,aodonnell963465,Credit from RMA #7133 Adjustment Note #N10103661,N10102145,Completed,Afterpay,2-Dec-19,$116.95 ,No
+6559,30-Nov-19,,Jeanie,McColl,jeaniemccoll220,Credit from RMA #7114 Adjustment Note #N10103436,N10101185,Completed,Afterpay,30-Nov-19,$244.00 ,No
+6557,29-Nov-19,,,,noreg,Credit from RMA #7112 Adjustment Note #N10103375,N10102358,Completed,Kogan Payment,29-Nov-19,$21.95 ,No
+6558,29-Nov-19,,,,noreg,Credit from RMA #7113 Adjustment Note #N10103377,N10100420,Completed,Afterpay,29-Nov-19,$11.75 ,No
+6546,28-Nov-19,,Steven,Scacchia,myimmortal92537,Credit from RMA #7100 Adjustment Note #N10103258,N1098335,Completed,PayPal Express,28-Nov-19,$36.90 ,No
+6547,28-Nov-19,,Tam,Pirozzo,dolce.abode,Credit from RMA #7101 Adjustment Note #N10103266,N10102547,Completed,PayPal Express,28-Nov-19,$136.95 ,No
+6548,28-Nov-19,,Maggie,Brown,maggiebrown4246,Credit from RMA #7103 Adjustment Note #N10103274,N10102562,Completed,Visa,28-Nov-19,$38.90 ,No
+6549,28-Nov-19,,Tarrant,Ling,gnar,Credit from RMA #7104 Adjustment Note #N10103275,N10101245,Completed,MasterCard,28-Nov-19,$251.95 ,No
+6550,28-Nov-19,,Jeremy,Lam,j014823220819,Credit from RMA #7105 Adjustment Note #N10103276,N10101062,Completed,MasterCard,28-Nov-19,$387.36 ,No
+6551,28-Nov-19,,Steve,Cain,scain1031191711,Credit from RMA #7106 Adjustment Note #N10103278,N10100709,Completed,PayPal Express,28-Nov-19,$49.90 ,No
+6552,28-Nov-19,,Aron,Wendt ,susanaron085310,Credit from RMA #7107 Adjustment Note #N10103279,N10101928,Completed,PayPal Express,28-Nov-19,$244.65 ,No
+6553,28-Nov-19,,Bruce,Haines,20439083736,Credit from RMA #7108 Adjustment Note #N10103280,KOGAN-9593466,Completed,PayPal Express,28-Nov-19,$34.95 ,No
+6554,28-Nov-19,,Christopher,Douglas,candkdouglas450,Credit from RMA #7109 Adjustment Note #N10103282,N10102274,Completed,PayPal Express,28-Nov-19,$35.90 ,No
+6555,28-Nov-19,,david,gluskie,dgluskie0501201,Credit from RMA #7110 Adjustment Note #N10103288,N10100791,Completed,Afterpay,28-Nov-19,$257.11 ,No
+6556,28-Nov-19,,Jeff,McNall,jeffm278,Credit from RMA #7111 Adjustment Note #N10103290,KOGAN-9653118,Completed,PayPal Express,28-Nov-19,$17.05 ,No
+6537,27-Nov-19,,,,noreg,Credit from RMA #7091 Adjustment Note #N10103175,N10102544,Completed,Kogan Payment,27-Nov-19,$24.95 ,No
+6538,27-Nov-19,,Malcolm,Howard,musicman_mal,Credit from RMA #7092 Adjustment Note #N10103177,N10102852,Completed,PayPal Express,27-Nov-19,$589.95 ,No
+6539,27-Nov-19,,John,Davies,daviesjohn01106,Credit from RMA #7093 Adjustment Note #N10103178,N10102455,Completed,MasterCard,27-Nov-19,$64.59 ,No
+6540,27-Nov-19,,,,noreg,Credit from RMA #7094 Adjustment Note #N10103206,N10102503,Completed,Kogan Payment,27-Nov-19,$32.95 ,No
+6541,27-Nov-19,,Fernando ,Recasens ,loco0730,Credit from RMA #7095 Adjustment Note #N10103208,N10102357,Completed,Afterpay,27-Nov-19,$35.95 ,No
+6542,27-Nov-19,,Melissa,Kampen,meljohnk0248172,Credit from RMA #7096 Adjustment Note #N10103210,N10102528,Completed,Afterpay,27-Nov-19,$30.39 ,No
+6543,27-Nov-19,,Brian,Davenport,worldbrd7024006,Credit from RMA #7097 Adjustment Note #N10103211,N10102940,Completed,Visa,27-Nov-19,$126.95 ,No
+6544,27-Nov-19,,Brett,Janissen,brjmobile065920,Credit from RMA #7098 Adjustment Note #N10103212,N10102002,Completed,MasterCard,27-Nov-19,$43.16 ,No
+6545,27-Nov-19,skyline Renovations,Allan,Watts,allan5840181311,Credit from RMA #7099 Adjustment Note #N10103213,N10102284,Completed,Visa,27-Nov-19,$50.63 ,No
+6502,26-Nov-19,,Laureen,Mather,laureenmather49,Credit from RMA #7052 Adjustment Note #N10103074,KOGAN-9607481,Completed,Afterpay,26-Nov-19,$51.42 ,No
+6503,26-Nov-19,,Ben,Manser,azogis154111241,Credit from RMA #7053 Adjustment Note #N10103075,MD1611192252118,Completed,PayPal Express,26-Nov-19,$36.13 ,No
+6504,26-Nov-19,,Megan,Bonham,megan2558934440,Credit from RMA #7054 Adjustment Note #N10103076,N10102799,Completed,Afterpay,26-Nov-19,$137.90 ,No
+6505,26-Nov-19,,Melissa,Pollard,mpollard7691245,Credit from RMA #7055 Adjustment Note #N10103077,N10102258,Completed,Afterpay,26-Nov-19,$33.95 ,No
+6506,26-Nov-19,,,,noreg,Credit from RMA #7056 Adjustment Note #N10103078,KOGAN-9670445,Completed,Kogan Payment,26-Nov-19,$93.90 ,No
+6507,26-Nov-19,,,,noreg,Credit from RMA #7057 Adjustment Note #N10103080,KOGAN-9653532,Completed,Afterpay,26-Nov-19,$55.33 ,No
+6508,26-Nov-19,,Guy,Yarrow,guyyarrow243107,Credit from RMA #7058 Adjustment Note #N10103081,N10102899,Completed,MasterCard,26-Nov-19,$37.43 ,No
+6509,26-Nov-19,Pilon bricklaying ,Michael,Pilon,pilonbricklayin,Credit from RMA #7059 Adjustment Note #N10103083,N10102101,Completed,Visa,26-Nov-19,$278.44 ,No
+6510,26-Nov-19,,,,noreg,Credit from RMA #7060 Adjustment Note #N10103085,N10101564,Completed,Kogan Payment,26-Nov-19,$48.95 ,No
+6511,26-Nov-19,,,,noreg,Credit from RMA #7061 Adjustment Note #N10103087,N10101415,Completed,Kogan Payment,26-Nov-19,$84.75 ,No
+6512,26-Nov-19,,Lisa,Anderson,1.44848E+11,Credit from RMA #7062 Adjustment Note #N10103088,N10100140,Completed,Afterpay,26-Nov-19,$216.95 ,No
+6513,26-Nov-19,,David,Ellem,david_ellem1600,Credit from RMA #7063 Adjustment Note #N10103089,N10101148,Completed,PayPal Express,26-Nov-19,$109.90 ,No
+6514,26-Nov-19,,lindon,smith,lindon055755183,Credit from RMA #7064 Adjustment Note #N10103090,N10101338,Completed,Visa,26-Nov-19,$60.00 ,No
+6515,26-Nov-19,,Samantha,Clifford,saminseptember0,Credit from RMA #7065 Adjustment Note #N10103091,N10102716,Completed,Visa,26-Nov-19,$9.95 ,No
+6516,26-Nov-19,,Mark,Bennett,mreb19035747062,Credit from RMA #7066 Adjustment Note #N10103092,N10102890,Completed,PayPal Express,26-Nov-19,$123.90 ,No
+6517,26-Nov-19,,Matthew,Macreadie,mattmacreadie49,Credit from RMA #7067 Adjustment Note #N10103093,N10102938,Completed,Visa,26-Nov-19,$31.95 ,No
+6518,26-Nov-19,,David,Barnett,bigkahuna435909,Credit from RMA #7068 Adjustment Note #N10103095,N10102805,Completed,Visa,26-Nov-19,$32.40 ,No
+6519,26-Nov-19,,Becky,Dowsing,beckydowsing461,Credit from RMA #7069 Adjustment Note #N10103096,N10102779,Completed,zipPay,26-Nov-19,$81.35 ,No
+6520,26-Nov-19,,Chen Wye,Chin,aimeichin904233,Credit from RMA #7070 Adjustment Note #N10103097,N10102773,Completed,MasterCard,26-Nov-19,$212.70 ,No
+6521,26-Nov-19,,Rupert,Carmichael,rupert383516111,Credit from RMA #7071 Adjustment Note #N10103098,N10100278,Completed,Visa,26-Nov-19,$38.76 ,No
+6522,26-Nov-19,,Steven,Irwin,sirwin196728291,Credit from RMA #7072 Adjustment Note #N10103099,N10102220,Completed,PayPal Express,26-Nov-19,$80.97 ,No
+6523,26-Nov-19,,Simon,Sullivan,ssimonsss732140,Credit from RMA #7073 Adjustment Note #N10103100,N10101247,Completed,Visa,26-Nov-19,$36.90 ,No
+6524,26-Nov-19,,Timothy,Kain,timkain31001921,Credit from RMA #7074 Adjustment Note #N10103101,N10101367,Completed,PayPal Express,26-Nov-19,$55.91 ,No
+6525,26-Nov-19,Clarendon State School ,David,Noonan,davenoonan28351,Credit from RMA #7075 Adjustment Note #N10103102,N10100879,Completed,PayPal Express,26-Nov-19,$154.95 ,No
+6526,26-Nov-19,,Adelle,Scott,adellescott3070,Credit from RMA #7076 Adjustment Note #N10103104,N10102546,Completed,Visa,26-Nov-19,$28.95 ,No
+6527,26-Nov-19,,Craig,Macfarlane,craigmacfarlane,Credit from RMA #7077 Adjustment Note #N10103106,N10101770,Completed,Visa,26-Nov-19,$29.95 ,No
+6528,26-Nov-19,,craig,harmon,luckyharmon1614,Credit from RMA #7078 Adjustment Note #N10103107,N10101635,Completed,Visa,26-Nov-19,$31.95 ,No
+6529,26-Nov-19,ATE Tankers,Christophe,Poelmans,christophep5302,Credit from RMA #7079 Adjustment Note #N10103108,N1099014,Completed,Visa,26-Nov-19,$285.05 ,No
+6530,26-Nov-19,,Steven ,Chamberlain,greengold32561530111,Credit from RMA #7080 Adjustment Note #N10103111,N1098732,Completed,MasterCard,26-Nov-19,$27.95 ,No
+6531,26-Nov-19,,Zac,Simpson,reaper139,Credit from RMA #7084 Adjustment Note #N10103131,N10101193,Completed,PayPal Express,26-Nov-19,$36.90 ,No
+6532,26-Nov-19,,addrienne,brown,addy02231917111,Credit from RMA #7085 Adjustment Note #N10103132,N10101642,Completed,PayPal Express,26-Nov-19,$179.99 ,No
+6533,26-Nov-19,,Andi,Sutherland ,dsmotoxr2633190,Credit from RMA #7086 Adjustment Note #N10103133,N1098442,Completed,Afterpay,26-Nov-19,$93.85 ,No
+6534,26-Nov-19,,Stephen,Bell,1.01749E+11,Credit from RMA #7087 Adjustment Note #N10103134,N10101189,Completed,PayPal Express,26-Nov-19,$57.90 ,No
+6535,26-Nov-19,,Anthony,Blue,jenny2636130409,Credit from RMA #7088 Adjustment Note #N10103135,N10100601,Completed,PayPal Express,26-Nov-19,$55.95 ,No
+6536,26-Nov-19,,Martin,Truong,hellosnoopy9394,Credit from RMA #7090 Adjustment Note #N10103136,N10102128,Completed,PayPal Express,26-Nov-19,$72.95 ,No
+6494,25-Nov-19,,Janet,Newman,janetnewman3541,Credit from RMA #7047 Adjustment Note #N10103021,N10101392,Pending,PayPal Express,-,$639.00 ,No
+6495,25-Nov-19,,Janet,Newman,janetnewman3541,Credit from RMA #7047 Adjustment Note #N10103021,N10102241,Completed,PayPal Express,25-Nov-19,$639.00 ,No
+6496,25-Nov-19,,Leonie,Horton,leonieh13570312,Credit from RMA #7048 Adjustment Note #N10103022,N10101593,Completed,PayPal Express,25-Nov-19,$262.95 ,No
+6497,25-Nov-19,,Louis,Polgar,louiepolgar0446,Credit from RMA #6624 Adjustment Note #N10103025,N10101829,Completed,MasterCard,25-Nov-19,$169.95 ,No
+6498,25-Nov-19,,George,Dyke,george521614231,Credit from RMA #7049 Adjustment Note #N10103026,MD0411190657341,Completed,PayPal Express,25-Nov-19,$601.42 ,No
+6499,25-Nov-19,,Mark,Taylor,mark08321410101,Credit from RMA #7050 Adjustment Note #N10103027,N10101613,Completed,MasterCard,25-Nov-19,$26.01 ,No
+6500,25-Nov-19,,Mathew,Witham,matwitham582414,Credit from RMA #7051 Adjustment Note #N10103028,KOGAN-9601015,Completed,Afterpay,25-Nov-19,$18.95 ,No
+6501,25-Nov-19,,Colin,Paynter,pistol225321202,Credit from RMA #6915 Adjustment Note #N10103032,MD1311191632290,Completed,Afterpay,25-Nov-19,$262.95 ,No
+6490,24-Nov-19,,Todd,Booth,toddb0642081211,Credit from RMA #7040 Adjustment Note #N10102931,N10102345,Completed,MasterCard,24-Nov-19,$778.00 ,No
+6491,24-Nov-19,,Steve,Roberts,obrob2949123110,Credit from RMA #7041 Adjustment Note #N10102936,N10102129,Completed,Visa,24-Nov-19,$13.95 ,No
+6492,24-Nov-19,,Jared,Diamond,12237430237,Credit from RMA #7042 Adjustment Note #N10102939,N10100705,Completed,Afterpay,24-Nov-19,$89.99 ,No
+6493,24-Nov-19,,,,noreg,Credit from RMA #7044 Adjustment Note #N10102941,N10100255,Completed,Afterpay,24-Nov-19,$177.31 ,No
+6463,22-Nov-19,,Anthony,Yong,antyong52342131,Credit from RMA #7013 Adjustment Note #N10102803,N10102636,Completed,PayPal Express,22-Nov-19,$590.42 ,No
+6464,22-Nov-19,,,,noreg,Credit from RMA #7014 Adjustment Note #N10102806,N10102445,Completed,Kogan Payment,22-Nov-19,$25.95 ,No
+6465,22-Nov-19,,,,noreg,Credit from RMA #7015 Adjustment Note #N10102807,N10102283,Completed,Afterpay,22-Nov-19,$45.90 ,No
+6466,22-Nov-19,,Wayne,Jack,waynekjack13021,Credit from RMA #7016 Adjustment Note #N10102809,N10102249,Completed,PayPal Express,22-Nov-19,$45.44 ,No
+6467,22-Nov-19,,robyn,carrington,robyn_carringto,Credit from RMA #7017 Adjustment Note #N10102811,N10100800,Completed,PayPal Express,22-Nov-19,$45.90 ,No
+6468,22-Nov-19,,Paul,Buck,paulmalcolmbuck,Credit from RMA #7019 Adjustment Note #N10102813,N10102217,Completed,PayPal Express,22-Nov-19,$27.95 ,No
+6469,22-Nov-19,,Cristina,Grant,ericyelf2834213,Credit from RMA #7020 Adjustment Note #N10102814,N10102083,Completed,Visa,22-Nov-19,$70.02 ,No
+6470,22-Nov-19,,Madonna,Cuskelly,cusoby460918191,Credit from RMA #7021 Adjustment Note #N10102815,N10100956,Completed,Visa,22-Nov-19,$176.95 ,No
+6471,22-Nov-19,,Alex,Clothier,aclothier172618,Credit from RMA #7022 Adjustment Note #N10102816,N10101884,Completed,Visa,22-Nov-19,$178.95 ,No
+6472,22-Nov-19,Carpet Court Jindabyne,Helen,Hulm,jindycarpetcour,Credit from RMA #7023 Adjustment Note #N10102817,N10101749,Completed,Visa,22-Nov-19,$210.95 ,No
+6473,22-Nov-19,,Wendy,Day,wendyjday465009,Credit from RMA #7024 Adjustment Note #N10102818,N10101784,Completed,MasterCard,22-Nov-19,$27.95 ,No
+6474,22-Nov-19,,Anthony,Shaw,tcshaw560815151,Credit from RMA #7025 Adjustment Note #N10102819,N10102068,Completed,PayPal Express,22-Nov-19,$165.95 ,No
+6475,22-Nov-19,,Rupert,Carmichael,rupert383516111,Credit from RMA #7026 Adjustment Note #N10102820,N10102190,Completed,Visa,22-Nov-19,$23.54 ,No
+6476,22-Nov-19,,Lauren,Forster,26487145_cotd,Credit from RMA #7027 Adjustment Note #N10102821,N10102592,Completed,Catch,22-Nov-19,$48.90 ,No
+6477,22-Nov-19,,Garry L,Bannister,gbconstruct0356,Credit from RMA #7028 Adjustment Note #N10102822,N10101987,Completed,PayPal Express,22-Nov-19,$113.89 ,No
+6478,22-Nov-19,,Steve,Lambley,stephenlambley3,Credit from RMA #7029 Adjustment Note #N10102823,N1099805,Completed,MasterCard,22-Nov-19,$20.95 ,No
+6479,22-Nov-19,,Eva-Marie,Kjellberg Burns,28968101_cotd,Credit from RMA #7030 Adjustment Note #N10102824,N1096888,Completed,Catch,22-Nov-19,$66.90 ,No
+6480,22-Nov-19,,Leigh,Anderson,hungryleigh5221,Credit from RMA #7031 Adjustment Note #N10102825,N10101665,Completed,PayPal Express,22-Nov-19,$25.07 ,No
+6481,22-Nov-19,,Gaynor,Thompson,gthompson290815,Credit from RMA #7032 Adjustment Note #N10102826,N10100312,Completed,PayPal Express,22-Nov-19,$33.62 ,No
+6482,22-Nov-19,,Elaine,Twomey,elainetwomey450,Credit from RMA #7033 Adjustment Note #N10102832,N10101411,Completed,PayPal Express,22-Nov-19,$77.12 ,No
+6483,22-Nov-19,,Tom,Fowler,tomofowler43301,Credit from RMA #7034 Adjustment Note #N10102833,KOGAN-9610894,Completed,PayPal Express,22-Nov-19,$37.64 ,No
+6484,22-Nov-19,,Mihaela,Costache,danatancu060118,Credit from RMA #7035 Adjustment Note #N10102834,N10101710,Completed,PayPal Express,22-Nov-19,$36.57 ,No
+6485,22-Nov-19,,STEPHANIE,Haydon,stephaniehallha,Credit from RMA #7036 Adjustment Note #N10102835,N10102450,Pending,PayPal Express,-,$67.95 ,No
+6486,22-Nov-19,,STEPHANIE,Haydon,stephaniehallha,Credit from RMA #7036 Adjustment Note #N10102835,N10102099,Completed,PayPal Express,22-Nov-19,$67.95 ,No
+6487,22-Nov-19,,melanie,taylor,melanie_taylor0,Credit from RMA #7037 Adjustment Note #N10102836,N1099325,Completed,PayPal Express,22-Nov-19,$152.85 ,No
+6488,22-Nov-19,,Elliot ,Powell,elliotpowell403,Credit from RMA #7038 Adjustment Note #N10102839,N10102565,Completed,MasterCard,22-Nov-19,$46.90 ,No
+6489,22-Nov-19,,Sarah,Lowcock,sarahlowcock006,Credit from RMA #7039 Adjustment Note #N10102840,N10101702,Completed,Afterpay,22-Nov-19,$127.00 ,No
+6442,21-Nov-19,,Tarika,Rivers,tarikarivers452,Credit from RMA #6992 Adjustment Note #N10102737,N10102394,Completed,Afterpay,21-Nov-19,$138.32 ,No
+6443,21-Nov-19,,,,noreg,Credit from RMA #6993 Adjustment Note #N10102738,N10102264,Completed,Kogan Payment,21-Nov-19,$5.95 ,No
+6444,21-Nov-19,,Millie,So,mirii3809012912,Credit from RMA #6994 Adjustment Note #N10102739,N10102393,Completed,Afterpay,21-Nov-19,$172.15 ,No
+6445,21-Nov-19,,Sam,McKay,sammckay1004205,Credit from RMA #6995 Adjustment Note #N10102740,N10102168,Completed,MasterCard,21-Nov-19,$176.95 ,No
+6446,21-Nov-19,,Bethany,Houlihan,bhoulihan933255,Credit from RMA #6996 Adjustment Note #N10102741,N10102377,Completed,Afterpay,21-Nov-19,$172.15 ,No
+6447,21-Nov-19,,Alan,Barrett,noabarrett05552,Credit from RMA #6997 Adjustment Note #N10102742,N10102374,Completed,MasterCard,21-Nov-19,$99.80 ,No
+6448,21-Nov-19,,Rhys,Pattingale,rpattingale135115040,Credit from RMA #6998 Adjustment Note #N10102743,N10102117,Completed,Afterpay,21-Nov-19,$210.07 ,No
+6449,21-Nov-19,,Chris,Fisher,fisher336251002,Credit from RMA #6999 Adjustment Note #N10102744,N10101981,Completed,Visa,21-Nov-19,$99.92 ,No
+6450,21-Nov-19,,Geoffrey,Dobson,geoffreydobson5,Credit from RMA #7000 Adjustment Note #N10102746,N10101885,Completed,Visa,21-Nov-19,$27.95 ,No
+6451,21-Nov-19,,Alison,Edwards,alisonedwards55,Credit from RMA #7001 Adjustment Note #N10102747,N10102552,Completed,PayPal Express,21-Nov-19,$275.33 ,No
+6452,21-Nov-19,,Kaitlyn,Langdale,kaitlynlangdale,Credit from RMA #7002 Adjustment Note #N10102748,N10101787,Completed,MasterCard,21-Nov-19,$58.02 ,No
+6453,21-Nov-19,,Alison,Edwards,alisonedwards55,Credit from RMA #7003 Adjustment Note #N10102749,N10102122,Completed,PayPal Express,21-Nov-19,$275.17 ,No
+6454,21-Nov-19,,Simone,Senisin,simonesenisin36,Credit from RMA #7004 Adjustment Note #N10102750,KOGAN-9601692,Completed,Visa,21-Nov-19,$52.90 ,No
+6455,21-Nov-19,,Lauren,Armstrong,pollee905128081,Credit from RMA #7005 Adjustment Note #N10102751,KOGAN-9548756,Completed,PayPal Express,21-Nov-19,$40.96 ,No
+6456,21-Nov-19,,Aaron,Thompson,tazza7771146071,Credit from RMA #7007 Adjustment Note #N10102752,KOGAN-9528586,Completed,PayPal Express,21-Nov-19,$34.44 ,No
+6457,21-Nov-19,,ERIC,BONATO,11157992459,Credit from RMA #7006 Adjustment Note #N10102753,KOGAN-9518659,Completed,Visa,21-Nov-19,$78.22 ,No
+6458,21-Nov-19,,Anthony,Heweston,tony04131507111,Credit from RMA #7008 Adjustment Note #N10102754,N10102010,Completed,Visa,21-Nov-19,$34.25 ,No
+6459,21-Nov-19,,Bernd,Schiffer,berndschiffer38,Credit from RMA #7009 Adjustment Note #N10102756,KOGAN-9382141,Completed,Visa,21-Nov-19,$72.90 ,No
+6460,21-Nov-19,,Agnes,Wong,wingyanwong1063,Credit from RMA #7010 Adjustment Note #N10102757,N10100553,Completed,PayPal Express,21-Nov-19,$47.90 ,No
+6461,21-Nov-19,,Catherine,Young,jcjasyoung09390,Credit from RMA #7011 Adjustment Note #N10102758,N10101671,Completed,Visa,21-Nov-19,$40.35 ,No
+6462,21-Nov-19,,Katharine,Purbrick,katepurbrick162,Credit from RMA #7012 Adjustment Note #N10102759,N10101761,Completed,Visa,21-Nov-19,$27.95 ,No
+6434,20-Nov-19,,,,noreg,Credit from RMA #6984 Adjustment Note #N10102674,N10102359,Completed,Kogan Payment,20-Nov-19,$5.95 ,No
+6435,20-Nov-19,,,,noreg,Credit from RMA #6985 Adjustment Note #N10102675,N10102342,Completed,Kogan Payment,20-Nov-19,$21.95 ,No
+6436,20-Nov-19,,,,noreg,Credit from RMA #6986 Adjustment Note #N10102676,N10102380,Completed,Kogan Payment,20-Nov-19,$20.95 ,No
+6437,20-Nov-19,,,,noreg,Credit from RMA #6987 Adjustment Note #N10102677,KOGAN-9503992,Completed,Kogan Payment,20-Nov-19,$44.95 ,No
+6438,20-Nov-19,,Villiami,Vuni,villiamvun_0,Credit from RMA #6988 Adjustment Note #N10102679,KOGAN-9544183,Completed,PayPal Express,20-Nov-19,$36.90 ,No
+6439,20-Nov-19,,,,noreg,Credit from RMA #6989 Adjustment Note #N10102680,N10101620,Completed,Kogan Payment,20-Nov-19,$43.90 ,No
+6440,20-Nov-19,,Sharron,Cattermole,30004098_cotd,Credit from RMA #6990 Adjustment Note #N10102684,N10100659,Completed,Catch,20-Nov-19,$137.90 ,No
+6441,20-Nov-19,,Emile,Griffith,emilegriffith28,Credit from RMA #6991 Adjustment Note #N10102685,N10101165,Completed,PayPal Express,20-Nov-19,$589.95 ,No
+6433,16-Nov-19,,David,Mouatt,davem567,Credit from RMA #6983 Adjustment Note #N10102474,N10101162,Completed,PayPal Express,16-Nov-19,$390.30 ,No
+6427,15-Nov-19,,Gary,Molloy,garylowrider78,Credit from RMA #6977 Adjustment Note #N10102422,N10101080,Completed,PayPal Express,15-Nov-19,$55.90 ,No
+6428,15-Nov-19,,Mark,Laspina,markl0_5,Credit from RMA #6978 Adjustment Note #N10102423,N10100963,Completed,PayPal Express,15-Nov-19,$51.90 ,No
+6429,15-Nov-19,,Harold,Roberts,harry1709594539,Credit from RMA #6979 Adjustment Note #N10102424,N10100467,Completed,Afterpay,15-Nov-19,$83.95 ,No
+6430,15-Nov-19,,,,noreg,Credit from RMA #6980 Adjustment Note #N10102426,N1099618,Completed,Kogan Payment,15-Nov-19,$88.95 ,No
+6431,15-Nov-19,,,,noreg,Credit from RMA #6981 Adjustment Note #N10102428,N1099643,Completed,Kogan Payment,15-Nov-19,$5.95 ,No
+6432,15-Nov-19,,Clair,Richards,skiholiday,Credit from RMA #6982 Adjustment Note #N10102430,N1099835,Completed,PayPal Express,15-Nov-19,$38.90 ,No
+6426,14-Nov-19,,Harry,Dean,hmdean362811121,Credit from RMA #6975 Adjustment Note #N10102405,N10100649,Completed,PayPal Express,14-Nov-19,$167.95 ,No
+6400,13-Nov-19,,Tania,Wallace-smith,taniawallacesmi,Credit from RMA #6951 Adjustment Note #N10102308,N1099523,Completed,MasterCard,13-Nov-19,$39.35 ,No
+6401,13-Nov-19,,Suzanne,Vermeulen,suzannewv180820,Credit from RMA #6952 Adjustment Note #N10102310,N10100814,Completed,MasterCard,13-Nov-19,$50.50 ,No
+6402,13-Nov-19,,Trent,Holbrook,tholbrook375911,Credit from RMA #6953 Adjustment Note #N10102311,N10101728,Completed,Visa,13-Nov-19,$35.35 ,No
+6403,13-Nov-19,,Caroline,Boulom,courdibm3327191,Credit from RMA #6954 Adjustment Note #N10102312,N10101774,Completed,MasterCard,13-Nov-19,$29.38 ,No
+6404,13-Nov-19,,Richard,Barth,richardbarth240,Credit from RMA #6955 Adjustment Note #N10102313,N10101485,Completed,Visa,13-Nov-19,$263.85 ,No
+6405,13-Nov-19,,Lasha,Esquivel Cota,lashaesquivel19,Credit from RMA #6810 Adjustment Note #N10102314,N1098376,Completed,PayPal Express,13-Nov-19,$25.95 ,No
+6406,13-Nov-19,,Taryn,Evans,tarynevans29531,Credit from RMA #6956 Adjustment Note #N10102315,N10101368,Completed,PayPal Express,13-Nov-19,$39.95 ,No
+6407,13-Nov-19,,Warren,Picton,warrenpicton350,Credit from RMA #6957 Adjustment Note #N10102316,N10100267,Completed,MasterCard,13-Nov-19,$57.88 ,No
+6408,13-Nov-19,,Mike,Smith,tigermike135352,Credit from RMA #6958 Adjustment Note #N10102317,N1097886,Completed,Visa,13-Nov-19,$24.90 ,No
+6409,13-Nov-19,,Christian,Jaques,chrisjaques9668,Credit from RMA #6959 Adjustment Note #N10102318,N1098199,Completed,Visa,13-Nov-19,$49.90 ,No
+6410,13-Nov-19,,william,plant,wplant215418151,Credit from RMA #6960 Adjustment Note #N10102319,N1098164,Completed,MasterCard,13-Nov-19,$170.95 ,No
+6411,13-Nov-19,,Leonie,Smith,greggnlee450121,Credit from RMA #6961 Adjustment Note #N10102320,N1098212,Completed,PayPal Express,13-Nov-19,$65.86 ,No
+6412,13-Nov-19,,emma,thomas,emma__louise430,Credit from RMA #6962 Adjustment Note #N10102321,N1097780,Completed,PayPal Express,13-Nov-19,$27.95 ,No
+6413,13-Nov-19,,Saga,Hassinen,snatsja888,Credit from RMA #6963 Adjustment Note #N10102322,N10100983,Completed,PayPal Express,13-Nov-19,$21.90 ,No
+6414,13-Nov-19,,Mitch,Kerr,mittakerr020623,Credit from RMA #6964 Adjustment Note #N10102323,N10100948,Completed,Afterpay,13-Nov-19,$13.95 ,No
+6415,13-Nov-19,,Scott,Newman,snknn75,Credit from RMA #6965 Adjustment Note #N10102326,N10101117,Completed,zipPay,13-Nov-19,$108.95 ,No
+6416,13-Nov-19,,Salih,Sengezer,salzdaman373400,Credit from RMA #6966 Adjustment Note #N10102327,N1099423,Completed,zipPay,13-Nov-19,$73.85 ,No
+6417,13-Nov-19,,Michael,Bennett,mb9168881604121,Credit from RMA #6967 Adjustment Note #N10102328,N10100626,Completed,PayPal Express,13-Nov-19,$0.95 ,No
+6418,13-Nov-19,,Gavin,Sinckajr,creativegav7225,Credit from RMA #6968 Adjustment Note #N10102329,N10100972,Completed,MasterCard,13-Nov-19,$35.90 ,No
+6419,13-Nov-19,,Catherine,Attard,dragonwhisperer,Credit from RMA #6544 Adjustment Note #N10102330,N10101695,Completed,Visa,13-Nov-19,$341.90 ,No
+6420,13-Nov-19,,Mathew,Pittock,mathewpittock14,Credit from RMA #6969 Adjustment Note #N10102331,N10101624,Completed,Visa,13-Nov-19,$115.95 ,No
+6421,13-Nov-19,,Sandra,Garrido,kasaraandra1228,Credit from RMA #6970 Adjustment Note #N10102332,N10101587,Completed,PayPal Express,13-Nov-19,$37.90 ,No
+6422,13-Nov-19,,Rod,Smith,rodjanelle10201,Credit from RMA #6971 Adjustment Note #N10102333,N1099970,Completed,Visa,13-Nov-19,$42.90 ,No
+6423,13-Nov-19,,Tammy,Fontaine,plasmatam444314,Credit from RMA #6972 Adjustment Note #N10102334,N10101628,Completed,PayPal Express,13-Nov-19,$44.35 ,No
+6424,13-Nov-19,,Vicki,Cooper,sweetiecooper12,Credit from RMA #6973 Adjustment Note #N10102335,N10101995,Completed,PayPal Express,13-Nov-19,$144.64 ,No
+6425,13-Nov-19,,Natalie,Barrington,73846653991,Credit from RMA #6974 Adjustment Note #N10102336,N10101926,Completed,Visa,13-Nov-19,$42.95 ,No
+6395,13-Nov-19,,Dr Tommy L,Myers,my6667,Credit from RMA #6946 Adjustment Note #N10102300,N10101894,Completed,PayPal Express,13-Nov-19,$242.10 ,No
+6396,13-Nov-19,,Ostii,Palmer,oshtopher,Credit from RMA #6947 Adjustment Note #N10102304,KOGAN-9403701,Completed,PayPal Express,13-Nov-19,$175.55 ,No
+6397,13-Nov-19,,instore,,john55453453,Credit from RMA #6948 Adjustment Note #N10102305,KOGAN-9487337,Completed,Visa,13-Nov-19,$429.00 ,No
+6398,13-Nov-19,,Joanne,Craig,joattard3452080,Credit from RMA #6949 Adjustment Note #N10102306,N10101726,Completed,MasterCard,13-Nov-19,$18.90 ,No
+6399,13-Nov-19,,Iris,Ho,1.03329E+11,Credit from RMA #6950 Adjustment Note #N10102307,N10101818,Completed,MasterCard,13-Nov-19,$79.90 ,No
+6385,11-Nov-19,,Sean,Tully,seantully222022,Credit from RMA #6936 Adjustment Note #N10102174,N1098962,Completed,Visa,11-Nov-19,$265.95 ,No
+6386,11-Nov-19,,Renee,Chaplin,reneechap011222,Credit from RMA #6937 Adjustment Note #N10102176,N10101111,Completed,Afterpay,11-Nov-19,$42.90 ,No
+6387,11-Nov-19,,Olivia,Noonan,olivia_noonan17,Credit from RMA #6938 Adjustment Note #N10102177,N10101076,Completed,Visa,11-Nov-19,$266.85 ,No
+6388,11-Nov-19,,Grace,Staib,gracestaib22591,Credit from RMA #6939 Adjustment Note #N10102178,N10100324,Completed,MasterCard,11-Nov-19,$167.95 ,No
+6389,11-Nov-19,,Darin,Lynch,djlmtb215406061,Credit from RMA #6940 Adjustment Note #N10102179,N1095788,Completed,PayPal Express,11-Nov-19,$49.97 ,No
+6390,11-Nov-19,,,,noreg,Credit from RMA #6941 Adjustment Note #N10102181,N10100693,Completed,Kogan Payment,11-Nov-19,$35.95 ,No
+6391,11-Nov-19,,,,noreg,Credit from RMA #6942 Adjustment Note #N10102182,N10100527,Completed,Kogan Payment,11-Nov-19,$45.95 ,No
+6392,11-Nov-19,,Lassi Levo Parcel locker,1012885868,ninsalev,Credit from RMA #6943 Adjustment Note #N10102184,N10100461,Completed,PayPal Express,11-Nov-19,$52.00 ,No
+6393,11-Nov-19,,David,Clerke,clerau2,Credit from RMA #6944 Adjustment Note #N10102185,N10100434,Completed,PayPal Express,11-Nov-19,$97.60 ,No
+6394,11-Nov-19,,Carol,Mayoh,carol_mayoh5310,Credit from RMA #6945 Adjustment Note #N10102187,N10101118,Completed,PayPal Express,11-Nov-19,$44.95 ,No
+6383,9-Nov-19,,Vincent,Gonzalez,happosoy,Credit from RMA #6933 Adjustment Note #N10102053,N10101669,Completed,PayPal Express,9-Nov-19,$56.90 ,No
+6384,9-Nov-19,,Therron,Fahy,therronfahy3246,Credit from RMA #6934 Adjustment Note #N10102065,N10100367,Completed,MasterCard,9-Nov-19,$119.95 ,No
+6375,8-Nov-19,,Bev,Timmermans,titchbev3231150,Credit from RMA #6925 Adjustment Note #N10102013,N1099973,Completed,PayPal Express,8-Nov-19,$74.90 ,No
+6376,8-Nov-19,,Matt,Gaddes,mattgaddes1937101516,Credit from RMA #6926 Adjustment Note #N10102018,N10101280,Completed,PayPal Express,8-Nov-19,$38.36 ,No
+6377,8-Nov-19,,Nick,Bryant,nick44351513101,Credit from RMA #6927 Adjustment Note #N10102020,N1099975,Completed,MasterCard,8-Nov-19,$229.95 ,No
+6378,8-Nov-19,,Peter,Shortland,instoresales,Credit from RMA #6928 Adjustment Note #N10102021,N10100726,Completed,Visa,8-Nov-19,$197.95 ,No
+6379,8-Nov-19,,Daniel,Boerma,danielboerma013,Credit from RMA #6929 Adjustment Note #N10102024,KOGAN-8993304,Completed,Visa,8-Nov-19,$322.09 ,No
+6380,8-Nov-19,,Roberto ,Pesenti ,pesentirobi5500,Credit from RMA #6930 Adjustment Note #N10102026,N1094526,Completed,Afterpay,8-Nov-19,$51.90 ,No
+6381,8-Nov-19,,Scott,Pagett,scottpagett7827,Credit from RMA #6932 Adjustment Note #N10102028,N1085928,Completed,Visa,8-Nov-19,$13.97 ,No
+6382,8-Nov-19,,Anika,Graffunder,agraffunder4333,Credit from RMA #6931 Adjustment Note #N10102029,N10101128,Completed,PayPal Express,8-Nov-19,$149.00 ,No
+6366,7-Nov-19,,Shannon,O&#39;Connor,shannonoconnor8,Credit from RMA #6916 Adjustment Note #N10101954,N10101009,Completed,PayPal Express,7-Nov-19,$167.95 ,No
+6367,7-Nov-19,,Christine,Castillo,chrissiecastill,Credit from RMA #6917 Adjustment Note #N10101956,KOGAN-9347136,Completed,PayPal Express,7-Nov-19,$23.95 ,No
+6368,7-Nov-19,,Jon,Berry,jondylanberry17,Credit from RMA #6918 Adjustment Note #N10101957,N10100979,Completed,MasterCard,7-Nov-19,$670.95 ,No
+6369,7-Nov-19,,Jenny,Kapeller,jkapp0117510813,Credit from RMA #6919 Adjustment Note #N10101958,N10100530,Completed,Afterpay,7-Nov-19,$54.95 ,No
+6370,7-Nov-19,,Caleb,Govender,calebgovender08,Credit from RMA #6920 Adjustment Note #N10101959,N1099051,Completed,PayPal Express,7-Nov-19,$89.95 ,No
+6371,7-Nov-19,,,,noreg,Credit from RMA #6921 Adjustment Note #N10101967,N10100346,Completed,Kogan Payment,7-Nov-19,$22.95 ,No
+6372,7-Nov-19,,Josita,Hicks,hicksjosita3806,Credit from RMA #6922 Adjustment Note #N10101970,N10100772,Completed,Afterpay,7-Nov-19,$994.95 ,No
+6373,7-Nov-19,,shayne,starr,shaynestarr525616280,Credit from RMA #6923 Adjustment Note #N10101971,N10101211,Completed,PayPal Express,7-Nov-19,$71.85 ,No
+6374,7-Nov-19,,Aaron,Manning,wapm,Credit from RMA #6924 Adjustment Note #N10101990,N10101230,Completed,PayPal Express,7-Nov-19,$18.90 ,No
